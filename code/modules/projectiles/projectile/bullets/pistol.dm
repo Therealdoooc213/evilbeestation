@@ -9,6 +9,11 @@
 	damage = 15
 	armour_penetration = 40
 
+obj/projectile/bullet/c9mm/rubber
+	name = "9mm rubber bullet"
+	damage = 2
+	stamina = 20
+
 /obj/projectile/bullet/incendiary/c9mm
 	name = "9mm incendiary bullet"
 	damage = 10

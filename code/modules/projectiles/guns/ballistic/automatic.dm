@@ -103,6 +103,41 @@
 	magazine = new /obj/item/ammo_box/magazine/wt550m9/rubber(src)
 	. = ..()
 
+/obj/item/gun/ballistic/automatic/pistol/glock
+	name = "Glock-13"
+	desc = "A small 9mm handgun used by Nanotrasen crewmen. It has a polymer handle and a full durasteel body construction, giving it a nice weight."
+	icon = 'nsv13/icons/obj/guns/projectile.dmi'
+	icon_state = "crewglock"
+	item_state = "glock"
+	fire_sound = 'sound/weapons/gunshot_smg.ogg'
+	w_class = WEIGHT_CLASS_LARGE
+	mag_type = /obj/item/ammo_box/magazine/glock
+	can_suppress = FALSE
+	automatic = FALSE
+	can_flashlight = TRUE
+	flight_x_offset = 15
+	flight_y_offset = 12
+	fire_rate = 2
+
+/obj/item/gun/ballistic/automatic/pistol/glock/security
+	name = "Glock-13BR"
+	desc = "A small 9mm handgun used by Nanotrasen security forces. It has burst-fire capabilities and a weighted grip to tame the recoil."
+	icon = 'nsv13/icons/obj/guns/projectile.dmi'
+	icon_state = "secglock"
+	item_state = "glock"
+	fire_sound = 'sound/weapons/gunshot_smg.ogg'
+	w_class = WEIGHT_CLASS_LARGE
+	mag_type = /obj/item/ammo_box/magazine/glock
+	can_suppress = FALSE
+	burst_size = 3
+	fire_delay = 2
+	actions_types = list(/datum/action/item_action/toggle_firemode)
+	automatic = FALSE
+	can_flashlight = TRUE
+	flight_x_offset = 15
+	flight_y_offset = 12
+	fire_rate = 2
+
 /obj/item/gun/ballistic/automatic/mini_uzi
 	name = "\improper Type U3 Uzi"
 	desc = "A lightweight submachine gun, for when you really want someone dead. Uses 9mm rounds."

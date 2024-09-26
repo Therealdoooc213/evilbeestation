@@ -82,6 +82,12 @@
 	ammo_type = /obj/item/ammo_casing/c9mm
 	max_ammo = 30
 
+/obj/item/ammo_box/c9mm/rubber
+	name = "ammo box (9mm Rubber)"
+	icon_state = "9mmbox"
+	ammo_type = /obj/item/ammo_casing/c9mm/rubber
+	max_ammo = 30
+
 /obj/item/ammo_box/pouch/c9mm
 	name = "ammo pouch (9mm)"
 	ammo_type = /obj/item/ammo_casing/c9mm

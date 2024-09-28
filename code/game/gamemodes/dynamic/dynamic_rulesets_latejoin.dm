@@ -88,7 +88,7 @@
 	antag_datum = /datum/antagonist/heretic
 	role_preference = /datum/role_preference/antagonist/heretic
 	protected_roles = list(JOB_NAME_SECURITYOFFICER, JOB_NAME_WARDEN, JOB_NAME_HEADOFPERSONNEL, JOB_NAME_DETECTIVE, JOB_NAME_HEADOFSECURITY, JOB_NAME_CAPTAIN)
-	restricted_roles = list(JOB_NAME_AI,JOB_NAME_CYBORG)
+	restricted_roles = list(JOB_NAME_AI,JOB_NAME_CYBORG, JOB_NAME_CHAPLAIN)
 	required_candidates = 1
 	weight = 4
 	cost = 10

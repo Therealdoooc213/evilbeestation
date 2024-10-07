@@ -81,6 +81,7 @@
 		/obj/item/stack/sheet/snow					= /datum/species/golem/snow,
 		/obj/item/stack/sheet/capitalisium			= /datum/species/golem/capitalist,
 		/obj/item/stack/sheet/stalinium				= /datum/species/golem/soviet,
+		/obj/item/stack/sheet/animalhide/human		= /datum/species/golem/skin
 		)
 
 	if(istype(I, /obj/item/stack))

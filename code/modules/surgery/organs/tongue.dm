@@ -397,3 +397,14 @@
 	color = "#1b1b1b"
 	liked_food = RAW | GROSS
 	disliked_food = DAIRY
+
+/obj/item/organ/tongue/golem/skgolem
+	name = "rotted adamantine tongue"
+	desc = "Disgusting, smells of adamantine."
+	icon_state = "tonguenormal"
+	say_mod = "gibbers"
+	ask_mod = "groans"
+	yell_mod = "bellows"
+	exclaim_mod = "twitches"
+	color = "#5A4A54"
+	taste_sensitivity = 101 //even if they are made of skin, theyre still part golem

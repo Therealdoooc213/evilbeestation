@@ -1320,9 +1320,9 @@ CREATION_TEST_IGNORE_SUBTYPES(/obj/structure/cloth_pile)
 /datum/species/golem/skin
 	name = "Skin Golem"
 	id = SPECIES_GOLEM_SKIN
-	meat = /obj/item/food/meat/slab/human
-	mutant_organs = list(/obj/item/organ/adamantine_resonator, /obj/item/organ/vocal_cords/adamantine)
+	meat = /obj/item/food/meat/slab/human/mutant/golem
+	mutant_organs = /obj/item/organ/tongue/golem/skgolem
 	fixed_mut_color = "4ed"
 	info_text = "As an <span class='danger'>Skin Golem</span>, you possess a disgusting ability to turn your arm into a tentacle which can snatch people from far distances."
 	prefix = "Abominable"
-	special_names = null
+	special_names = list("Lung", "Jaundice", "Heart", "Appendix", "Lupus", "Liver")

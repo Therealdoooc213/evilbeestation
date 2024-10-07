@@ -1321,8 +1321,26 @@ CREATION_TEST_IGNORE_SUBTYPES(/obj/structure/cloth_pile)
 	name = "Skin Golem"
 	id = SPECIES_GOLEM_SKIN
 	meat = /obj/item/food/meat/slab/human/mutant/golem
-	mutant_organs = /obj/item/organ/tongue/golem/skgolem
+	mutant_organs = /obj/item/organ/tongue/golem/skin
 	fixed_mut_color = "4ed"
 	info_text = "As an <span class='danger'>Skin Golem</span>, you possess a disgusting ability to turn your arm into a tentacle which can snatch people from far distances."
 	prefix = "Abominable"
 	special_names = list("Lung", "Jaundice", "Heart", "Appendix", "Lupus", "Liver")
+	var/datum/action/skin_golem/weapon/tentacle/tentacle
+
+/datum/species/golem/skin/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+	..()
+	if(ishuman(C))
+		tentacle = new
+		tentacle.Grant(C)
+
+/datum/species/golem/skin/on_species_loss(mob/living/carbon/C)
+	if(tentacle)
+		tentacle.Remove(C)
+	..()
+
+/datum/action/skin_golem/weapon/tentacle/tentacle
+	name = "Adamantine Tentacle"
+	desc = "We ready a tentacle to grab items or victims with."
+	button_icon_state = "tentacle"
+	weapon_type = /obj/item/gun/magic/tentacle

@@ -1331,16 +1331,12 @@ CREATION_TEST_IGNORE_SUBTYPES(/obj/structure/cloth_pile)
 /datum/species/golem/skin/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	..()
 	if(ishuman(C))
-		tentacle = new
-		tentacle.Grant(C)
+		temp = new
+		temp.Grant(C)
 
 /datum/species/golem/skin/on_species_loss(mob/living/carbon/C)
-	if(tentacle)
-		tentacle.Remove(C)
+	if(temp)
+		temp.Remove(C)
 	..()
 
-/datum/action/skin_golem/weapon/tentacle/tentacle
-	name = "Adamantine Tentacle"
-	desc = "We ready a tentacle to grab items or victims with."
-	button_icon_state = "tentacle"
-	weapon_type = /obj/item/gun/magic/tentacle
+/datum/action/skin_golem/temp

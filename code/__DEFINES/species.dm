@@ -58,6 +58,7 @@
 #define SPECIES_GOLEM_TITANIUM "titanium_golem"
 #define SPECIES_GOLEM_URANIUM "uranium_golem"
 #define SPECIES_GOLEM_WOOD "wood_golem"
+#define SPECIES_GOLEM_SKIN "skin_golem"
 
 //Species bitflags, used for species_restricted. If this somehow ever gets above 23 Bee has larger problems.
 #define FLAG_HUMAN			(1<<0)

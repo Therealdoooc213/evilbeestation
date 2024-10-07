@@ -1293,6 +1293,9 @@ CREATION_TEST_IGNORE_SUBTYPES(/mob/living/carbon/human/species)
 /mob/living/carbon/human/species/golem/soviet
 	race = /datum/species/golem/soviet
 
+/mob/living/carbon/human/species/golem/skin
+	race = /datum/species/golem/skin
+
 /mob/living/carbon/human/species/ipc
 	race = /datum/species/ipc
 

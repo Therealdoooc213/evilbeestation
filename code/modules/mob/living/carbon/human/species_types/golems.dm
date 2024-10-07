@@ -1315,3 +1315,14 @@ CREATION_TEST_IGNORE_SUBTYPES(/obj/structure/cloth_pile)
 
 	playsound(source, 'sound/misc/Cyka Blyat.ogg', 25, 0)
 	speech_args[SPEECH_MESSAGE] = "Cyka Blyat"
+
+
+/datum/species/golem/skin
+	name = "Skin Golem"
+	id = SPECIES_GOLEM_SKIN
+	meat = /obj/item/food/meat/slab/human
+	mutant_organs = list(/obj/item/organ/adamantine_resonator, /obj/item/organ/vocal_cords/adamantine)
+	fixed_mut_color = "4ed"
+	info_text = "As an <span class='danger'>Skin Golem</span>, you possess a disgusting ability to turn your arm into a tentacle which can snatch people from far distances."
+	prefix = "Abominable"
+	special_names = null

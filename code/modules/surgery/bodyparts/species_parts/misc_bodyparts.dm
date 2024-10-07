@@ -487,6 +487,31 @@
 	limb_id = "sn_golem"
 	should_draw_greyscale = FALSE
 
+/obj/item/bodypart/head/golem/skin
+	limb_id = "sk_golem"
+	is_dimorphic = FALSE
+
+/obj/item/bodypart/chest/golem/skin
+	limb_id = "sk_golem"
+	is_dimorphic = FALSE
+	should_draw_greyscale = FALSE
+
+/obj/item/bodypart/l_arm/golem/skin
+	limb_id = "sk_golem"
+	should_draw_greyscale = FALSE
+
+/obj/item/bodypart/r_arm/golem/skin
+	limb_id = "sk_golem"
+	should_draw_greyscale = FALSE
+
+/obj/item/bodypart/l_leg/golem/skin
+	limb_id = "Ck_golem"
+	should_draw_greyscale = FALSE
+
+/obj/item/bodypart/r_leg/golem/skin
+	limb_id = "sk_golem"
+	should_draw_greyscale = FALSE
+
 /// Pumpkin people
 
 /obj/item/bodypart/head/pumpkin_man

@@ -1323,10 +1323,13 @@ CREATION_TEST_IGNORE_SUBTYPES(/obj/structure/cloth_pile)
 	meat = /obj/item/food/meat/slab/human/mutant/golem
 	mutant_organs = /obj/item/organ/tongue/golem/skin
 	fixed_mut_color = "4ed"
+	species_traits = list(NO_UNDERWEAR,NOEYESPRITES,NOTRANSSTING)
 	info_text = "As an <span class='danger'>Skin Golem</span>, you possess a disgusting ability to turn your arm into a tentacle which can snatch people from far distances."
+	inherent_traits = list(TRAIT_NOBREATH,TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_RADIMMUNE)
 	prefix = "Abominable"
 	special_names = list("Lung", "Jaundice", "Heart", "Appendix", "Lupus", "Liver")
-	var/datum/action/skin_golem/weapon/tentacle/tentacle
+	var/datum/action/skin_golem/temp/temp
+	burnmod = 1.5
 
 /datum/species/golem/skin/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	..()
@@ -1340,3 +1343,5 @@ CREATION_TEST_IGNORE_SUBTYPES(/obj/structure/cloth_pile)
 	..()
 
 /datum/action/skin_golem/temp
+	name = "Placeholder"
+	desc = "Placeholder, Placeholder, Placeholder."

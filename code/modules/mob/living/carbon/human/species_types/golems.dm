@@ -1321,27 +1321,33 @@ CREATION_TEST_IGNORE_SUBTYPES(/obj/structure/cloth_pile)
 	name = "Skin Golem"
 	id = SPECIES_GOLEM_SKIN
 	meat = /obj/item/food/meat/slab/human/mutant/golem
-	mutant_organs = /obj/item/organ/tongue/golem/skin
+	mutant_organs = list(/obj/item/organ/tongue/golem/skin)
 	fixed_mut_color = "4ed"
 	species_traits = list(NO_UNDERWEAR,NOEYESPRITES,NOTRANSSTING)
 	info_text = "As an <span class='danger'>Skin Golem</span>, you possess a disgusting ability to turn your arm into a tentacle which can snatch people from far distances."
 	inherent_traits = list(TRAIT_NOBREATH,TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_RADIMMUNE)
 	prefix = "Abominable"
 	special_names = list("Lung", "Jaundice", "Heart", "Appendix", "Lupus", "Liver")
-	var/datum/action/skin_golem/temp/temp
+	var/obj/effect/proc_holder/spell/targeted/conjure_item/tentacle/tentacle
 	burnmod = 1.5
 
 /datum/species/golem/skin/on_species_gain(mob/living/carbon/C, datum/species/old_species)
-	..()
-	if(ishuman(C))
-		temp = new
-		temp.Grant(C)
+	. = ..()
+	tentacle = new
+	tentacle.charge_counter = 0
+	tentacle.start_recharge()
+	C.AddSpell(tentacle)
 
 /datum/species/golem/skin/on_species_loss(mob/living/carbon/C)
-	if(temp)
-		temp.Remove(C)
-	..()
+	. = ..()
+	if(tentacle)
+		C.RemoveSpell(tentacle)
 
-/datum/action/skin_golem/temp
-	name = "Placeholder"
-	desc = "Placeholder, Placeholder, Placeholder."
+/obj/effect/proc_holder/spell/targeted/conjure_item/tentacle
+	name = "Temporary"
+	desc = "Temp, Temporary, Temp."
+	item_type = /obj/item/gun/magic/tentacle
+	charge_max = 15
+	cooldown_min = 600 SECONDS
+	action_icon = 'icons/obj/changeling_items.dmi'
+	action_icon_state = "tentacle"

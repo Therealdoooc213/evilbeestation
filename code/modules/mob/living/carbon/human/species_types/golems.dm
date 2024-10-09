@@ -1331,6 +1331,13 @@ CREATION_TEST_IGNORE_SUBTYPES(/obj/structure/cloth_pile)
 	var/obj/effect/proc_holder/spell/targeted/conjure_item/tentacle/tentacle
 	burnmod = 1.5
 
+	species_chest = /obj/item/bodypart/chest/golem/skin
+	species_head = /obj/item/bodypart/head/golem/skin
+	species_l_arm = /obj/item/bodypart/l_arm/golem/skin
+	species_r_arm = /obj/item/bodypart/r_arm/golem/skin
+	species_l_leg = /obj/item/bodypart/l_leg/golem/skin
+	species_r_leg = /obj/item/bodypart/r_leg/golem/skin
+
 /datum/species/golem/skin/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
 	tentacle = new

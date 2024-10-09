@@ -1344,10 +1344,9 @@ CREATION_TEST_IGNORE_SUBTYPES(/obj/structure/cloth_pile)
 		C.RemoveSpell(tentacle)
 
 /obj/effect/proc_holder/spell/targeted/conjure_item/tentacle
-	name = "Temporary"
-	desc = "Temp, Temporary, Temp."
+	name = "Adamantine Tentacle"
+	desc = "Your unique skeleton allows you to form a Tentacle from your arm to grab objects and people from long distances."
 	item_type = /obj/item/gun/magic/tentacle
-	charge_max = 15
-	cooldown_min = 600 SECONDS
+	charge_max = 10 SECONDS
 	action_icon = 'icons/obj/changeling_items.dmi'
 	action_icon_state = "tentacle"

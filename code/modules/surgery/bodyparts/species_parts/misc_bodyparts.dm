@@ -505,7 +505,7 @@
 	should_draw_greyscale = FALSE
 
 /obj/item/bodypart/l_leg/golem/skin
-	limb_id = "Ck_golem"
+	limb_id = "sk_golem"
 	should_draw_greyscale = FALSE
 
 /obj/item/bodypart/r_leg/golem/skin

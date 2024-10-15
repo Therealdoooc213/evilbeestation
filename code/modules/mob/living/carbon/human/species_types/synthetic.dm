@@ -1,7 +1,7 @@
 /datum/species/synth
 	name = "\improper Synthetic"
 	id = SPECIES_SYNTHETIC
-	default_color = "#ffd4fe"
+	default_color = "#fce9fb"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS)
 	inherent_traits = list(TRAIT_BLOOD_COOLANT,TRAIT_NOBREATH,TRAIT_RADIMMUNE,TRAIT_EASYDISMEMBER,TRAIT_XENO_IMMUNE, TRAIT_TOXIMMUNE)
 	mutanttongue = /obj/item/organ/tongue/robot

@@ -1,11 +1,12 @@
 /datum/species/synth
-	name = "\improper Synthetic" //"I cant lie to you about your chances, but you have my sympathies."
+	name = "\improper Synthetic" //"Not bad for a human." -Bishop, 2122
 	id = SPECIES_SYNTHETIC
 	default_color = "#fce9fb"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS)
 	inherent_traits = list(TRAIT_BLOOD_COOLANT,TRAIT_NOBREATH,TRAIT_RADIMMUNE,TRAIT_EASYDISMEMBER,TRAIT_XENO_IMMUNE, TRAIT_TOXIMMUNE)
 	mutanttongue = /obj/item/organ/tongue/robot
 	mutantheart = /obj/item/organ/heart/cybernetic/ipc
+	mutantbrain = /obj/item/organ/brain/positron
 	species_language_holder = /datum/language_holder/synth
 
 	use_skintones = 1
@@ -18,7 +19,6 @@
 	clonemod = 0
 	staminamod = 0.8
 	siemens_coeff = 1.5
-	deathsound = "sound/voice/borg_deathsound.ogg"
 	reagent_tag = PROCESS_SYNTHETIC
 	species_bitflags = NOT_TRANSMORPHIC
 
@@ -28,7 +28,7 @@
 
 
 /datum/species/human/qualifies_for_rank(rank, list/features)
-	return TRUE	//Pure humans are always allowed in all roles.
+	return TRUE
 
 /datum/species/human/get_laugh_sound(mob/living/carbon/user)
 	return user.gender == FEMALE ? 'sound/voice/human/womanlaugh.ogg' : pick('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
@@ -72,11 +72,7 @@
 		Their 'kind' are widely looked down apon across the universe for being monsters."
 
 /datum/species/human/get_species_lore()
-	return list(
-		"These primate-descended creatures, originating from the mostly harmless Earth, \
-		have long-since outgrown their home and semi-benign designation. \
-		The space age has taken humans out of their solar system and into the galaxy-at-large."
-	)
+	return null
 
 /datum/species/synthetic/create_pref_unique_perks()
 	var/list/to_add = list()

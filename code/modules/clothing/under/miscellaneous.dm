@@ -77,3 +77,7 @@
 	desc = "A cartridge loaded with a compressed extinguisher mix, used to refill the automatic extinguisher on plasma envirosuits."
 	icon_state = "plasmarefill"
 	icon = 'icons/obj/device.dmi'
+
+/obj/item/under/misc/overalls/colonist
+	name = "colonists jumpsuit"
+	desc = "A old and dusty jumpsuit used primarily by Synthetics."

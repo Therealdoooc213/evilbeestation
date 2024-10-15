@@ -1,34 +1,29 @@
-/datum/species/synthetic
+/datum/species/synth
 	name = "\improper Synthetic"
 	id = SPECIES_SYNTHETIC
 	default_color = "#ffd4fe"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS)
 	inherent_traits = list(TRAIT_BLOOD_COOLANT,TRAIT_NOBREATH,TRAIT_RADIMMUNE,TRAIT_EASYDISMEMBER,TRAIT_XENO_IMMUNE, TRAIT_TOXIMMUNE)
 	mutanttongue = /obj/item/organ/tongue/robot
-	mutantheart = /obj/item/organ/heart/robot
+	mutantheart = /obj/item/organ/heart/cybernetic/ipc
 	species_language_holder = /datum/language_holder/synth
 
 	use_skintones = 1
-	skinned_type = /obj/item/stack/sheet/iron{amount = 5}, /obj/item/food/meat/slab/synthmeat{amount = 5}
+	skinned_type = /obj/item/stack/sheet/iron{amount = 5}
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 
 	burnmod = 2.3
 	heatmod = 2
-	brutemod = -0.5
+	brutemod = 1
+	clonemod = 0
+	staminamod = 0.8
+	siemens_coeff = 1.5
 	deathsound = "sound/voice/borg_deathsound.ogg"
-	species_gib = GIB_TYPE_ROBOTIC
 	reagent_tag = PROCESS_SYNTHETIC
 	species_bitflags = NOT_TRANSMORPHIC
 
-	species_chest = /obj/item/bodypart/chest/synthetic
-	species_head = /obj/item/bodypart/head/synthetic
-	species_l_arm = /obj/item/bodypart/l_arm/synthetic
-	species_r_arm = /obj/item/bodypart/r_arm/synthetic
-	species_l_leg = /obj/item/bodypart/l_leg/synthetic
-	species_r_leg = /obj/item/bodypart/r_leg/synthetic
-
 	exotic_blood = /datum/reagent/oil
-	blood_color = "#ffffff"
+	blood_color = "#fcdddd"
 	bleed_effect = /datum/status_effect/bleeding/robotic
 
 

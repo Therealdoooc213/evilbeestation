@@ -416,6 +416,12 @@ Key procs
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 							/datum/language/shadowtongue = list(LANGUAGE_ATOM))
 
+/datum/language_holder/synthetic
+	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
+								/datum/language/uncommon = list(LANGUAGE_ATOM))
+		spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
+								/datum/language/uncommon = list(LANGUAGE_ATOM))
+
 /datum/language_holder/psyphoza
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 								/datum/language/sonus = list(LANGUAGE_ATOM),

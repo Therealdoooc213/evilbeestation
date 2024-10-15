@@ -1,5 +1,5 @@
 /datum/species/synth
-	name = "\improper Synthetic"
+	name = "\improper Synthetic" //"I cant lie to you about your chances, but you have my sympathies."
 	id = SPECIES_SYNTHETIC
 	default_color = "#fce9fb"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS)

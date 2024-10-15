@@ -27,13 +27,13 @@
 	bleed_effect = /datum/status_effect/bleeding/robotic
 
 
-/datum/species/human/qualifies_for_rank(rank, list/features)
+/datum/species/synthetic/qualifies_for_rank(rank, list/features)
 	return TRUE
 
-/datum/species/human/get_laugh_sound(mob/living/carbon/user)
+/datum/species/synthetic/get_laugh_sound(mob/living/carbon/user)
 	return user.gender == FEMALE ? 'sound/voice/human/womanlaugh.ogg' : pick('sound/voice/human/manlaugh1.ogg', 'sound/voice/human/manlaugh2.ogg')
 
-/datum/species/human/get_scream_sound(mob/living/carbon/user)
+/datum/species/synthetic/get_scream_sound(mob/living/carbon/user)
 	return user.gender == FEMALE ? pick(
 		'sound/voice/human/femalescream_1.ogg',
 		'sound/voice/human/femalescream_2.ogg',
@@ -50,19 +50,19 @@
 /datum/species/human/get_cough_sound(mob/living/carbon/user)
 	return SPECIES_DEFAULT_COUGH_SOUND(user)
 
-/datum/species/human/get_gasp_sound(mob/living/carbon/user)
+/datum/species/synthetic/get_gasp_sound(mob/living/carbon/user)
 	return SPECIES_DEFAULT_GASP_SOUND(user)
 
-/datum/species/human/get_sigh_sound(mob/living/carbon/user)
+/datum/species/synthetic/get_sigh_sound(mob/living/carbon/user)
 	return SPECIES_DEFAULT_SIGH_SOUND(user)
 
-/datum/species/human/get_sneeze_sound(mob/living/carbon/user)
+/datum/species/synthetic/get_sneeze_sound(mob/living/carbon/user)
 	return SPECIES_DEFAULT_SNEEZE_SOUND(user)
 
-/datum/species/human/get_sniff_sound(mob/living/carbon/user)
+/datum/species/synthetic/get_sniff_sound(mob/living/carbon/user)
 	return SPECIES_DEFAULT_SNIFF_SOUND(user)
 
-/datum/species/human/prepare_human_for_preview(mob/living/carbon/human/human)
+/datum/species/synthetic/prepare_human_for_preview(mob/living/carbon/human/human)
 	human.hair_style = "Business Hair"
 	human.hair_color = "b96" // brown
 	human.update_hair()
@@ -71,7 +71,7 @@
 	return "Synthetics are a artificially produced species of half human half robot people \
 		Their 'kind' are widely looked down apon across the universe for being monsters."
 
-/datum/species/human/get_species_lore()
+/datum/species/synthetic/get_species_lore()
 	return null
 
 /datum/species/synthetic/create_pref_unique_perks()

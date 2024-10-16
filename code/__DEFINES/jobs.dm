@@ -52,6 +52,7 @@
 #define JOB_DISPLAY_ORDER_BRIG_PHYS 32
 #define JOB_DISPLAY_ORDER_AI 33
 #define JOB_DISPLAY_ORDER_CYBORG 34
+#define JOB_DISPLAY_ORDER_SYNTHETIC 35
 
 // should check the ones in `\_DEFINES\economy.dm`
 // It's true that bitflags shouldn't be separated in two DEFINES if these are same, but just in case the system can be devided, it's remained separated.
@@ -114,6 +115,7 @@
 // Silicon
 #define JOB_NAME_AI     "AI"
 #define JOB_NAME_CYBORG "Cyborg"
+#define JOB_NAME_SYNTHETIC "Synthetic"
 #define JOB_NAME_POSIBRAIN "Positronic Brain"
 #define JOB_NAME_PAI    "Personal AI"
 
@@ -143,7 +145,6 @@
 #define JOB_NAME_KING    "King"
 #define JOB_NAME_PRISONER "Prisoner"
 #define JOB_SPACE_POLICE "Space Police"
-#define JOB_SYNTHETIC "Synthetic"
 
 
 

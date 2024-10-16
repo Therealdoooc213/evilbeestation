@@ -396,7 +396,8 @@ SUBSYSTEM_DEF(department)
 
 	leaders = list()
 	jobs = list(JOB_NAME_AI,
-				JOB_NAME_CYBORG)
+				JOB_NAME_CYBORG,
+				JOB_NAME_SYNTHETIC)
 
 	pref_category_name = DEPT_NAME_SILICON
 	pref_category_order = DEPT_PREF_ORDER_SILICON

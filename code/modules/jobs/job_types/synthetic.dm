@@ -21,7 +21,7 @@ Synthetic
 	bank_account_department = NONE // nothing is free for them
 	payment_per_department = list(ACCOUNT_CIV_ID = PAYCHECK_ASSISTANT) // Get a job. Job reassignment changes your paycheck now. Get over it.
 
-	display_order = JOB_DISPLAY_ORDER_ASSISTANT
+	display_order = JOB_DISPLAY_ORDER_SYNTHETIC
 	rpg_title = "Mechanical Monstrosity"
 
 	species_outfits = list(

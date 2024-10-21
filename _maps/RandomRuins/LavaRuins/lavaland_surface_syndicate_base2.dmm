@@ -1,7 +1,245 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/area/space,
-/turf/open/space/basic)
+/turf/open/lava/smooth/lava_land_surface,
+/area/space)
+"c" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/iron/dark,
+/area/space)
+"d" = (
+/obj/machinery/computer{
+	dir = 8
+	},
+/turf/open/floor/carpet/royalblack,
+/area/space)
+"e" = (
+/turf/open/floor/plating/beach/sand,
+/area/space)
+"f" = (
+/obj/machinery/door/airlock/hatch{
+	req_access_txt = "150";
+	name = "Research Heads Quarters"
+	},
+/turf/open/floor/iron/dark,
+/area/space)
+"g" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/space)
+"h" = (
+/obj/machinery/computer/camera_advanced/syndie{
+	dir = 8
+	},
+/turf/open/floor/carpet/royalblack,
+/area/space)
+"j" = (
+/obj/structure/chair/office{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/space)
+"l" = (
+/obj/effect/turf_decal/tile/dark_red/half/contrasted{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/space)
+"m" = (
+/turf/open/floor/carpet/red,
+/area/space)
+"n" = (
+/obj/item/food/fishmeat/carp,
+/turf/open/floor/holofloor/snow/cold,
+/area/space)
+"o" = (
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/obj/machinery/door/poddoor/preopen{
+	id = "lavalandsyndi_commander";
+	name = "Commanders Office"
+	},
+/turf/open/floor/iron/dark,
+/area/space)
+"p" = (
+/turf/open/water/air,
+/area/space)
+"q" = (
+/obj/structure/window/plastitanium,
+/turf/open/lava/smooth/lava_land_surface,
+/area/space)
+"r" = (
+/obj/structure/bed/double,
+/obj/item/bedsheet/double/syndie,
+/obj/item/toy/plush/nukeplushie{
+	layer = 5
+	},
+/turf/open/floor/carpet/red,
+/area/space)
+"s" = (
+/mob/living/simple_animal/hostile/bear/snow,
+/turf/open/floor/holofloor/snow/cold,
+/area/space)
+"t" = (
+/obj/structure/closet/gimmick,
+/turf/open/floor/carpet/red,
+/area/space)
+"u" = (
+/obj/structure/grille,
+/turf/open/lava/smooth/lava_land_surface,
+/area/space)
+"w" = (
+/obj/structure/table/wood,
+/turf/open/floor/carpet/red,
+/area/space)
+"x" = (
+/obj/effect/turf_decal/tile/dark_red/half/contrasted,
+/turf/open/floor/iron/dark,
+/area/space)
+"y" = (
+/obj/structure/flora/tree/dead,
+/turf/open/floor/holofloor/snow/cold,
+/area/space)
+"z" = (
+/obj/structure/chair/office{
+	dir = 4
+	},
+/turf/open/floor/carpet/royalblack,
+/area/space)
+"A" = (
+/turf/open/floor/holofloor/snow/cold,
+/area/space)
+"B" = (
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/turf/open/floor/plating,
+/area/space)
+"C" = (
+/obj/effect/turf_decal/tile/dark_red{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/space)
+"D" = (
+/turf/open/floor/carpet/royalblack,
+/area/space)
+"E" = (
+/obj/machinery/button/door{
+	id = "lavalandsyndi_commander";
+	name = "Commanders Blast Door Control";
+	pixel_y = 5;
+	req_access_txt = "150"
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/space)
+"F" = (
+/obj/effect/spawner/structure/window/hollow/reinforced/directional,
+/turf/open/floor/carpet/red,
+/area/space)
+"G" = (
+/obj/effect/turf_decal/tile/dark_blue/half/contrasted{
+	alpha = 180;
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/space)
+"H" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/plating/beach/sand,
+/area/space)
+"I" = (
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/turf/open/floor/iron/dark,
+/area/space)
+"J" = (
+/turf/open/floor/plating,
+/area/space)
+"K" = (
+/obj/effect/turf_decal/tile/dark_blue/half/contrasted{
+	alpha = 180
+	},
+/turf/open/floor/iron/dark,
+/area/space)
+"L" = (
+/obj/effect/mob_spawn/human/lavaland_syndicate/comms{
+	dir = 8
+	},
+/obj/effect/mob_spawn/human/lavaland_syndicate/comms{
+	dir = 8
+	},
+/obj/effect/spawner/structure/window/hollow/reinforced/directional,
+/turf/open/floor/carpet/red,
+/area/space)
+"M" = (
+/mob/living/simple_animal/hostile/retaliate/frog,
+/obj/item/clothing/head/costume/crown,
+/turf/open/floor/plating/beach/sand,
+/area/space)
+"O" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "lavalandsyndi_commander";
+	name = "Commanders Office"
+	},
+/obj/machinery/door/window{
+	name = "Commanders Office";
+	req_access_txt = "150";
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/space)
+"P" = (
+/obj/machinery/door/airlock/hatch{
+	req_access_txt = "150";
+	name = "Commanders Quarters"
+	},
+/turf/open/lava/smooth/lava_land_surface,
+/area/space)
+"Q" = (
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/space)
+"R" = (
+/obj/item/toy/plush/lizard_plushie{
+	name = "Fears-The-Frog"
+	},
+/turf/open/water/air,
+/area/space)
+"S" = (
+/obj/machinery/computer/apc_control{
+	dir = 8
+	},
+/turf/open/floor/carpet/royalblack,
+/area/space)
+"T" = (
+/obj/effect/turf_decal/tile/dark_red/half/contrasted{
+	dir = 4
+	},
+/turf/open/floor/iron/dark,
+/area/space)
+"U" = (
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/obj/structure/cable/yellow,
+/turf/open/floor/plating,
+/area/space)
+"W" = (
+/turf/open/floor/iron/dark,
+/area/space)
+"Y" = (
+/obj/structure/chair/office{
+	dir = 8
+	},
+/turf/open/floor/iron/dark,
+/area/space)
+"Z" = (
+/obj/effect/turf_decal/tile/dark_red,
+/turf/open/floor/iron/dark,
+/area/space)
 
 (1,1,1) = {"
 a
@@ -3189,14 +3427,14 @@ a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+Q
 a
 a
 a
@@ -3281,24 +3519,24 @@ a
 a
 a
 a
+W
+W
+W
+W
+W
+W
 a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+Q
+W
+W
+W
+W
+W
+W
+Q
 a
 a
 a
@@ -3383,24 +3621,24 @@ a
 a
 a
 a
+W
+W
+W
+W
+W
+W
 a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+Q
+W
+W
+W
+W
+W
+W
+Q
 a
 a
 a
@@ -3484,25 +3722,25 @@ a
 a
 a
 a
+B
+W
+W
+W
+W
+W
+W
 a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+Q
+W
+W
+W
+W
+W
+W
+Q
 a
 a
 a
@@ -3586,25 +3824,25 @@ a
 a
 a
 a
+B
+W
+W
+W
+W
+W
+W
 a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+Q
+W
+W
+W
+W
+W
+W
+Q
 a
 a
 a
@@ -3688,25 +3926,25 @@ a
 a
 a
 a
+B
+W
+W
+W
+W
+W
+W
 a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+Q
+W
+W
+W
+W
+W
+j
+Q
 a
 a
 a
@@ -3790,25 +4028,25 @@ a
 a
 a
 a
+B
+W
+W
+W
+W
+W
+W
 a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+Q
+Q
+Q
+f
+I
+I
+c
+Q
 a
 a
 a
@@ -3892,37 +4130,37 @@ a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+B
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+G
+G
+G
+G
+G
+G
+G
+G
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
 a
 a
 a
@@ -3994,37 +4232,37 @@ a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+B
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
 a
 a
 a
@@ -4096,37 +4334,37 @@ a
 a
 a
 a
+B
+W
+W
+W
+W
+W
+W
 a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+K
+K
+K
+K
+K
+K
+K
+K
+x
+x
+x
+x
+C
+W
+Z
+x
+x
+x
+x
+x
 a
 a
 a
@@ -4198,37 +4436,37 @@ a
 a
 a
 a
+B
+W
+W
+W
+W
+W
+W
 a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+Q
+Q
+Q
+f
+o
+o
+O
+Q
+Q
+Q
+Q
+Q
+T
+W
+l
+Q
+Q
+Q
+Q
+Q
 a
 a
 a
@@ -4288,6 +4526,7 @@ a
 a
 "}
 (43,1,1) = {"
+Q
 a
 a
 a
@@ -4299,38 +4538,37 @@ a
 a
 a
 a
+B
+W
+W
+W
+W
+W
+W
 a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+Q
+W
+W
+W
+W
+W
+Y
+E
+p
+p
+R
+g
+T
+W
+l
+U
+A
+A
+A
+Q
 a
 a
 a
@@ -4390,6 +4628,7 @@ a
 a
 "}
 (44,1,1) = {"
+q
 a
 a
 a
@@ -4401,38 +4640,37 @@ a
 a
 a
 a
+B
+W
+W
+W
+W
+W
+W
 a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+Q
+m
+m
+m
+W
+W
+W
+Q
+p
+p
+p
+g
+T
+W
+l
+U
+A
+n
+A
+Q
 a
 a
 a
@@ -4492,6 +4730,7 @@ a
 a
 "}
 (45,1,1) = {"
+u
 a
 a
 a
@@ -4504,37 +4743,36 @@ a
 a
 a
 a
+W
+W
+W
+W
+W
+W
 a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+Q
+w
+m
+F
+D
+D
+D
+Q
+p
+p
+p
+g
+T
+W
+l
+U
+A
+s
+A
+Q
 a
 a
 a
@@ -4594,6 +4832,7 @@ a
 a
 "}
 (46,1,1) = {"
+P
 a
 a
 a
@@ -4606,37 +4845,36 @@ a
 a
 a
 a
+W
+W
+W
+W
+W
+W
 a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+Q
+m
+m
+F
+D
+z
+D
+Q
+e
+p
+p
+g
+T
+W
+l
+U
+A
+y
+A
+Q
 a
 a
 a
@@ -4696,6 +4934,7 @@ a
 a
 "}
 (47,1,1) = {"
+J
 a
 a
 a
@@ -4718,27 +4957,26 @@ a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+Q
+r
+t
+L
+h
+S
+d
+Q
+M
+H
+p
+g
+T
+W
+l
+U
+A
+A
+A
+Q
 a
 a
 a
@@ -4821,26 +5059,26 @@ a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
-a
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+T
+W
+l
+Q
+Q
+Q
+Q
+Q
 a
 a
 a

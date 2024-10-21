@@ -268,6 +268,11 @@
 	desc = "A console to monitor the outside status of the shuttle."
 	network = list(CAMERA_NETWORK_CARAVAN_SYNDICATE)
 
+/obj/machinery/computer/security/lavalandsyndicate
+	name = "syndicate monitoring console"
+	desc = "A console to monitor all of your evil underlings."
+	network = list(CAMERA_NETWORK_LAVALAND_SYNDICATE)
+
 // TELESCREENS
 
 /obj/machinery/computer/security/telescreen

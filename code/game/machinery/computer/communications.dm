@@ -566,3 +566,12 @@
 #undef STATE_BUYING_SHUTTLE
 #undef STATE_CHANGING_STATUS
 #undef STATE_MESSAGES
+
+/obj/machinery/computer/communications/broken 
+	name = "broken communications console"
+	desc = "A broken communications console. This one managed to receive one final message before breaking, repair pending."
+	icon_screen = "comm"
+	icon_keyboard = "tech_key"
+	req_access = list(ACCESS_CENT_GENERAL) //you arent accessing this lol
+	circuit = /obj/item/circuitboard/computer/communications
+	light_color = LIGHT_COLOR_BLUE

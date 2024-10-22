@@ -1,9 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aE" = (
-/obj/effect/turf_decal/stripes{
-	dir = 4
-	},
-/turf/open/floor/iron/white,
+"ax" = (
+/obj/machinery/vending/clothing,
+/turf/open/floor/iron/dark,
 /area/space)
 "aO" = (
 /obj/machinery/computer/security/lavalandsyndicate,
@@ -20,13 +18,54 @@
 /obj/item/binoculars,
 /turf/open/floor/iron/white,
 /area/space)
+"bG" = (
+/obj/structure/sign/poster/contraband/kss13,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/space)
 "bI" = (
 /obj/effect/turf_decal/tile/purple/opposingcorners,
 /turf/open/floor/iron/white,
 /area/space)
 "bL" = (
-/obj/structure/sign/poster/contraband/have_a_puff,
+/obj/structure/table/wood,
+/obj/item/toy/cards/deck/cas/black,
+/obj/item/toy/cards/deck/cas,
+/turf/open/floor/carpet,
+/area/space)
+"bT" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chem_dispenser/drinks{
+	dir = 8
+	},
+/turf/open/floor/iron/cafeteria_red,
+/area/space)
+"bV" = (
+/obj/structure/table/reinforced,
+/obj/item/toy/redbutton,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/space)
+"bW" = (
+/obj/machinery/chem_master/condimaster,
+/turf/open/floor/iron/freezer,
+/area/space)
+"ca" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/open/floor/iron/cafeteria,
+/area/space)
+"ce" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "lavalandsyndi_xenoarcheology";
+	name = "R&D Blast Door"
+	},
+/turf/open/floor/iron/white,
+/area/space)
+"cp" = (
+/obj/structure/table/reinforced,
+/obj/machinery/fax/centcom{
+	fax_name = "Suspicious Reseach Facility";
+	name = "Syndicate Fax Machine"
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "cA" = (
 /obj/machinery/door/airlock/hatch{
@@ -35,26 +74,44 @@
 	},
 /turf/open/lava/smooth/lava_land_surface,
 /area/space)
-"cI" = (
-/obj/structure/sign/poster/contraband/kss13,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
+"cB" = (
+/obj/structure/table/reinforced,
+/obj/machinery/microwave{
+	pixel_x = -2;
+	pixel_y = 5
+	},
+/turf/open/floor/iron/cafeteria,
 /area/space)
-"ee" = (
-/obj/effect/decal/cleanable/xenoblood/xgibs/larva/body,
-/turf/open/floor/plating/beach/sand,
+"dx" = (
+/obj/effect/decal/cleanable/greenglow,
+/obj/effect/decal/cleanable/insectguts,
+/turf/open/floor/iron/dark,
 /area/space)
-"eg" = (
+"dN" = (
 /obj/effect/turf_decal/tile/purple/half/contrasted,
 /obj/effect/turf_decal/stripes/closeup{
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/space)
-"ek" = (
-/obj/item/kirbyplants/random,
-/obj/effect/turf_decal/tile/purple/half/contrasted{
-	dir = 1
+"dQ" = (
+/obj/machinery/telecomms/relay/preset/ruskie{
+	use_power = 0
 	},
+/turf/open/floor/iron/dark,
+/area/space)
+"ee" = (
+/obj/effect/decal/cleanable/xenoblood/xgibs/larva/body,
+/turf/open/floor/plating/beach/sand,
+/area/space)
+"eg" = (
+/obj/machinery/gibber,
+/turf/open/floor/iron/freezer,
+/area/space)
+"ei" = (
+/obj/structure/table/reinforced,
+/obj/item/multitool,
+/obj/item/storage/belt/utility,
 /turf/open/floor/iron/white,
 /area/space)
 "el" = (
@@ -64,28 +121,38 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/iron/dark,
 /area/space)
+"eo" = (
+/obj/effect/turf_decal/tile/purple/half/contrasted,
+/turf/open/floor/iron/white,
+/area/space)
 "eG" = (
 /obj/effect/turf_decal/tile/dark_red{
 	dir = 3
 	},
 /turf/open/floor/iron/dark,
 /area/space)
-"eK" = (
-/obj/machinery/mech_bay_recharge_port,
-/obj/effect/decal/cleanable/cobweb{
-	dir = 8
-	},
-/turf/open/floor/iron/white,
+"eN" = (
+/obj/structure/table/reinforced,
+/obj/item/toy/figure/syndie,
+/turf/open/floor/carpet/red,
 /area/space)
-"eV" = (
+"fi" = (
 /obj/structure/table/wood,
-/obj/item/toy/cards/deck/syndicate,
-/turf/open/floor/carpet,
+/obj/item/toy/figure/hos{
+	name = "\improper Syndicate Commander action figure"
+	},
+/turf/open/floor/carpet/royalblack,
 /area/space)
 "fm" = (
 /obj/machinery/door/airlock/hatch{
 	req_access_txt = "151";
 	name = "R&D Directors Quarters"
+	},
+/turf/open/floor/iron/dark,
+/area/space)
+"fq" = (
+/obj/structure/chair/office{
+	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/space)
@@ -95,34 +162,53 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
-"fS" = (
-/obj/machinery/vending/games{
-	pixel_y = -1
-	},
-/turf/open/floor/iron/dark,
+"fC" = (
+/obj/structure/table/reinforced,
+/obj/item/assembly/signaler,
+/turf/open/floor/iron/white,
+/area/space)
+"fL" = (
+/obj/structure/table/reinforced,
+/obj/item/toy/figure/chef,
+/turf/open/floor/iron/cafeteria,
 /area/space)
 "fY" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood,
+/area/space)
+"ga" = (
+/obj/structure/flora/rock,
+/turf/open/floor/plating/asteroid/basalt,
 /area/space)
 "gh" = (
 /obj/machinery/modular_fabricator/component_printer,
 /obj/effect/turf_decal/tile/purple/opposingcorners,
 /turf/open/floor/iron/white,
 /area/space)
-"gk" = (
-/obj/machinery/vending/clothing,
-/turf/open/floor/iron/dark,
-/area/space)
-"gJ" = (
-/obj/structure/sign/poster/contraband/kudzu,
+"gD" = (
+/obj/structure/sign/poster/contraband/c20r,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/space)
+"gT" = (
+/obj/structure/sign/poster/contraband/revolver,
+/turf/closed/wall/r_wall/syndicate,
 /area/space)
 "gZ" = (
 /obj/effect/turf_decal/tile/dark_blue/half/contrasted{
 	alpha = 180
 	},
 /obj/item/kirbyplants/random,
+/turf/open/floor/iron/dark,
+/area/space)
+"ho" = (
+/obj/machinery/door/airlock{
+	id_tag = "Cabin2";
+	name = "Cabin 2"
+	},
+/turf/open/floor/wood,
+/area/space)
+"ht" = (
+/obj/effect/spawner/randomvend/snack,
 /turf/open/floor/iron/dark,
 /area/space)
 "hy" = (
@@ -135,11 +221,14 @@
 /obj/structure/window/plastitanium,
 /turf/open/lava/smooth/lava_land_surface,
 /area/space)
-"hG" = (
-/obj/structure/chair/wood/normal{
-	dir = 4
-	},
-/turf/open/floor/carpet,
+"ib" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/backpack/duffelbag/syndie/surgery,
+/turf/open/floor/iron/dark/textured,
+/area/space)
+"iq" = (
+/obj/machinery/vending/toyliberationstation,
+/turf/open/floor/iron/dark,
 /area/space)
 "iu" = (
 /obj/item/toy/plush/lizard_plushie/space{
@@ -150,14 +239,21 @@
 	},
 /turf/open/floor/fakespace,
 /area/space)
-"iv" = (
-/obj/structure/sign/poster/contraband/revolver,
-/turf/closed/wall/r_wall/syndicate,
-/area/space)
 "iI" = (
 /obj/structure/grille,
 /obj/structure/window/plastitanium,
 /turf/open/floor/plating,
+/area/space)
+"iM" = (
+/obj/structure/curtain/directional{
+	color = "#ACD1E9";
+	icon_state = "bathroom-open";
+	icon_type = "bathroom"
+	},
+/obj/effect/turf_decal/edges/techfloor{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/textured,
 /area/space)
 "iN" = (
 /obj/effect/mob_spawn/human/lavaland_syndicate/rdirector{
@@ -168,28 +264,24 @@
 	},
 /turf/open/floor/carpet/blue,
 /area/space)
-"iW" = (
-/obj/structure/chair/wood/normal,
-/turf/open/floor/carpet,
+"jc" = (
+/turf/open/floor/engine,
 /area/space)
-"jv" = (
-/obj/structure/closet/firecloset,
-/turf/open/floor/iron/white,
-/area/space)
-"jP" = (
-/obj/structure/bed/pod,
-/obj/item/bedsheet/syndie,
-/turf/open/floor/wood,
-/area/space)
-"jV" = (
-/obj/effect/turf_decal/tile/purple/half/contrasted,
-/obj/effect/turf_decal/caution/red{
-	dir = 8
-	},
-/obj/effect/turf_decal/stripes/closeup{
+"jw" = (
+/obj/item/kirbyplants/random,
+/obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 1
 	},
-/turf/open/floor/iron/dark,
+/turf/open/floor/iron/white,
+/area/space)
+"jZ" = (
+/obj/structure/bed/maint,
+/obj/item/bedsheet/yellow,
+/turf/open/floor/wood,
+/area/space)
+"ka" = (
+/obj/structure/chair/stool/bar/directional/east,
+/turf/open/floor/iron/cafeteria_red,
 /area/space)
 "kH" = (
 /obj/effect/turf_decal/tile/dark_green/opposingcorners,
@@ -197,12 +289,6 @@
 	dir = 1
 	},
 /turf/open/floor/iron/white,
-/area/space)
-"kI" = (
-/obj/machinery/computer/operating{
-	dir = 1
-	},
-/turf/open/floor/iron/dark/textured,
 /area/space)
 "kP" = (
 /obj/machinery/rnd/production/protolathe,
@@ -214,6 +300,23 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
+/area/space)
+"lg" = (
+/obj/structure/table/reinforced,
+/obj/item/clothing/head/utility/chefhat,
+/obj/item/clothing/suit/apron/chef,
+/obj/item/book/manual/chef_recipes,
+/turf/open/floor/iron/cafeteria,
+/area/space)
+"ll" = (
+/obj/structure/table/reinforced,
+/obj/machinery/button/door{
+	id = "lavalandsyndi_xenoarch";
+	name = "Xenoarcheology Blast Door Control";
+	pixel_y = 5;
+	req_access_txt = "150"
+	},
+/turf/open/floor/iron/white,
 /area/space)
 "ln" = (
 /obj/machinery/nanite_programmer,
@@ -230,13 +333,7 @@
 /turf/open/floor/iron/white,
 /area/space)
 "lw" = (
-/obj/structure/closet/crate/science,
-/obj/item/xenoartifact,
-/obj/item/xenoartifact,
-/obj/item/xenoartifact,
-/obj/item/xenoartifact,
-/obj/item/xenoartifact,
-/turf/open/floor/engine,
+/turf/open/floor/iron,
 /area/space)
 "lx" = (
 /obj/machinery/computer/apc_control{
@@ -244,11 +341,17 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/space)
-"lD" = (
-/obj/effect/turf_decal/tile/dark_red/half/contrasted{
-	dir = 4
+"lC" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Cafeteria"
 	},
-/obj/effect/spawner/randomvend/snack,
+/turf/open/floor/iron/cafeteria,
+/area/space)
+"lK" = (
+/obj/machinery/door/airlock{
+	id_tag = "Toilet 2";
+	name = "Toilet Unit"
+	},
 /turf/open/floor/iron/dark,
 /area/space)
 "lL" = (
@@ -256,45 +359,62 @@
 /obj/item/food/grown/flower/poppy,
 /turf/open/floor/carpet/blue,
 /area/space)
-"lM" = (
-/obj/machinery/button/door{
-	id = "lavalandsyndi_research";
-	name = "Science Blast Door Control";
-	pixel_y = 5;
-	req_access_txt = "150"
-	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
+"lS" = (
+/obj/structure/table/reinforced,
+/obj/machinery/ecto_sniffer/syndicate,
+/obj/item/robot_module/saboteur,
+/obj/item/robot_module/saboteur,
+/obj/item/robot_module/saboteur,
+/obj/item/robot_module/syndicate_medical,
+/obj/item/robot_module/syndicate_medical,
+/turf/open/floor/iron/white,
 /area/space)
 "mx" = (
 /obj/effect/turf_decal/tile/dark_green/opposingcorners,
 /turf/open/floor/iron/white,
 /area/space)
-"mz" = (
-/obj/structure/table/wood,
-/obj/item/toy/cards/deck/cas/black,
-/obj/item/toy/cards/deck/cas,
-/turf/open/floor/carpet,
+"mE" = (
+/obj/machinery/vending/autodrobe/all_access,
+/turf/open/floor/iron/dark,
 /area/space)
 "mL" = (
 /obj/effect/turf_decal/tile/dark_red/half/contrasted,
 /turf/open/floor/iron/dark,
 /area/space)
+"mP" = (
+/obj/structure/chair/stool/bar,
+/turf/open/floor/iron/cafeteria,
+/area/space)
+"nb" = (
+/obj/machinery/door/airlock{
+	name = "Kitchen";
+	req_one_access_txt = "150";
+	req_access_txt = "150"
+	},
+/turf/open/floor/iron/cafeteria,
+/area/space)
 "nd" = (
-/obj/item/food/grown/flower/poppy,
-/turf/open/lava/smooth/lava_land_surface,
+/obj/structure/flora/rock/pile,
+/turf/open/floor/plating/asteroid/basalt,
 /area/space)
 "nf" = (
 /obj/structure/barricade/sandbags,
 /obj/item/ammo_casing/c9mm/hp,
 /turf/open/floor/plating/beach/sand,
 /area/space)
-"nm" = (
-/obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	id = "lavalandsyndi_xenoarch";
-	name = "Xenoarcheology Blast Door Control";
-	pixel_y = 5;
-	req_access_txt = "150"
+"nj" = (
+/obj/machinery/door/airlock{
+	id_tag = "Cabin4";
+	name = "Cabin 5"
+	},
+/turf/open/floor/wood,
+/area/space)
+"nC" = (
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/obj/machinery/door/poddoor/preopen{
+	id = "lavalandsyndi_research";
+	name = "R&D Blast Door"
 	},
 /turf/open/floor/iron/white,
 /area/space)
@@ -304,6 +424,30 @@
 	dir = 10
 	},
 /turf/open/floor/iron/white,
+/area/space)
+"oh" = (
+/obj/structure/sink/kitchen,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/space)
+"ox" = (
+/obj/structure/table/wood,
+/obj/item/toy/figure/syndie,
+/turf/open/floor/carpet/royalblack,
+/area/space)
+"oE" = (
+/obj/structure/closet/crate/science,
+/obj/item/xenoartifact,
+/obj/item/xenoartifact,
+/obj/item/xenoartifact,
+/obj/item/xenoartifact,
+/obj/item/xenoartifact,
+/turf/open/floor/engine,
+/area/space)
+"oK" = (
+/obj/effect/turf_decal/tile/yellow/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "oL" = (
 /obj/effect/turf_decal/tile/dark_green/opposingcorners,
@@ -333,8 +477,16 @@
 	},
 /turf/open/floor/iron/white,
 /area/space)
+"oV" = (
+/obj/machinery/icecream_vat,
+/turf/open/floor/iron/freezer,
+/area/space)
 "pi" = (
 /turf/open/water/air,
+/area/space)
+"pq" = (
+/obj/effect/turf_decal/caution,
+/turf/open/floor/iron/white,
 /area/space)
 "pz" = (
 /turf/open/floor/plating,
@@ -345,97 +497,29 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
-"pE" = (
-/obj/structure/chair/wood/normal{
-	dir = 8
+"pG" = (
+/obj/machinery/door/airlock/hatch{
+	req_one_access_txt = "150";
+	name = "Communications"
 	},
-/turf/open/floor/carpet,
+/turf/open/floor/iron/freezer,
 /area/space)
 "pO" = (
 /mob/living/simple_animal/hostile/retaliate/frog,
 /obj/item/clothing/head/costume/crown,
 /turf/open/floor/plating/beach/sand,
 /area/space)
-"pU" = (
-/obj/structure/table/reinforced,
-/obj/item/assembly/flash,
-/obj/item/assembly/flash,
-/obj/item/assembly/flash,
-/obj/item/assembly/flash,
-/obj/item/assembly/flash,
-/obj/item/assembly/flash,
-/obj/item/assembly/flash,
-/obj/item/storage/firstaid/tactical{
-	empty = 1
-	},
-/obj/item/storage/firstaid/tactical{
-	empty = 1
-	},
-/obj/item/storage/firstaid/tactical{
-	empty = 1
-	},
-/obj/item/storage/firstaid/tactical{
-	empty = 1
-	},
-/obj/item/healthanalyzer,
-/obj/item/healthanalyzer,
-/obj/item/healthanalyzer,
-/obj/item/healthanalyzer,
-/obj/item/assembly/prox_sensor{
-	pixel_x = 6;
-	pixel_y = 7
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = 6;
-	pixel_y = 7
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = 6;
-	pixel_y = 7
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = 6;
-	pixel_y = 7
-	},
-/obj/item/assembly/prox_sensor{
-	pixel_x = 6;
-	pixel_y = 7
-	},
-/obj/effect/turf_decal/tile/purple/half/contrasted{
-	dir = 8
-	},
-/obj/item/borg/upgrade/rename{
-	pixel_x = -1;
-	pixel_y = 8
-	},
-/obj/item/borg/upgrade/restart,
-/turf/open/floor/iron/white,
-/area/space)
-"qb" = (
-/obj/structure/chair/wood/normal{
-	dir = 1
-	},
-/turf/open/floor/carpet,
-/area/space)
-"qn" = (
-/obj/machinery/door/airlock{
-	id_tag = "Cabin2";
-	name = "Cabin 2"
-	},
-/turf/open/floor/wood,
+"qi" = (
+/obj/effect/turf_decal/tile/green/half/contrasted,
+/turf/open/floor/iron/dark,
 /area/space)
 "qo" = (
 /turf/open/floor/glass/plasma,
 /area/space)
-"qw" = (
+"qs" = (
 /obj/structure/table/reinforced,
-/obj/machinery/ecto_sniffer/syndicate,
-/obj/item/robot_module/saboteur,
-/obj/item/robot_module/saboteur,
-/obj/item/robot_module/saboteur,
-/obj/item/robot_module/syndicate_medical,
-/obj/item/robot_module/syndicate_medical,
-/obj/item/robot_module/syndicate_medical,
+/obj/item/analyzer,
+/obj/item/healthanalyzer,
 /turf/open/floor/iron/white,
 /area/space)
 "qE" = (
@@ -459,10 +543,6 @@
 /obj/effect/turf_decal/tile/purple/half/contrasted,
 /turf/open/floor/iron/dark,
 /area/space)
-"rl" = (
-/obj/structure/table/wood,
-/turf/open/floor/carpet/royalblue,
-/area/space)
 "rm" = (
 /obj/effect/turf_decal/tile/dark_green/opposingcorners,
 /obj/machinery/computer/pandemic,
@@ -472,8 +552,18 @@
 /obj/machinery/computer/crew/syndie,
 /turf/open/floor/carpet/red,
 /area/space)
+"rr" = (
+/obj/item/kirbyplants/random,
+/turf/open/floor/iron/cafeteria,
+/area/space)
 "rt" = (
 /obj/structure/table,
+/turf/open/floor/iron/white,
+/area/space)
+"rx" = (
+/obj/effect/turf_decal/tile/purple/half/contrasted{
+	dir = 8
+	},
 /turf/open/floor/iron/white,
 /area/space)
 "rH" = (
@@ -482,24 +572,33 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
-"rL" = (
-/obj/structure/curtain/directional{
-	color = "#ACD1E9";
-	icon_state = "bathroom-open";
-	icon_type = "bathroom"
+"rI" = (
+/obj/effect/turf_decal/tile/purple/half/contrasted{
+	dir = 4
 	},
-/obj/effect/turf_decal/edges/techfloor{
-	dir = 1
+/turf/open/floor/iron/white,
+/area/space)
+"rO" = (
+/obj/structure/closet/secure_closet/freezer/fridge{
+	req_access = null;
+	req_one_access_txt = "28;25;35"
 	},
-/turf/open/floor/iron/dark/textured,
+/turf/open/floor/iron/cafeteria,
 /area/space)
 "rU" = (
 /obj/structure/grille,
 /turf/open/lava/smooth/lava_land_surface,
 /area/space)
+"sx" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Bar"
+	},
+/turf/open/floor/iron/cafeteria_red,
+/area/space)
 "sX" = (
-/obj/structure/table/reinforced,
-/obj/item/assembly/signaler,
+/obj/effect/turf_decal/stripes{
+	dir = 4
+	},
 /turf/open/floor/iron/white,
 /area/space)
 "tr" = (
@@ -515,23 +614,15 @@
 /obj/machinery/modular_computer/console/buildable,
 /turf/open/floor/carpet/red,
 /area/space)
+"tG" = (
+/obj/machinery/door/window,
+/turf/open/floor/iron/cafeteria_red,
+/area/space)
 "tO" = (
 /obj/effect/turf_decal/tile/black/half/contrasted{
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/space)
-"tP" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/obj/machinery/door/poddoor/preopen{
-	id = "lavalandsyndi_researchrobo";
-	name = "R&D Blast Door"
-	},
-/turf/open/floor/iron/white,
-/area/space)
-"tY" = (
-/turf/closed/wall/r_wall/syndicate,
 /area/space)
 "tZ" = (
 /obj/structure/bed/double,
@@ -588,6 +679,19 @@
 /obj/effect/turf_decal/tile/purple/opposingcorners,
 /turf/open/floor/iron/white,
 /area/space)
+"vn" = (
+/obj/machinery/door/airlock{
+	id_tag = "Cabin1";
+	name = "Cabin 1"
+	},
+/turf/open/floor/wood,
+/area/space)
+"vs" = (
+/obj/structure/chair/wood/normal{
+	dir = 1
+	},
+/turf/open/floor/carpet,
+/area/space)
 "vu" = (
 /obj/effect/turf_decal/tile/dark_green/opposingcorners,
 /obj/effect/spawner/structure/window/hollow/reinforced/directional{
@@ -595,12 +699,28 @@
 	},
 /turf/open/floor/iron/white,
 /area/space)
+"vQ" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chem_dispenser/drinks/beer{
+	dir = 8
+	},
+/turf/open/floor/iron/cafeteria_red,
+/area/space)
 "vR" = (
 /obj/effect/turf_decal/tile/dark_green/opposingcorners,
 /obj/effect/spawner/structure/window/hollow/reinforced/directional{
 	dir = 6
 	},
 /turf/open/floor/iron/white,
+/area/space)
+"wk" = (
+/obj/structure/table/reinforced,
+/obj/item/radio/intercom{
+	freerange = 1;
+	name = "Syndicate Radio Intercom"
+	},
+/obj/item/paper/fluff/ruins/syndicomms,
+/turf/open/floor/iron/dark,
 /area/space)
 "wn" = (
 /obj/structure/grille,
@@ -614,22 +734,11 @@
 "wt" = (
 /turf/closed/indestructible/rock,
 /area/space)
-"wH" = (
-/obj/effect/turf_decal/tile/dark_red/half/contrasted{
-	dir = 4
-	},
-/obj/machinery/vending/cigarette/syndicate,
-/turf/open/floor/iron/dark,
-/area/space)
 "wO" = (
 /obj/effect/spawner/structure/window/hollow/reinforced/directional{
 	dir = 3
 	},
 /turf/open/floor/carpet/red,
-/area/space)
-"wR" = (
-/obj/structure/table/wood,
-/turf/open/floor/carpet/royalblack,
 /area/space)
 "wT" = (
 /obj/effect/turf_decal/tile/dark_red{
@@ -643,6 +752,16 @@
 	},
 /turf/open/floor/carpet/royalblue,
 /area/space)
+"wV" = (
+/obj/machinery/door/airlock/freezer{
+	req_one_access_txt = "150"
+	},
+/turf/open/floor/iron/cafeteria,
+/area/space)
+"xk" = (
+/obj/structure/sign/poster/contraband/kudzu,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/space)
 "xp" = (
 /obj/machinery/computer/communications/broken,
 /turf/open/floor/carpet/red,
@@ -653,7 +772,7 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
-"xS" = (
+"yg" = (
 /obj/machinery/door/airlock/hatch{
 	name = "Artifacts Lab";
 	req_access_txt = "150"
@@ -670,25 +789,33 @@
 	},
 /turf/open/floor/carpet/royalblue,
 /area/space)
-"yx" = (
-/obj/effect/turf_decal/tile/green/half/contrasted{
-	dir = 4
-	},
-/obj/machinery/vending/cola/space_up,
-/turf/open/floor/iron/dark,
-/area/space)
 "yB" = (
-/obj/effect/turf_decal/tile/purple/half/contrasted,
-/obj/effect/turf_decal/stripes/closeup{
-	dir = 6
-	},
-/turf/open/floor/iron/dark,
+/turf/open/floor/iron/cafeteria_red,
+/area/space)
+"yF" = (
+/obj/effect/decal/cleanable/blood/gibs/old,
+/turf/open/floor/iron/freezer,
+/area/space)
+"yO" = (
+/obj/machinery/griddle,
+/turf/open/floor/iron/cafeteria,
 /area/space)
 "yR" = (
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 8
 	},
 /turf/open/floor/iron/dark,
+/area/space)
+"zr" = (
+/obj/effect/turf_decal/tile/green/half/contrasted{
+	dir = 4
+	},
+/obj/machinery/vending/cola/space_up,
+/turf/open/floor/iron/dark,
+/area/space)
+"zy" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/iron/cafeteria,
 /area/space)
 "zA" = (
 /obj/machinery/computer/nanite_chamber_control{
@@ -699,19 +826,33 @@
 	},
 /turf/open/floor/iron/white,
 /area/space)
-"zF" = (
-/obj/machinery/door/airlock{
-	id_tag = "Cabin3";
-	name = "Cabin 3"
+"zX" = (
+/obj/machinery/computer/camera_advanced/syndie{
+	dir = 8
 	},
-/turf/open/floor/wood,
+/turf/open/floor/iron/dark,
 /area/space)
-"zV" = (
-/obj/machinery/door/airlock{
-	id_tag = "Cabin1";
-	name = "Cabin 1"
+"Ad" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Cafeteria"
 	},
-/turf/open/floor/wood,
+/turf/open/floor/iron/dark,
+/area/space)
+"Ah" = (
+/obj/item/chair/stool/bar,
+/obj/structure/chair/noose,
+/obj/effect/decal/remains/human,
+/turf/open/floor/iron,
+/area/space)
+"Am" = (
+/obj/machinery/door/window/brigdoor/northleft{
+	dir = 4
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "lavalandsyndi_xenoarcheology";
+	name = "R&D Blast Door"
+	},
+/turf/open/floor/iron/white,
 /area/space)
 "Ar" = (
 /obj/machinery/nanite_program_hub,
@@ -720,14 +861,23 @@
 	},
 /turf/open/floor/iron/white,
 /area/space)
-"As" = (
-/obj/structure/table/wood,
-/obj/item/storage/box/yatzy,
-/turf/open/floor/carpet,
+"Av" = (
+/obj/machinery/door/airlock{
+	name = "Janitors Closet"
+	},
+/turf/open/floor/iron,
+/area/space)
+"AK" = (
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/open/floor/iron/freezer,
 /area/space)
 "AN" = (
 /obj/machinery/computer/camera_advanced/syndie,
 /turf/open/floor/carpet/red,
+/area/space)
+"Ba" = (
+/obj/effect/turf_decal/delivery,
+/turf/open/floor/iron/white,
 /area/space)
 "Bg" = (
 /obj/effect/turf_decal/tile/purple/half/contrasted{
@@ -735,12 +885,20 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
-"Bo" = (
-/turf/open/floor/engine,
+"Bh" = (
+/obj/structure/kitchenspike,
+/turf/open/floor/iron/freezer,
 /area/space)
-"Bw" = (
-/obj/effect/turf_decal/caution,
+"Bn" = (
+/obj/machinery/recharge_station,
+/obj/effect/turf_decal/tile/purple/half/contrasted{
+	dir = 8
+	},
 /turf/open/floor/iron/white,
+/area/space)
+"BE" = (
+/obj/structure/sign/poster/contraband/free_key,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/space)
 "BF" = (
 /obj/machinery/computer/camera_advanced/syndie{
@@ -761,34 +919,47 @@
 /obj/effect/turf_decal/tile/purple/opposingcorners,
 /turf/open/floor/iron/white,
 /area/space)
+"BP" = (
+/obj/structure/sign/poster/contraband/syndiemoth,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/space)
 "BS" = (
 /obj/structure/chair/office{
 	dir = 8
 	},
 /turf/open/floor/wood,
 /area/space)
-"Cg" = (
-/obj/structure/sign/poster/contraband/energy_swords,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
+"BX" = (
+/obj/structure/bed/pod,
+/obj/item/bedsheet/syndie,
+/turf/open/floor/wood,
 /area/space)
-"CL" = (
-/obj/effect/decal/cleanable/insectguts,
-/obj/effect/decal/cleanable/leaper_sludge,
-/obj/structure/toilet{
-	dir = 4;
-	pixel_y = 2
+"Ch" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/cup/glass/mug,
+/turf/open/floor/carpet/red,
+/area/space)
+"Cx" = (
+/obj/structure/filingcabinet/security,
+/turf/open/floor/iron/dark,
+/area/space)
+"CB" = (
+/obj/effect/turf_decal/tile/purple/half/contrasted,
+/obj/effect/turf_decal/stripes/closeup{
+	dir = 6
 	},
 /turf/open/floor/iron/dark,
 /area/space)
-"CS" = (
-/obj/effect/spawner/structure/window/hollow/plasma/reinforced/directional{
-	dir = 4
+"CF" = (
+/obj/machinery/porta_turret/syndicate{
+	dir = 10
 	},
-/obj/machinery/door/poddoor/preopen{
-	id = "lavalandsyndi_xenoarcheology";
-	name = "R&D Blast Door"
-	},
-/turf/open/floor/iron/white,
+/turf/open/floor/plating/asteroid/basalt,
+/area/space)
+"CN" = (
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/turf/open/floor/iron/cafeteria_red,
 /area/space)
 "CY" = (
 /obj/machinery/door/airlock/science/glass{
@@ -797,15 +968,20 @@
 	},
 /turf/open/floor/iron/white,
 /area/space)
-"DA" = (
-/obj/item/kirbyplants/random,
-/turf/open/floor/iron/dark,
+"Di" = (
+/obj/structure/chair/wood/normal{
+	dir = 8
+	},
+/turf/open/floor/carpet,
 /area/space)
-"DD" = (
-/obj/structure/table/reinforced,
-/obj/item/analyzer,
-/obj/item/healthanalyzer,
-/turf/open/floor/iron/white,
+"Du" = (
+/obj/machinery/button/door{
+	id = "lavalandsyndi_research";
+	name = "Science Blast Door Control";
+	pixel_y = 5;
+	req_access_txt = "150"
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/space)
 "DF" = (
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
@@ -813,36 +989,22 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
+"DG" = (
+/turf/open/floor/carpet,
+/area/space)
 "Ed" = (
 /obj/effect/turf_decal/tile/dark_red{
 	dir = 4
 	},
 /turf/open/floor/iron/dark,
 /area/space)
-"Eg" = (
-/obj/structure/sign/poster/contraband/lusty_xenomorph,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
+"Et" = (
+/obj/item/kirbyplants/random,
+/turf/open/floor/iron/dark,
 /area/space)
-"Ei" = (
-/obj/machinery/door/window/brigdoor/northleft{
-	dir = 4
-	},
-/obj/machinery/door/poddoor/preopen{
-	id = "lavalandsyndi_xenoarcheology";
-	name = "R&D Blast Door"
-	},
-/turf/open/floor/iron/white,
-/area/space)
-"Eq" = (
-/obj/structure/mecha_wreckage/mauler,
-/turf/open/floor/iron/white,
-/area/space)
-"Ez" = (
-/obj/machinery/recharge_station,
-/obj/effect/turf_decal/tile/purple/half/contrasted{
-	dir = 8
-	},
-/turf/open/floor/iron/white,
+"EG" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/iron/cafeteria_red,
 /area/space)
 "EI" = (
 /turf/open/floor/carpet/red,
@@ -855,24 +1017,34 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/iron/dark,
 /area/space)
+"EP" = (
+/obj/structure/table/wood,
+/obj/item/storage/box/yatzy,
+/turf/open/floor/carpet,
+/area/space)
+"ER" = (
+/obj/effect/turf_decal/tile/dark_red/half/contrasted{
+	dir = 4
+	},
+/obj/effect/spawner/randomvend/snack,
+/turf/open/floor/iron/dark,
+/area/space)
 "EX" = (
 /turf/open/lava/smooth/lava_land_surface,
+/area/space)
+"Fo" = (
+/obj/structure/table/reinforced,
+/obj/effect/spawner/lootdrop/donkpockets,
+/obj/machinery/door/poddoor/shutters{
+	id = "kitchencounter";
+	name = "Kitchen Shutters"
+	},
+/turf/open/floor/iron/cafeteria,
 /area/space)
 "FD" = (
 /obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/plating/beach/sand,
-/area/space)
-"FG" = (
-/obj/structure/table/reinforced,
-/obj/item/multitool,
-/obj/item/storage/belt/utility,
-/turf/open/floor/iron/white,
-/area/space)
-"FI" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/backpack/duffelbag/syndie/surgery,
-/turf/open/floor/iron/dark/textured,
 /area/space)
 "FJ" = (
 /obj/item/toy/plush/lizard_plushie{
@@ -880,17 +1052,29 @@
 	},
 /turf/open/water/air,
 /area/space)
-"FU" = (
-/obj/machinery/vending/autodrobe/all_access,
-/turf/open/floor/iron/dark,
-/area/space)
-"Gc" = (
-/obj/machinery/modular_fabricator/exosuit_fab,
+"FK" = (
 /obj/effect/turf_decal/tile/purple/half/contrasted{
-	dir = 4
+	dir = 8
 	},
-/obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/item/kirbyplants/random,
 /turf/open/floor/iron/white,
+/area/space)
+"FU" = (
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/obj/machinery/door/poddoor/preopen{
+	id = "lavalandsyndi_researchrobo";
+	name = "R&D Blast Door"
+	},
+/turf/open/floor/iron/white,
+/area/space)
+"FV" = (
+/obj/structure/sign/poster/contraband/have_a_puff,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/space)
+"Ga" = (
+/obj/structure/sign/poster/contraband/syndicate_pistol,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/space)
 "Gm" = (
 /obj/item/kirbyplants/random,
@@ -904,11 +1088,10 @@
 /turf/open/floor/carpet/royalblue,
 /area/space)
 "GA" = (
-/obj/effect/turf_decal/tile/purple/half/contrasted{
-	dir = 8
+/obj/machinery/door/airlock/public/glass{
+	name = "Bar"
 	},
-/obj/item/kirbyplants/random,
-/turf/open/floor/iron/white,
+/turf/open/floor/iron/cafeteria,
 /area/space)
 "GF" = (
 /turf/open/floor/iron/dark,
@@ -921,12 +1104,11 @@
 "GR" = (
 /turf/open/floor/carpet/blue,
 /area/space)
-"HK" = (
-/obj/machinery/door/airlock{
-	id_tag = "Cabin4";
-	name = "Cabin 5"
-	},
-/turf/open/floor/wood,
+"Hv" = (
+/obj/structure/table/reinforced,
+/obj/item/gun/ballistic/automatic/c20r/toy,
+/obj/item/toy/sword,
+/turf/open/floor/iron/dark,
 /area/space)
 "HO" = (
 /obj/machinery/computer/secure_data/syndie,
@@ -945,9 +1127,13 @@
 /mob/living/simple_animal/hostile/bear/snow,
 /turf/open/floor/holofloor/snow/cold,
 /area/space)
-"IJ" = (
-/obj/structure/sign/poster/contraband/syndicate_pistol,
+"Ij" = (
+/obj/structure/sign/poster/contraband/energy_swords,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/space)
+"IG" = (
+/obj/structure/table/wood,
+/turf/open/floor/carpet/royalblue,
 /area/space)
 "IL" = (
 /obj/effect/turf_decal/tile/dark_green/opposingcorners,
@@ -957,15 +1143,28 @@
 "IS" = (
 /turf/open/floor/holofloor/snow/cold,
 /area/space)
+"Jh" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "lavalandsyndi_research";
+	name = "R&D Blast Door"
+	},
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/turf/open/floor/iron/dark,
+/area/space)
+"Jx" = (
+/obj/structure/table/reinforced,
+/obj/item/paper_bin,
+/turf/open/floor/iron/dark,
+/area/space)
 "JB" = (
 /obj/machinery/rnd/production/circuit_imprinter,
 /obj/effect/turf_decal/tile/purple/opposingcorners,
 /turf/open/floor/iron/white,
 /area/space)
-"JL" = (
-/obj/machinery/door/airlock{
-	id_tag = "Toilet 2";
-	name = "Toilet Unit"
+"JP" = (
+/obj/effect/turf_decal/tile/green/half/contrasted{
+	dir = 1
 	},
 /turf/open/floor/iron/dark,
 /area/space)
@@ -975,14 +1174,28 @@
 	},
 /turf/open/floor/plating/beach/sand,
 /area/space)
-"Kw" = (
-/obj/effect/decal/cleanable/greenglow,
-/obj/effect/decal/cleanable/insectguts,
+"JV" = (
+/obj/machinery/deepfryer,
+/turf/open/floor/iron/cafeteria,
+/area/space)
+"Kj" = (
+/obj/machinery/computer/operating{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/textured,
+/area/space)
+"Ko" = (
+/obj/effect/turf_decal/tile/dark_red/half/contrasted{
+	dir = 4
+	},
+/obj/machinery/vending/cigarette/syndicate,
 /turf/open/floor/iron/dark,
 /area/space)
 "Kx" = (
-/obj/structure/sign/poster/contraband/c20r,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/obj/structure/reagent_dispensers/watertank,
+/obj/item/reagent_containers/cup/bucket,
+/obj/item/mop,
+/turf/open/floor/iron,
 /area/space)
 "KE" = (
 /obj/structure/closet/gimmick,
@@ -992,26 +1205,26 @@
 /obj/item/ammo_box/magazine/pistolm9mm,
 /turf/open/floor/carpet/red,
 /area/space)
-"KK" = (
-/obj/effect/turf_decal/tile/purple/half/contrasted{
-	dir = 1
-	},
-/turf/open/floor/iron/white,
-/area/space)
-"KM" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "lavalandsyndi_research";
-	name = "R&D Blast Door"
-	},
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/turf/open/floor/iron/dark,
-/area/space)
 "KS" = (
 /obj/effect/spawner/structure/window/hollow/reinforced/directional{
 	dir = 3
 	},
 /turf/open/floor/carpet/blue,
+/area/space)
+"KT" = (
+/obj/machinery/modular_fabricator/exosuit_fab,
+/obj/effect/turf_decal/tile/purple/half/contrasted{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/turf/open/floor/iron/white,
+/area/space)
+"KY" = (
+/obj/structure/table,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/soap/syndie,
+/obj/item/grenade/chem_grenade/cleaner,
+/turf/open/floor/iron,
 /area/space)
 "La" = (
 /obj/machinery/button/door{
@@ -1022,22 +1235,27 @@
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/space)
+"Le" = (
+/obj/effect/decal/cleanable/insectguts,
+/obj/effect/decal/cleanable/leaper_sludge,
+/obj/structure/toilet{
+	dir = 4;
+	pixel_y = 2
+	},
+/turf/open/floor/iron/dark,
+/area/space)
 "Lg" = (
 /turf/open/floor/carpet/royalblack,
 /area/space)
-"Lw" = (
-/obj/effect/spawner/randomvend/snack,
-/turf/open/floor/iron/dark,
+"LP" = (
+/obj/effect/decal/cleanable/cobweb{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
 /area/space)
 "LS" = (
 /obj/effect/turf_decal/tile/black/opposingcorners,
 /turf/open/floor/iron/white,
-/area/space)
-"LU" = (
-/obj/structure/table/reinforced,
-/obj/item/gun/ballistic/automatic/c20r/toy,
-/obj/item/toy/sword,
-/turf/open/floor/iron/dark,
 /area/space)
 "Mi" = (
 /obj/effect/turf_decal/tile/dark_green/opposingcorners,
@@ -1048,6 +1266,21 @@
 /obj/item/clothing/gloves/color/latex,
 /turf/open/floor/iron/white,
 /area/space)
+"Ml" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Dormitory"
+	},
+/turf/open/floor/iron/dark,
+/area/space)
+"Mm" = (
+/obj/structure/closet/firecloset,
+/turf/open/floor/iron/white,
+/area/space)
+"Mo" = (
+/obj/structure/table/reinforced,
+/obj/item/toy/figure/bartender,
+/turf/open/floor/iron/cafeteria_red,
+/area/space)
 "Mt" = (
 /obj/structure/barricade/sandbags,
 /obj/item/gun/ballistic/automatic/c20r/toy,
@@ -1056,6 +1289,10 @@
 "Mx" = (
 /turf/open/floor/plating/beach/sand,
 /area/space)
+"ME" = (
+/obj/machinery/computer/camera_advanced/syndie,
+/turf/open/floor/iron/dark,
+/area/space)
 "MH" = (
 /obj/effect/turf_decal/tile/dark_green/opposingcorners,
 /obj/machinery/door/window{
@@ -1063,10 +1300,6 @@
 	dir = 4
 	},
 /turf/open/floor/iron/white,
-/area/space)
-"MX" = (
-/obj/structure/sign/poster/contraband/syndicate_recruitment,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/space)
 "Nf" = (
 /obj/structure/table/reinforced,
@@ -1095,11 +1328,65 @@
 	},
 /turf/open/floor/iron/white,
 /area/space)
-"Nt" = (
-/obj/effect/decal/cleanable/cobweb{
+"Nl" = (
+/obj/structure/table/reinforced,
+/obj/item/assembly/flash,
+/obj/item/assembly/flash,
+/obj/item/assembly/flash,
+/obj/item/assembly/flash,
+/obj/item/assembly/flash,
+/obj/item/assembly/flash,
+/obj/item/assembly/flash,
+/obj/item/storage/firstaid/tactical{
+	empty = 1
+	},
+/obj/item/storage/firstaid/tactical{
+	empty = 1
+	},
+/obj/item/storage/firstaid/tactical{
+	empty = 1
+	},
+/obj/item/storage/firstaid/tactical{
+	empty = 1
+	},
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/assembly/prox_sensor{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/item/assembly/prox_sensor{
+	pixel_x = 6;
+	pixel_y = 7
+	},
+/obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 8
 	},
 /turf/open/floor/iron/white,
+/area/space)
+"Nt" = (
+/obj/structure/chair/wood/normal,
+/turf/open/floor/carpet,
+/area/space)
+"Ny" = (
+/obj/machinery/vending/games{
+	pixel_y = -1
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "NF" = (
 /obj/structure/cable/yellow{
@@ -1109,21 +1396,23 @@
 /obj/structure/window/plastitanium,
 /turf/open/floor/plating,
 /area/space)
+"NG" = (
+/obj/machinery/oven,
+/turf/open/floor/iron/cafeteria,
+/area/space)
 "NS" = (
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 1
 	},
 /turf/open/floor/iron/dark,
 /area/space)
-"Of" = (
-/obj/effect/turf_decal/delivery,
-/turf/open/floor/iron/white,
+"Oc" = (
+/obj/machinery/vending/cigarette/syndicate,
+/turf/open/floor/iron/cafeteria,
 /area/space)
-"Op" = (
-/obj/effect/turf_decal/tile/purple/half/contrasted{
-	dir = 4
-	},
-/turf/open/floor/iron/white,
+"Oe" = (
+/obj/structure/sign/poster/contraband/syndicate_recruitment,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/space)
 "Ov" = (
 /obj/structure/table/reinforced,
@@ -1139,10 +1428,7 @@
 /turf/open/floor/iron/dark,
 /area/space)
 "Ow" = (
-/obj/machinery/fax/centcom{
-	fax_name = "Suspicious Reseach Facility";
-	name = "Syndicate Fax Machine"
-	},
+/obj/effect/turf_decal/tile/yellow/half/contrasted,
 /turf/open/floor/iron/dark,
 /area/space)
 "OE" = (
@@ -1155,37 +1441,70 @@
 "OU" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/space)
+"OW" = (
+/obj/structure/grille,
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/turf/open/floor/iron/cafeteria_red,
+/area/space)
+"OZ" = (
+/obj/structure/chair/office{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
+/area/space)
+"Pj" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/iron/freezer,
+/area/space)
+"Po" = (
+/turf/open/floor/iron/freezer,
+/area/space)
+"Pr" = (
+/obj/effect/spawner/structure/window/hollow/plasma/reinforced/directional{
+	dir = 14
+	},
+/turf/open/floor/iron/white,
+/area/space)
 "Pu" = (
 /obj/item/tank/jetpack/oxygen/harness,
 /turf/open/floor/fakespace,
-/area/space)
-"PB" = (
-/obj/structure/sign/poster/contraband/syndiemoth,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/space)
 "PI" = (
 /turf/open/floor/fakespace,
 /area/space)
 "PM" = (
-/obj/structure/grille,
-/obj/structure/window/plastitanium,
-/obj/machinery/door/poddoor/preopen{
-	id = "lavalandsyndi_research";
-	name = "R&D Blast Door"
-	},
-/turf/open/floor/iron/white,
+/turf/closed/wall/r_wall/syndicate,
 /area/space)
-"PR" = (
-/obj/structure/sign/poster/contraband/tools,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
+"PS" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/poddoor/shutters{
+	id = "kitchencounter";
+	name = "Kitchen Shutters"
+	},
+/obj/machinery/button/door{
+	id = "kitchencounter";
+	name = "Kitchen Counter Shutters";
+	pixel_x = -24;
+	pixel_y = -24;
+	req_access_txt = "28"
+	},
+/turf/open/floor/iron/cafeteria,
 /area/space)
 "Qd" = (
 /turf/open/floor/wood,
 /area/space)
-"Qh" = (
-/obj/structure/bed/maint,
-/obj/item/bedsheet/yellow,
-/turf/open/floor/wood,
+"Qi" = (
+/obj/structure/table/wood,
+/obj/item/toy/cards/deck/syndicate,
+/turf/open/floor/carpet,
+/area/space)
+"Qo" = (
+/obj/machinery/mech_bay_recharge_port,
+/obj/effect/decal/cleanable/cobweb{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
 /area/space)
 "QK" = (
 /obj/structure/flora/tree/dead,
@@ -1214,29 +1533,63 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
-"Rk" = (
-/obj/effect/turf_decal/tile/purple/half/contrasted{
-	dir = 8
-	},
-/turf/open/floor/iron/white,
-/area/space)
 "RD" = (
 /obj/machinery/modular_computer/console/preset/engineering,
 /turf/open/floor/carpet/red,
 /area/space)
-"RI" = (
-/obj/effect/spawner/structure/window/hollow/plasma/reinforced/directional{
-	dir = 14
+"RQ" = (
+/obj/structure/table/reinforced,
+/obj/structure/desk_bell,
+/obj/machinery/door/poddoor/shutters{
+	id = "kitchencounter";
+	name = "Kitchen Shutters"
 	},
-/turf/open/floor/iron/white,
+/turf/open/floor/iron/cafeteria,
+/area/space)
+"Sa" = (
+/obj/effect/decal/cleanable/xenoblood,
+/turf/open/floor/iron/freezer,
+/area/space)
+"Se" = (
+/obj/machinery/door/airlock/hatch{
+	req_one_access_txt = "150";
+	name = "Communications"
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "Sg" = (
-/obj/item/food/fishmeat/carp,
+/obj/item/food/fishmeat/carp{
+	name = "Was-A-Lizard"
+	},
 /turf/open/floor/holofloor/snow/cold,
 /area/space)
 "Sl" = (
-/obj/structure/table/optable,
-/turf/open/floor/iron/dark/textured,
+/turf/open/floor/iron/cafeteria,
+/area/space)
+"Sq" = (
+/obj/structure/table/reinforced,
+/obj/structure/desk_bell,
+/turf/open/floor/iron/cafeteria_red,
+/area/space)
+"Sy" = (
+/obj/effect/spawner/structure/window/hollow/plasma/reinforced/directional{
+	dir = 4
+	},
+/obj/machinery/door/poddoor/preopen{
+	id = "lavalandsyndi_xenoarcheology";
+	name = "R&D Blast Door"
+	},
+/turf/open/floor/iron/white,
+/area/space)
+"SE" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/iron/dark,
+/area/space)
+"SK" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/fancy/cigarettes/cigars,
+/obj/item/lighter,
+/turf/open/floor/carpet/red,
 /area/space)
 "SO" = (
 /obj/structure/chair/office{
@@ -1244,8 +1597,21 @@
 	},
 /turf/open/floor/wood,
 /area/space)
-"SW" = (
+"SU" = (
+/obj/structure/mecha_wreckage/mauler,
+/turf/open/floor/iron/white,
+/area/space)
+"SZ" = (
+/obj/machinery/processor,
+/turf/open/floor/iron/cafeteria,
+/area/space)
+"Tj" = (
 /turf/open/floor/plating/asteroid/basalt,
+/area/space)
+"Tn" = (
+/obj/structure/table/reinforced,
+/obj/item/paper_bin,
+/turf/open/floor/carpet/red,
 /area/space)
 "Tq" = (
 /obj/machinery/nanite_chamber,
@@ -1267,31 +1633,42 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
-"TZ" = (
-/obj/machinery/door/poddoor/preopen{
-	id = "lavalandsyndi_xenoarcheology";
-	name = "R&D Blast Door"
+"Tx" = (
+/obj/structure/chair/wood/normal{
+	dir = 4
 	},
-/turf/open/floor/iron/white,
+/turf/open/floor/carpet,
+/area/space)
+"TC" = (
+/obj/item/food/grown/flower/poppy,
+/turf/open/floor/plating/asteroid/basalt,
+/area/space)
+"Uh" = (
+/obj/structure/sign/poster/contraband/tools,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/space)
+"UD" = (
+/obj/machinery/button/door{
+	id = "lavalandsyndi_xenoarch";
+	name = "Xenoarcheology Blast Door Control";
+	pixel_y = 5;
+	req_access_txt = "150"
+	},
+/turf/closed/wall/r_wall/syndicate,
 /area/space)
 "UE" = (
 /obj/effect/decal/cleanable/xenoblood/xgibs/limb,
 /obj/item/toy/toy_xeno,
 /turf/open/floor/plating/beach/sand,
 /area/space)
-"UM" = (
-/obj/machinery/vending/toyliberationstation,
-/turf/open/floor/iron/dark,
-/area/space)
-"UZ" = (
-/obj/structure/closet/radiation,
-/obj/effect/decal/cleanable/cobweb{
-	dir = 8
-	},
-/turf/open/floor/iron/white,
-/area/space)
 "Vp" = (
 /turf/open/floor/carpet/royalblue,
+/area/space)
+"Vw" = (
+/obj/machinery/porta_turret/syndicate{
+	dir = 10
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/space)
 "VK" = (
 /obj/structure/table/reinforced,
@@ -1317,37 +1694,88 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
-"Wz" = (
-/turf/open/floor/carpet,
+"Wx" = (
+/obj/structure/closet/radiation,
+/obj/effect/decal/cleanable/cobweb{
+	dir = 8
+	},
+/turf/open/floor/iron/white,
+/area/space)
+"WC" = (
+/obj/structure/table/reinforced,
+/obj/item/knife/kitchen,
+/obj/item/kitchen/rollingpin,
+/obj/machinery/reagentgrinder{
+	pixel_y = 5
+	},
+/obj/item/reagent_containers/condiment/enzyme,
+/turf/open/floor/iron/cafeteria,
+/area/space)
+"WM" = (
+/obj/effect/turf_decal/tile/purple/half/contrasted,
+/obj/effect/turf_decal/caution/red{
+	dir = 8
+	},
+/obj/effect/turf_decal/stripes/closeup{
+	dir = 1
+	},
+/turf/open/floor/iron/dark,
 /area/space)
 "WU" = (
 /obj/item/toy/plush/carpplushie,
 /turf/open/floor/fakespace,
+/area/space)
+"Xa" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/poddoor/shutters{
+	id = "kitchencounter";
+	name = "Kitchen Shutters"
+	},
+/turf/open/floor/iron/cafeteria,
+/area/space)
+"Xb" = (
+/obj/structure/sign/poster/contraband/lusty_xenomorph,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/space)
 "Xs" = (
 /obj/item/ammo_casing/c9mm/hp,
 /obj/item/bedsheet/patriot,
 /turf/open/floor/plating/beach/sand,
 /area/space)
-"Xw" = (
-/obj/machinery/button/door{
-	id = "lavalandsyndi_xenoarch";
-	name = "Xenoarcheology Blast Door Control";
-	pixel_y = 5;
-	req_access_txt = "150"
-	},
-/turf/closed/wall/r_wall/syndicate,
+"Xy" = (
+/obj/structure/janitorialcart,
+/turf/open/floor/iron,
 /area/space)
 "XA" = (
 /turf/open/floor/iron/white,
 /area/space)
-"XY" = (
-/obj/effect/turf_decal/tile/purple/half/contrasted,
-/turf/open/floor/iron/white,
+"XK" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/iron,
 /area/space)
-"Ym" = (
-/obj/structure/sign/poster/contraband/free_key,
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
+"XO" = (
+/obj/machinery/computer/message_monitor{
+	dir = 8
+	},
+/obj/item/paper/monitorkey,
+/turf/open/floor/iron/dark,
+/area/space)
+"XQ" = (
+/obj/machinery/door/airlock{
+	id_tag = "Cabin3";
+	name = "Cabin 3"
+	},
+/turf/open/floor/wood,
+/area/space)
+"Yf" = (
+/obj/structure/table/optable,
+/turf/open/floor/iron/dark/textured,
+/area/space)
+"YE" = (
+/obj/effect/turf_decal/tile/purple/half/contrasted{
+	dir = 1
+	},
+/turf/open/floor/iron/white,
 /area/space)
 "YF" = (
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
@@ -1355,11 +1783,18 @@
 	},
 /turf/open/floor/iron/dark,
 /area/space)
-"YH" = (
-/obj/machinery/door/airlock/public/glass{
-	name = "Dormitory"
-	},
-/turf/open/floor/iron/dark,
+"YN" = (
+/obj/machinery/vending/boozeomat/syndicate_access,
+/turf/open/floor/iron/cafeteria_red,
+/area/space)
+"YQ" = (
+/obj/structure/window/plastitanium,
+/obj/structure/grille,
+/turf/open/floor/iron/cafeteria_red,
+/area/space)
+"Zf" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/carpet/red,
 /area/space)
 "Zg" = (
 /obj/machinery/computer/nanite_cloud_controller,
@@ -1367,6 +1802,12 @@
 	dir = 6
 	},
 /turf/open/floor/iron/white,
+/area/space)
+"ZJ" = (
+/obj/structure/chair/fancy/brass{
+	dir = 1
+	},
+/turf/open/floor/carpet/red,
 /area/space)
 
 (1,1,1) = {"
@@ -3034,8 +3475,8 @@ EX
 EX
 EX
 EX
-EX
-EX
+Tj
+nd
 EX
 EX
 EX
@@ -3131,14 +3572,14 @@ EX
 EX
 EX
 EX
-PM
-PM
-PM
-PM
-PM
-PM
-EX
-EX
+nC
+nC
+nC
+nC
+nC
+nC
+Tj
+ga
 EX
 EX
 EX
@@ -3232,20 +3673,20 @@ EX
 EX
 EX
 EX
-PM
-PM
+nC
+nC
 bz
 rt
 rt
 XA
 XA
-PM
+nC
 OU
 QT
 QT
 QT
 OU
-OU
+Vw
 OU
 OU
 QT
@@ -3333,8 +3774,8 @@ EX
 EX
 EX
 EX
-PM
-PM
+nC
+nC
 qo
 qo
 uG
@@ -3434,9 +3875,9 @@ EX
 EX
 EX
 EX
-PM
-PM
-Nt
+nC
+nC
+LP
 qo
 qo
 qo
@@ -3444,7 +3885,7 @@ qo
 qo
 XA
 XA
-gJ
+xk
 Bg
 GF
 GF
@@ -3536,7 +3977,7 @@ EX
 EX
 EX
 EX
-PM
+nC
 XA
 XA
 qo
@@ -3557,9 +3998,9 @@ rh
 rh
 rh
 rh
-eg
-jV
-yB
+dN
+WM
+CB
 rh
 rh
 EX
@@ -3638,7 +4079,7 @@ EX
 EX
 EX
 EX
-OU
+Vw
 Nf
 zA
 Tq
@@ -3654,17 +4095,17 @@ GF
 yR
 OU
 OU
-tP
+FU
 OU
-tY
-tY
-tY
-tY
-xS
-tY
-tY
-tY
-tY
+PM
+PM
+PM
+PM
+yg
+PM
+PM
+PM
+PM
 EX
 EX
 EX
@@ -3750,23 +4191,23 @@ XA
 XA
 XA
 XA
-lM
+Du
 Bg
 GF
 yR
 OU
-eK
-Eq
-Rk
-tY
-UZ
+Qo
+SU
+rx
+PM
+Wx
 XA
 XA
 XA
 Gm
 XA
 XA
-tY
+PM
 EX
 EX
 EX
@@ -3842,33 +4283,33 @@ EX
 EX
 EX
 EX
-PM
+nC
 Zg
 Ar
 ln
 tO
-XY
-XY
-XY
-XY
-XY
+eo
+eo
+eo
+eo
+eo
 CY
 Bg
 GF
 yR
 OU
-Of
+Ba
 XA
-Ez
-tY
-jv
-XA
-XA
+Bn
+PM
+Mm
 XA
 XA
 XA
 XA
-tY
+XA
+XA
+PM
 EX
 EX
 EX
@@ -3944,7 +4385,7 @@ EX
 EX
 EX
 EX
-PM
+nC
 lo
 lo
 lo
@@ -3954,23 +4395,23 @@ bI
 bI
 bI
 bI
-PM
+nC
 Bg
 GF
 yR
 CY
-Op
+rI
 XA
-Rk
-tY
-DD
-XA
-XA
+rx
+PM
+qs
 XA
 XA
-Bw
 XA
-tY
+XA
+pq
+XA
+PM
 EX
 EX
 EX
@@ -4046,7 +4487,7 @@ EX
 EX
 EX
 EX
-PM
+nC
 IL
 mx
 mx
@@ -4061,18 +4502,18 @@ Bg
 GF
 yR
 uC
-Op
+rI
 XA
-Rk
-iv
+rx
+gT
+fC
+ei
+ll
 sX
-FG
-nm
-aE
-aE
-aE
-aE
-tY
+sX
+sX
+sX
+PM
 EX
 EX
 EX
@@ -4148,7 +4589,7 @@ EX
 EX
 EX
 EX
-PM
+nC
 rm
 kH
 mx
@@ -4162,19 +4603,19 @@ OU
 Bg
 GF
 yR
-tP
-Op
+FU
+rI
 XA
-GA
-Xw
-tY
-tY
-tY
-TZ
-CS
-CS
-Ei
-tY
+FK
+UD
+PM
+PM
+PM
+ce
+Sy
+Sy
+Am
+PM
 EX
 EX
 EX
@@ -4250,7 +4691,7 @@ EX
 EX
 EX
 EX
-PM
+nC
 oL
 mx
 Mi
@@ -4265,18 +4706,18 @@ Bg
 GF
 yR
 OU
-Op
+rI
 XA
-Rk
-rL
+rx
+iM
 tr
-kI
-tY
-RI
-Bo
-Bo
-Bo
-tY
+Kj
+PM
+Pr
+jc
+jc
+jc
+PM
 EX
 EX
 EX
@@ -4341,17 +4782,17 @@ EX
 EX
 EX
 EX
-OU
-OU
-OU
-OU
-OU
-OU
 EX
 EX
 EX
 EX
-SW
+EX
+EX
+EX
+EX
+EX
+EX
+Tj
 OU
 vu
 vu
@@ -4362,23 +4803,23 @@ bI
 bI
 bI
 bI
-bL
+FV
 Bg
 GF
 yR
 OU
-Op
+rI
 XA
-Rk
-rL
+rx
+iM
 tr
-Sl
-tY
-RI
-Bo
-Bo
-Bo
-tY
+Yf
+PM
+Pr
+jc
+jc
+jc
+PM
 EX
 EX
 EX
@@ -4442,51 +4883,51 @@ EX
 EX
 EX
 EX
-OU
-OU
-GF
-GF
-GF
-GF
-OU
-OU
 EX
 EX
 EX
-SW
+EX
+EX
+EX
+EX
+EX
+EX
+EX
+EX
+Tj
 OU
 XA
 XA
 XA
 XA
-KK
-KK
-KK
-KK
-ek
+YE
+YE
+YE
+YE
+jw
 OU
 Bg
 GF
 yR
 OU
-Gc
-qw
-pU
-rL
+KT
+lS
+Nl
+iM
 tr
-FI
-tY
-RI
-lw
-Bo
-Bo
-tY
-EX
-EX
-EX
-EX
-EX
-EX
+ib
+PM
+Pr
+oE
+jc
+jc
+PM
+GF
+GF
+GF
+GF
+GF
+GF
 EX
 EX
 EX
@@ -4544,14 +4985,14 @@ EX
 EX
 EX
 EX
-OU
-GF
-GF
-GF
-GF
-GF
-GF
-OU
+EX
+EX
+EX
+EX
+EX
+EX
+EX
+EX
 EX
 EX
 EX
@@ -4577,18 +5018,18 @@ OU
 OU
 OU
 OU
-tY
-tY
-tY
-tY
-tY
-tY
-EX
-EX
-EX
-EX
-EX
-EX
+PM
+PM
+PM
+PM
+PM
+PM
+GF
+GF
+GF
+GF
+GF
+GF
 EX
 EX
 EX
@@ -4646,14 +5087,14 @@ EX
 EX
 EX
 EX
-OU
-GF
-GF
-GF
-GF
-GF
-GF
-OU
+EX
+EX
+EX
+EX
+EX
+EX
+EX
+EX
 EX
 EX
 EX
@@ -4677,20 +5118,20 @@ Mx
 BH
 Xs
 OU
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+XK
+lw
+lw
+OU
+GF
+GF
+dQ
+OU
+GF
+GF
+GF
+GF
+GF
+GF
 EX
 EX
 EX
@@ -4748,22 +5189,22 @@ EX
 EX
 EX
 EX
+Vw
 OU
-GF
-GF
-GF
-GF
-GF
-GF
+OU
+OU
+OU
 OU
 EX
 EX
 EX
-PB
+EX
+EX
+BP
 GR
 GR
 KS
-rl
+IG
 Vp
 Vp
 OU
@@ -4779,20 +5220,20 @@ JU
 Mt
 nf
 OU
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+lw
+Ah
+lw
+OU
+GF
+wk
+Jx
+OU
+GF
+GF
+GF
+GF
+GF
+GF
 EX
 EX
 EX
@@ -4850,22 +5291,22 @@ EX
 EX
 EX
 EX
-iI
-GF
-GF
-GF
+OU
+SE
 GF
 GF
 GF
 OU
-SW
-nd
+OU
+OU
+Tj
+EX
 EX
 OU
 lL
 GR
 KS
-rl
+IG
 Vp
 Vp
 OU
@@ -4881,20 +5322,20 @@ Mx
 Ib
 Mx
 OU
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+lw
+lw
+KY
+OU
+GF
+GF
+fq
+OU
+GF
+GF
+GF
+GF
+GF
+GF
 EX
 EX
 EX
@@ -4953,14 +5394,14 @@ EX
 EX
 EX
 iI
-EI
+SK
 GF
 GF
 GF
 GF
 GF
 OU
-SW
+TC
 EX
 EX
 OU
@@ -4970,7 +5411,7 @@ GR
 Qd
 Qd
 Qd
-lM
+Du
 wt
 WU
 PI
@@ -4983,20 +5424,20 @@ Mx
 UE
 Ib
 OU
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+lw
+lw
+lw
+OU
+GF
+zX
+XO
+OU
+GF
+GF
+GF
+GF
+GF
+GF
 EX
 EX
 EX
@@ -5058,12 +5499,12 @@ iI
 rp
 EI
 GF
-GF
-GF
+SE
+SE
 GF
 OU
-SW
-SW
+Tj
+Tj
 EX
 OU
 fY
@@ -5085,20 +5526,20 @@ Mx
 ee
 Mx
 OU
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+lw
+Xy
+Kx
+OU
+GF
+GF
+Cx
+OU
+GF
+GF
+GF
+GF
+GF
+GF
 EX
 EX
 EX
@@ -5160,8 +5601,8 @@ iI
 AN
 EI
 EI
-GF
-GF
+ME
+OZ
 GF
 OU
 iI
@@ -5172,14 +5613,14 @@ OU
 OU
 fm
 wn
-KM
+Jh
 Ov
-Kx
+gD
 OU
 OU
 OU
 OU
-wH
+Ko
 GF
 YF
 OU
@@ -5187,20 +5628,20 @@ OU
 OU
 OU
 OU
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+Av
+OU
+OU
+OU
+Se
+HS
+HS
+OU
+GF
+GF
+GF
+GF
+GF
+GF
 EX
 EX
 EX
@@ -5260,10 +5701,10 @@ EX
 EX
 iI
 xp
+Zf
 EI
-EI
-EI
-EI
+Ch
+Zf
 EI
 HS
 EL
@@ -5289,20 +5730,20 @@ DF
 DF
 DF
 DF
-GF
-GF
-GF
-GF
-GF
-GF
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+JP
+JP
+JP
+JP
+JP
+oK
+oK
+oK
+oK
+oK
+oK
+oK
+oK
+oK
 EX
 EX
 EX
@@ -5362,7 +5803,7 @@ EX
 EX
 iI
 HO
-EI
+ZJ
 EI
 EI
 EI
@@ -5397,14 +5838,14 @@ GF
 GF
 GF
 GF
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+GF
+GF
+GF
+GF
+GF
+GF
+GF
+GF
 EX
 EX
 EX
@@ -5464,10 +5905,10 @@ EX
 EX
 iI
 aO
+Tn
 EI
-EI
-EI
-EI
+Zf
+Zf
 EI
 HS
 gZ
@@ -5493,20 +5934,20 @@ bs
 mL
 mL
 mL
-GF
-GF
-GF
-GF
-GF
-GF
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+qi
+qi
+qi
+qi
+qi
+Ow
+Ow
+Ow
+Ow
+Ow
+Ow
+Ow
+Ow
+Ow
 EX
 EX
 EX
@@ -5568,8 +6009,8 @@ iI
 tC
 EI
 EI
-GF
-GF
+ME
+OZ
 GF
 OU
 iI
@@ -5584,10 +6025,10 @@ Rj
 Tt
 OU
 OU
-cI
+bG
 OU
 OU
-lD
+ER
 GF
 YF
 OU
@@ -5595,14 +6036,14 @@ OU
 OU
 OU
 OU
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+OU
+OU
+CN
+sx
+sx
+CN
+CN
+OU
 EX
 EX
 EX
@@ -5670,13 +6111,13 @@ iI
 RD
 EI
 GF
-GF
-GF
+cp
+SE
 GF
 OU
 EX
-SW
-SW
+nd
+Tj
 OU
 fY
 Qd
@@ -5697,14 +6138,14 @@ IS
 IS
 IS
 OU
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+yB
+yB
+yB
+yB
+yB
+yB
+yB
+OU
 EX
 EX
 EX
@@ -5769,16 +6210,16 @@ EX
 EX
 EX
 iI
-EI
+eN
 GF
-Ow
+GF
 GF
 GF
 GF
 OU
 EX
 EX
-SW
+Tj
 OU
 EI
 EI
@@ -5799,14 +6240,14 @@ IS
 Sg
 IS
 OU
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+ka
+ka
+ka
+ka
+ka
+ka
+yB
+OU
 EX
 EX
 EX
@@ -5870,13 +6311,13 @@ EX
 EX
 EX
 EX
-iI
+OU
+bV
 GF
 GF
 GF
-GF
-GF
-GF
+OU
+OU
 OU
 EX
 EX
@@ -5887,7 +6328,7 @@ EI
 wO
 Lg
 Lg
-wR
+fi
 OU
 pi
 pi
@@ -5901,14 +6342,14 @@ IS
 Ig
 IS
 OU
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+EG
+Mo
+Sq
+EG
+EG
+EG
+yB
+OU
 EX
 EX
 EX
@@ -5972,24 +6413,24 @@ EX
 EX
 EX
 EX
+Vw
 OU
-GF
-GF
-GF
-GF
-GF
-GF
+OU
+OU
+OU
 OU
 EX
 EX
 EX
-IJ
+EX
+EX
+Ga
 EI
 EI
 wO
 Lg
 lc
-wR
+ox
 OU
 Mx
 pi
@@ -6003,14 +6444,14 @@ IS
 QK
 IS
 OU
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+yB
+yB
+yB
+yB
+yB
+EG
+yB
+OU
 EX
 EX
 EX
@@ -6074,14 +6515,14 @@ EX
 EX
 EX
 EX
-OU
-GF
-GF
-GF
-GF
-GF
-GF
-OU
+EX
+EX
+EX
+EX
+EX
+EX
+EX
+EX
 EX
 EX
 EX
@@ -6105,14 +6546,14 @@ IS
 IS
 IS
 OU
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+bT
+vQ
+yB
+YN
+yB
+tG
+yB
+OU
 EX
 EX
 EX
@@ -6176,14 +6617,14 @@ EX
 EX
 EX
 EX
-OU
-GF
-GF
-GF
-GF
-GF
-GF
-OU
+EX
+EX
+EX
+EX
+EX
+EX
+EX
+EX
 EX
 EX
 EX
@@ -6207,14 +6648,14 @@ OU
 OU
 OU
 OU
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+OU
+OU
+nb
+OU
+OU
+OU
+OU
+OU
 EX
 EX
 EX
@@ -6278,49 +6719,49 @@ EX
 EX
 EX
 EX
-OU
-OU
-GF
-GF
-GF
-GF
-OU
-OU
 EX
 EX
 EX
+EX
+EX
+EX
+EX
+EX
+EX
+EX
+EX
 OU
 Qd
 Qd
-Eg
+Xb
 Qd
 Qd
-PR
+Uh
 Qd
 Qd
 OU
-CL
+Le
 OU
 pC
 GF
 Wl
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+CN
+Sl
+Sl
+Sl
+mP
+PS
+Sl
+Sl
+Sl
+Sl
+Sl
+Sl
+OU
+OU
+OU
+OU
+OU
 EX
 EX
 EX
@@ -6381,48 +6822,48 @@ EX
 EX
 EX
 EX
-OU
-OU
-OU
-OU
-OU
-OU
+EX
+EX
+EX
+EX
+EX
+EX
 EX
 EX
 EX
 EX
 OU
 Qd
-jP
+BX
 OU
 Qd
-jP
+BX
 OU
 Qd
-Qh
+jZ
 OU
-Kw
+dx
 OU
 pC
 GF
 Wl
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+CN
+Sl
+Sl
+Sl
+mP
+Xa
+Sl
+yO
+Sl
+JV
+Sl
+ca
+OU
+Po
+Po
+Po
+OU
 EX
 EX
 EX
@@ -6494,37 +6935,37 @@ EX
 EX
 EX
 OU
-zF
+XQ
 OU
 OU
-qn
+ho
 OU
 OU
-zV
+vn
 OU
 OU
-JL
-MX
+lK
+Oe
 pC
 GF
 Wl
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+CN
+rr
+Sl
+Sl
+mP
+RQ
+Sl
+NG
+Sl
+cB
+Sl
+rO
+OU
+Po
+yF
+AK
+OU
 EX
 EX
 EX
@@ -6601,7 +7042,7 @@ GF
 GF
 GF
 GF
-DA
+Et
 GF
 GF
 GF
@@ -6610,23 +7051,23 @@ HS
 pC
 GF
 Wl
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+GA
+Sl
+Sl
+Sl
+mP
+Fo
+Sl
+SZ
+Sl
+WC
+Sl
+Sl
+OU
+Po
+Po
+eg
+OU
 EX
 EX
 EX
@@ -6698,7 +7139,7 @@ EX
 EX
 EX
 OU
-HK
+nj
 OU
 OU
 GF
@@ -6712,23 +7153,23 @@ HS
 pC
 GF
 Wl
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+lC
+Sl
+Sl
+Sl
+mP
+Xa
+Sl
+lg
+Sl
+fL
+Sl
+Sl
+wV
+Po
+Pj
+Bh
+OU
 EX
 EX
 EX
@@ -6798,39 +7239,39 @@ EX
 EX
 EX
 EX
-SW
+Tj
 OU
 Qd
 Qd
 OU
 GF
 GF
-Wz
-hG
-Wz
+DG
+Tx
+DG
 GF
 GF
 HS
-yx
+zr
 GF
 Wl
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+CN
+rr
+Sl
+Sl
+mP
+Xa
+Sl
+zy
+Sl
+zy
+Sl
+Sl
+oh
+Po
+Po
+Bh
+OU
 EX
 EX
 EX
@@ -6900,39 +7341,39 @@ EX
 EX
 EX
 EX
-SW
+Tj
 OU
 Qd
-jP
+BX
 OU
-DA
+Et
 GF
-iW
-As
-qb
+Nt
+EP
+vs
 GF
 GF
-YH
+Ad
 pC
 GF
 Wl
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+YQ
+Sl
+Sl
+Sl
+Sl
+oh
+Sl
+Sl
+Sl
+Sl
+Sl
+Sl
+OU
+Sa
+Po
+Po
+pG
 EX
 EX
 EX
@@ -7001,40 +7442,40 @@ EX
 EX
 EX
 EX
-SW
-SW
+Tj
+Tj
 OU
 OU
 OU
-Ym
+BE
 GF
 GF
-iW
-mz
-qb
+Nt
+bL
+vs
 GF
 GF
-YH
+Ml
 pC
 GF
 Wl
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+CN
+Oc
+Sl
+Sl
+Sl
+nb
+Sl
+Sl
+Sl
+Sl
+Sl
+Sl
+OU
+Po
+oV
+bW
+OU
 EX
 EX
 EX
@@ -7103,40 +7544,40 @@ EX
 EX
 EX
 EX
-SW
-SW
+Tj
+CF
 OU
-LU
+Hv
 GF
 GF
 GF
 GF
-iW
-eV
-qb
+Nt
+Qi
+vs
 GF
 GF
-YH
+Ml
 pC
 GF
 Wl
+OU
+OU
+OW
+OW
+OU
+OU
+Sl
+OU
+OU
 EX
 EX
 EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
-EX
+OU
+OU
+OU
+OU
+OU
 EX
 EX
 EX
@@ -7206,16 +7647,16 @@ EX
 EX
 EX
 EX
-SW
+Tj
 OU
-UM
+iq
 GF
 GF
 GF
 GF
-Wz
-pE
-Wz
+DG
+Di
+DG
 GF
 GF
 HS
@@ -7308,9 +7749,9 @@ EX
 EX
 EX
 EX
-SW
+Tj
 OU
-fS
+Ny
 GF
 GF
 GF
@@ -7410,16 +7851,16 @@ EX
 EX
 EX
 EX
-SW
+Tj
 OU
-Lw
+ht
 GF
 GF
 GF
 GF
-gk
-FU
-DA
+ax
+mE
+Et
 GF
 GF
 HS
@@ -7519,7 +7960,7 @@ OU
 OU
 OU
 OU
-Cg
+Ij
 OU
 OU
 OU

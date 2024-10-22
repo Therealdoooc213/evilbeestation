@@ -166,10 +166,50 @@
 	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/radio/headset/syndicate/alt/leader
 	back = /obj/item/storage/backpack/satchel
-	r_pocket = /obj/item/gun/ballistic/automatic/pistol
 	id = /obj/item/card/id/syndicate/nuke_leader
 	belt = /obj/item/gun/ballistic/automatic/pistol/APS
 	implants = list(/obj/item/implant/weapons_auth)
+
+/datum/outfit/lavaland_syndicate/commander/post_equip(mob/living/carbon/human/H)
+	H.faction |= FACTION_SYNDICATE
+
+/obj/effect/mob_spawn/human/lavaland_syndicate/rdirector
+	name = "Syndicate R&D Director"
+	roundstart = FALSE
+	death = FALSE
+	random = TRUE
+	icon = 'icons/obj/machines/sleeper.dmi'
+	icon_state = "sleeper_s"
+	short_desc = "You are a syndicate R&D Director, employed in a top secret research facility developing biological weapons to speed the production along."
+	flavour_text = "Unfortunately, your hated enemy, Nanotrasen, has begun mining in this sector. Continue your research as best you can, and try to keep a low profile."
+	important_info = "The base is rigged with explosives, DO NOT abandon it or let it fall into enemy hands!"
+	outfit = /datum/outfit/lavaland_syndicate/rdirector
+	assignedrole = "Lavaland Syndicate"
+	use_cooldown = TRUE
+	banType = ROLE_LAVALAND_SYNDICATE
+
+/obj/effect/mob_spawn/human/lavaland_syndicate/rdirector/special(mob/living/new_spawn)
+	new_spawn.grant_language(/datum/language/codespeak)
+
+/datum/outfit/lavaland_syndicate/rdirector
+	name = "Lavaland Syndicate R&D Director"
+	r_hand = /obj/item/clipboard
+	uniform = /obj/item/clothing/under/syndicate
+	suit = /obj/item/clothing/suit/toggle/labcoat/research_director
+	shoes = /obj/item/clothing/shoes/laceup
+	gloves = /obj/item/clothing/gloves/combat
+	ears = /obj/item/radio/headset/syndicate/alt/leader
+	back = /obj/item/storage/backpack/satchel
+	r_pocket = /obj/item/gun/ballistic/automatic/pistol/service
+	id = /obj/item/card/id/syndicate/anyone
+	glasses = /obj/item/clothing/glasses/science/sciencesun
+	implants = list(/obj/item/implant/weapons_auth)
+
+/datum/outfit/lavaland_syndicate/post_equip(mob/living/carbon/human/H)
+	H.faction |= FACTION_SYNDICATE
+
+
+
 
 
 

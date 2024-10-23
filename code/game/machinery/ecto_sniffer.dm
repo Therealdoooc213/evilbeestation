@@ -98,14 +98,3 @@
 	if(!ghost || isliving(ghost))
 		return
 	to_chat(ghost, "[FOLLOW_LINK(ghost, src)] <span class='nicegreen'>The coating of ectoplasmic residue you left on [src]'s sensors has decayed.</span>")
-
-/obj/machinery/ecto_sniffer/syndicate
-
-/obj/machinery/ecto_sniffer/syndicate/Initialize(mapload)
-	. = ..()
-	wires = new/datum/wires/ecto_sniffer(src)
-	radio = new(src)
-	radio.keyslot = new /obj/item/encryptionkey/syndicate
-	radio.subspace_transmission = TRUE
-	radio.canhear_range = 0
-	radio.recalculateChannels()

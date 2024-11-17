@@ -11,6 +11,7 @@
 	block_chance = 75
 	var/just_a_cook = FALSE
 	smashes_tables = TRUE
+	display_combos = TRUE
 
 /datum/martial_art/cqc/under_siege
 	name = "Close Quarters Cooking"

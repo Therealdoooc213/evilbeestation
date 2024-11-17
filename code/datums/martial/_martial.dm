@@ -13,6 +13,8 @@
 	var/no_guns = FALSE
 	var/allow_temp_override = TRUE //if this martial art can be overridden by temporary martial arts
 	var/smashes_tables = FALSE //If the martial art smashes tables when performing table slams and head smashes
+	var/datum/weakref/holder //owner of the martial art
+	var/display_combos = FALSE //shows combo meter if true
 
 /datum/martial_art/proc/disarm_act(mob/living/carbon/human/A, mob/living/carbon/human/D)
 	return 0
@@ -35,6 +37,10 @@
 	if(length(streak) > max_streak_length)
 		streak = copytext(streak, 1 + length(streak[1]))
 	return
+	if (display_combos)
+		var/mob/living/holder_living = holder.resolve()
+		holder_living?.hud_used?.combo_display.update_icon_state(streak)
+
 
 /datum/martial_art/proc/basic_hit(mob/living/carbon/human/A,mob/living/carbon/human/D)
 
@@ -78,41 +84,44 @@
 		D.force_say(A)
 	return 1
 
-/datum/martial_art/proc/teach(mob/living/carbon/human/H,make_temporary=0)
-	if(!istype(H) || !H.mind)
+/datum/martial_art/proc/teach(mob/living/holder_living, make_temporary=FALSE)
+	if(!istype(holder_living) || !holder_living.mind)
 		return FALSE
-	if(H.mind.martial_art)
+	if(holder_living.mind.martial_art)
 		if(make_temporary)
-			if(!H.mind.martial_art.allow_temp_override)
+			if(!holder_living.mind.martial_art.allow_temp_override)
 				return FALSE
-			store(H.mind.martial_art,H)
+			store(holder_living.mind.martial_art, holder_living)
 		else
-			H.mind.martial_art.on_remove(H)
+			holder_living.mind.martial_art.on_remove(holder_living)
 	else if(make_temporary)
-		base = H.mind.default_martial_art
+		base = holder_living.mind.default_martial_art
 	if(help_verb)
-		H.add_verb(help_verb)
-	H.mind.martial_art = src
+		add_verb(holder_living, help_verb)
+	holder_living.mind.martial_art = src
+	holder = WEAKREF(holder_living)
 	return TRUE
 
-/datum/martial_art/proc/store(datum/martial_art/M,mob/living/carbon/human/H)
-	M.on_remove(H)
-	if(M.base) //Checks if M is temporary, if so it will not be stored.
-		base = M.base
-	else //Otherwise, M is stored.
-		base = M
+/datum/martial_art/proc/store(datum/martial_art/old, mob/living/holder_living)
+	old.on_remove(holder_living)
+	if (old.base) //Checks if old is temporary, if so it will not be stored.
+		base = old.base
+	else //Otherwise, old is stored.
+		base = old
 
-/datum/martial_art/proc/remove(mob/living/carbon/human/H)
-	if(!istype(H) || !H.mind || H.mind.martial_art != src)
+
+/datum/martial_art/proc/remove(mob/living/holder_living)
+	if(!istype(holder_living) || !holder_living.mind || holder_living.mind.martial_art != src)
 		return
-	on_remove(H)
+	on_remove(holder_living)
 	if(base)
-		base.teach(H)
+		base.teach(holder_living)
 	else
-		var/datum/martial_art/X = H.mind.default_martial_art
-		X.teach(H)
+		var/datum/martial_art/default = holder_living.mind.default_martial_art
+		default.teach(holder_living)
+	holder = null
 
-/datum/martial_art/proc/on_remove(mob/living/carbon/human/H)
+/datum/martial_art/proc/on_remove(mob/living/holder_living)
 	if(help_verb)
-		H.remove_verb(help_verb)
+		remove_verb(holder_living, help_verb)
 	return

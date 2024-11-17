@@ -321,6 +321,10 @@
 	healthdoll.hud = src
 	infodisplay += healthdoll
 
+	combo_display = new /atom/movable/screen/combo()
+	infodisplay += combo_display
+
+
 	stamina = new /atom/movable/screen/stamina()
 	stamina.hud = src
 	infodisplay += stamina
@@ -349,6 +353,9 @@
 	zone_select.update_icon()
 	zone_select.hud = src
 	static_inventory += zone_select
+
+	combo_display = new /atom/movable/screen/combo()
+	infodisplay += combo_display
 
 	for(var/atom/movable/screen/inventory/inv in (static_inventory + toggleable_inventory))
 		if(inv.slot_id)

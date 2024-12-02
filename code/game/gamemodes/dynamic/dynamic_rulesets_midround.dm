@@ -970,3 +970,48 @@
 	. = ..()
 	// Set their job in addition to their antag role to be a space ninja for logging purposes
 	new_character.mind.assigned_role = ROLE_NINJA
+
+
+//////////////////////////////////////////////
+//                                          //
+//       SLAUGHTER DEMON      (GHOST)       //
+//                                          //
+//////////////////////////////////////////////
+
+/datum/dynamic_ruleset/midround/from_ghosts/demon
+	name = "Slaughter Demon"
+	midround_ruleset_style = MIDROUND_RULESET_STYLE_HEAVY
+	role_preference = /datum/role_preference/midround_ghost/slaughter_demon
+	required_type = /mob/dead/observer
+	antag_datum = /datum/antagonist/slaughter
+	enemy_roles = list(JOB_NAME_SECURITYOFFICER, JOB_NAME_DETECTIVE, JOB_NAME_WARDEN, JOB_NAME_HEADOFSECURITY, JOB_NAME_CAPTAIN)
+	required_enemies = list(2,2,2,2,2,2,2,2,2,2)
+	required_candidates = 1
+	weight = 3
+	cost = 10
+	minimum_players = 20
+	repeatable = TRUE
+	blocking_rules = list(/datum/dynamic_ruleset/roundstart/nuclear, /datum/dynamic_ruleset/roundstart/clockcult)
+	var/spawn_locs
+
+/datum/dynamic_ruleset/midround/from_ghosts/demon/ready(forced = FALSE)
+	if(!..())
+		return FALSE
+	spawn_locs = list()
+	for(var/obj/effect/landmark/xeno_spawn/spawnpoint in GLOB.landmarks_list)
+		spawn_locs += spawnpoint.loc
+	if(!length(spawn_locs))
+		log_game("DYNAMIC: [ruletype] ruleset [name] ready() failed due to no valid spawn locations.")
+		return FALSE
+	return TRUE
+
+/datum/dynamic_ruleset/midround/from_ghosts/demon/generate_ruleset_body(mob/applicant)
+	var/datum/mind/player_mind = new /datum/mind(applicant.key)
+	player_mind.active = TRUE
+
+	var/mob/living/simple_animal/slaughter/S = new (pick(spawn_locs))
+	player_mind.transfer_to(S)
+
+	message_admins("[ADMIN_LOOKUPFLW(S)] has been made into a Slaughter Demon by the midround ruleset.")
+	log_game("DYNAMIC: [key_name(S)] was spawned as a Slaughter Demon by the midround ruleset.")
+	return S

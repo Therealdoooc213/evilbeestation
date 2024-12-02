@@ -988,10 +988,11 @@
 	required_enemies = list(2,2,2,2,2,2,2,2,2,2)
 	required_candidates = 1
 	weight = 3
-	cost = 10
-	minimum_players = 20
-	repeatable = TRUE
+	cost = 12
+	minimum_players = 25
+	repeatable = FALSE
 	blocking_rules = list(/datum/dynamic_ruleset/roundstart/nuclear, /datum/dynamic_ruleset/roundstart/clockcult)
+	flags = INTACT_STATION_RULESET|PERSISTENT_RULESET
 	var/spawn_locs
 
 /datum/dynamic_ruleset/midround/from_ghosts/demon/ready(forced = FALSE)

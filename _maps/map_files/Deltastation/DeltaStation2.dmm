@@ -39949,7 +39949,7 @@
 /obj/machinery/newscaster{
 	pixel_y = -32
 	},
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
@@ -84227,7 +84227,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/landmark/start/quartermaster,
-/obj/effect/turf_decal/bot,
+/obj/effect/turf_decal/bot_white,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -138545,8 +138545,8 @@ ayw
 vdo
 nvM
 lsf
-stz
-stz
+nvM
+nvM
 nvM
 aGz
 nko

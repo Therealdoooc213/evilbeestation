@@ -11221,6 +11221,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/tile/neutral/fourcorners/contrasted,
 /turf/open/floor/iron/smooth,
 /area/quartermaster/miningoffice)
 "bwn" = (
@@ -61488,11 +61489,6 @@
 	},
 /turf/open/floor/iron,
 /area/maintenance/aft)
-"nIb" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/tile/neutral/fourcorners/contrasted,
-/turf/open/floor/iron/smooth,
-/area/quartermaster/storage)
 "nIj" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/old,
@@ -68994,11 +68990,6 @@
 	},
 /turf/open/floor/iron,
 /area/science/xenobiology)
-"qiS" = (
-/obj/effect/decal/cleanable/oil,
-/obj/effect/turf_decal/tile/neutral/fourcorners/contrasted,
-/turf/open/floor/iron/smooth,
-/area/quartermaster/storage)
 "qje" = (
 /obj/structure/closet/radiation,
 /obj/effect/decal/cleanable/dirt,
@@ -81190,6 +81181,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
+/obj/effect/turf_decal/tile/neutral/fourcorners/contrasted,
 /turf/open/floor/iron/smooth,
 /area/quartermaster/miningoffice)
 "tWh" = (
@@ -138304,7 +138296,7 @@ wrS
 nvM
 nvM
 stz
-nIb
+stz
 aOW
 sNU
 qAi
@@ -138552,8 +138544,8 @@ tYP
 ayw
 vdo
 nvM
-qiS
-nIb
+lsf
+stz
 stz
 nvM
 aGz
@@ -139326,7 +139318,7 @@ stz
 aBW
 nvM
 tou
-vkn
+nvM
 azC
 nvM
 aBW
@@ -139583,7 +139575,7 @@ nvM
 azC
 nvM
 lSd
-vkn
+nvM
 aBW
 stz
 aJv
@@ -139840,7 +139832,7 @@ stz
 aBX
 nvM
 hxJ
-vkn
+nvM
 gPn
 stz
 aGz
@@ -140093,11 +140085,11 @@ aoF
 iGD
 ayA
 azD
-vkn
+nvM
 aBY
 nvM
 mpw
-vkn
+nvM
 azD
 lsf
 aBY

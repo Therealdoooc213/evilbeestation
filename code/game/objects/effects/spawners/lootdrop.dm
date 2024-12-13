@@ -613,3 +613,7 @@
 				/obj/item/pickaxe/drill/jackhammer = 30,
 				/obj/item/borg/upgrade/syndicate = 13,
 				/obj/item/borg/upgrade/selfrepair = 17)
+
+/obj/effect/spawner/lootdrop/xenobiology
+	name = "xenobiology friendly mob spawner"
+	loot = list(/)

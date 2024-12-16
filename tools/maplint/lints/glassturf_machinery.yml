@@ -1,0 +1,4 @@
+help: "Dont put machinery on glass tiles."
+/turf/open/floor/glass:
+  banned_neighbors:
+  /obj/machinery:

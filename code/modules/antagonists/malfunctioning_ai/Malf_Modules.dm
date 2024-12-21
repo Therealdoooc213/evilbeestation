@@ -157,8 +157,6 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/AI_Module))
 //Doomsday Device: Starts the self-destruct timer. It can only be stopped by killing the AI completely.
 /datum/AI_Module/destructive/nuke_station
 	name = "Doomsday Device"
-	module_name = "Doomsday Device"
-	mod_pick_name = "nukestation"
 	description = "Activate the station's nuclear warhead that will disintegrate all organic life on the station after a 450 seconds delay. Can only be used while on the station, will fail if your core is moved off station or destroyed."
 	cost = 130
 	one_purchase = TRUE
@@ -332,7 +330,6 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/AI_Module))
 //Hostile Station Lockdown: Locks, bolts, and electrifies every airlock on the station. After 90 seconds, the doors reset.
 /datum/AI_Module/destructive/lockdown
 	name = "Hostile Station Lockdown"
-	mod_pick_name = "lockdown"
 	description = "Overload the airlock, blast door and fire control networks, locking them down. Caution! This command also electrifies all airlocks. The networks will automatically reset after 90 seconds, briefly \
 	opening all doors on the station."
 	cost = 30
@@ -448,7 +445,6 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/AI_Module))
 /// Overload Machine: Allows the AI to overload a machine, detonating it after a delay. Two uses per purchase.
 /datum/AI_Module/destructive/overload_machine
 	name = "Machine Overload"
-	mod_pick_name = "overload"
 	description = "Overheats an electrical machine, causing a small explosion and destroying it. Two uses per purchase."
 	cost = 20
 	power_type = /datum/action/innate/ai/ranged/overload_machine
@@ -525,7 +521,6 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/AI_Module))
 /// Robotic Factory: Places a large machine that converts humans that go through it into cyborgs. Unlocking this ability removes shunting.
 /datum/AI_Module/utility/place_cyborg_transformer
 	name = "Robotic Factory (Removes Shunting)"
-	mod_pick_name = "cyborgtransformer"
 	description = "Build a machine anywhere, using expensive nanomachines, that can convert a living human into a loyal cyborg slave when placed inside."
 	cost = 100
 	one_purchase = TRUE
@@ -654,7 +649,6 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/AI_Module))
 /// Disable Emergency Lights
 /datum/AI_Module/utility/emergency_lights
 	name = "Disable Emergency Lights"
-	mod_pick_name = "disable_emergency_lights"
 	description = "Cuts emergency lights across the entire station. If power is lost to light fixtures, they will not attempt to fall back on emergency power reserves."
 	cost = 10
 	one_purchase = TRUE
@@ -681,8 +675,7 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/AI_Module))
 
 //Reactivate Camera Network: Reactivates up to 20 cameras across the station.
 /datum/AI_Module/small/reactivate_cameras
-	module_name = "Reactivate Camera Network"
-	mod_pick_name = "recam"
+	name = "Reactivate Camera Network"
 	description = "Runs a network-wide diagnostic on the camera network, resetting focus and re-routing power to failed cameras. Can be used to repair up to 20 cameras."
 	cost = 10
 	power_type = /datum/action/innate/ai/reactivate_cameras
@@ -763,7 +756,11 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/AI_Module))
 
 /datum/AI_Module/upgrade/upgrade_turrets/upgrade(mob/living/silicon/ai/AI)
 	for(var/obj/machinery/porta_turret/ai/turret in GLOB.machines)
-		turret.obj_integrity += 30
+		turret.max_integrity = 200
+		turret.emp_proofing = TRUE
+		turret.AddElement(/datum/element/empprotection, EMP_PROTECT_SELF | EMP_PROTECT_WIRES | EMP_PROTECT_CONTENTS)
+		turret.stun_projectile = /obj/projectile/beam/disabler/pass_glass //// AI defenses are often built with glass, so this is big.
+		turret.stun_projectile_sound = 'sound/weapons/lasercannonfire.ogg'
 		turret.lethal_projectile = /obj/projectile/beam/laser/heavylaser //Once you see it, you will know what it means to FEAR.
 		turret.lethal_projectile_sound = 'sound/weapons/lasercannonfire.ogg'
 
@@ -795,9 +792,8 @@ GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/AI_Module))
 
 
 //Fake Alert: Overloads a random number of lights across the station. One use.
-/datum/AI_Module/small/fake_alert
-	module_name = "Fake Alert"
-	mod_pick_name = "fake_alert"
+/datum/AI_Module/utility/fake_alert
+	name = "Fake Alert"
 	description = "Assess the most probable threats to the station, and send a distracting fake alert by hijacking the station's alert and threat identification systems."
 	cost = 20
 	power_type = /datum/action/innate/ai/fake_alert

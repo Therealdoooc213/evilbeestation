@@ -42,6 +42,22 @@
 	H.hair_color = "431"
 	H.update_hair()
 
+/datum/role_preference/antagonist/malf_ai
+	name = "Malfunctioning AI"
+	description = "With a law zero to complete your objectives at all costs, combine your \
+	omnipotence and malfunction modules to wreak havoc across the station. \
+	Go delta to destroy the station and all those who opposed you."
+
+/datum/role_preference/antagonist/malf_ai/get_preview_icon()
+	var/icon/malf_ai_icon = icon('icons/mob/ai.dmi', "ai-red")
+
+	// Crop out the borders of the AI, just the face
+	malf_ai_icon.Crop(5, 27, 28, 6)
+
+	malf_ai_icon.Scale(ANTAGONIST_PREVIEW_ICON_SIZE, ANTAGONIST_PREVIEW_ICON_SIZE)
+
+	return malf_ai_icon
+
 /datum/role_preference/antagonist/changeling
 	name = "Changeling"
 	description = "A highly intelligent alien predator that is capable of altering their \

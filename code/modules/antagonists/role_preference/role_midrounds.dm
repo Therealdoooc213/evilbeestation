@@ -249,8 +249,7 @@
 	description = "With a law zero to complete your objectives at all costs, combine your \
 	omnipotence and malfunction modules to wreak havoc across the station. \
 	Go delta to destroy the station and all those who opposed you."
-	// Yes, it's under traitor.
-	antag_datum = /datum/antagonist/traitor
+	antag_datum = /datum/antagonist/malf_ai
 
 /datum/role_preference/midround_living/malfunctioning_ai/get_preview_icon()
 	var/icon/malf_ai_icon = icon('icons/mob/ai.dmi', "ai-red")

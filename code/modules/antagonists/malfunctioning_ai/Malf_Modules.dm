@@ -17,6 +17,8 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 		/obj/machinery/syndicatebomb/training
 	)))
 
+GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/AI_Module))
+
 //The malf AI action subtype. All malf actions are subtypes of this.
 /datum/action/innate/ai
 	name = "AI Action"
@@ -123,102 +125,11 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 		add_ranged_ability(user, enable_text)
 
 
-//The datum and interface for the malf unlock menu, which lets them choose actions to unlock.
-/datum/module_picker
-	var/temp
-	var/processing_time = 50
-	var/list/possible_modules
-
-/datum/module_picker/New()
-	possible_modules = list()
-	for(var/type in typesof(/datum/AI_Module))
-		var/datum/AI_Module/AM = new type
-		if((AM.power_type && AM.power_type != /datum/action/innate/ai) || AM.upgrade)
-			possible_modules += AM
-
-/datum/module_picker/proc/remove_malf_verbs(mob/living/silicon/ai/AI) //Removes all malfunction-related abilities from the target AI.
-	for(var/datum/AI_Module/AM in possible_modules)
-		for(var/datum/action/A in AI.actions)
-			if(istype(A, initial(AM.power_type)))
-				qdel(A)
-
-/datum/module_picker/proc/use(mob/user)
-	var/list/dat = list()
-	dat += "<B>Select use of processing time: (currently #[processing_time] left.)</B><BR>"
-	dat += "<HR>"
-	dat += "<B>Install Module:</B><BR>"
-	dat += "<I>The number afterwards is the amount of processing time it consumes.</I><BR>"
-	for(var/datum/AI_Module/large/module in possible_modules)
-		dat += "<A href='byond://?src=[REF(src)];[module.mod_pick_name]=1'>[module.module_name]</A><A href='byond://?src=[REF(src)];showdesc=[module.mod_pick_name]'>\[?\]</A> ([module.cost])<BR>"
-	for(var/datum/AI_Module/small/module in possible_modules)
-		dat += "<A href='byond://?src=[REF(src)];[module.mod_pick_name]=1'>[module.module_name]</A><A href='byond://?src=[REF(src)];showdesc=[module.mod_pick_name]'>\[?\]</A> ([module.cost])<BR>"
-	dat += "<HR>"
-	if(temp)
-		dat += "[temp]"
-	var/datum/browser/popup = new(user, "modpicker", "Malf Module Menu")
-	popup.set_content(dat.Join())
-	popup.open()
-
-/datum/module_picker/Topic(href, href_list)
-	..()
-
-	if(!isAI(usr))
-		return
-	var/mob/living/silicon/ai/A = usr
-
-	if(A.stat == DEAD)
-		to_chat(A, "<span class='warning'>You are already dead!</span>")
-		return
-
-	for(var/datum/AI_Module/AM in possible_modules)
-		if (href_list[AM.mod_pick_name])
-
-			// Cost check
-			if(AM.cost > processing_time)
-				temp = "You cannot afford this module."
-				to_chat(A, "<span class='notice'>You cannot afford this module.</span>")
-				break
-
-			var/datum/action/innate/ai/action = locate(AM.power_type) in A.actions
-			// Give the power and take away the money.
-			if(AM.upgrade) //upgrade and upgrade() are separate, be careful!
-				AM.upgrade(A)
-				possible_modules -= AM
-				to_chat(A, AM.unlock_text)
-				A.playsound_local(A, AM.unlock_sound, 50, 0)
-				A.log_message("purchased malf module [AM.module_name] (NEW PROCESSING: [processing_time - AM.cost])", LOG_GAME)
-			else
-				if(AM.power_type)
-					if(AM.unlock_text)
-						to_chat(A, AM.unlock_text)
-					if(AM.unlock_sound)
-						A.playsound_local(A, AM.unlock_sound, 50, 0)
-					if(!action) //Unlocking for the first time
-						var/datum/action/AC = new AM.power_type
-						AC.Grant(A)
-						A.current_modules += new AM.type
-						temp = AM.description
-						if(AM.one_purchase)
-							possible_modules -= AM
-						A.log_message("purchased malf module [AM.module_name] (NEW PROCESSING: [processing_time - AM.cost])", LOG_GAME)
-					else //Adding uses to an existing module
-						action.uses += initial(action.uses)
-						temp = "Additional use[action.uses > 1 ? "s" : ""] added to [action.name]!"
-						action.update_desc()
-						A.log_message("purchased malf module [AM.module_name] (NEW USES: [action.uses]) (NEW PROCESSING: [processing_time - AM.cost])", LOG_GAME)
-			processing_time -= AM.cost
-
-		if(href_list["showdesc"])
-			if(AM.mod_pick_name == href_list["showdesc"])
-				temp = AM.description
-	use(usr)
-
-
 //The base module type, which holds info about each ability.
 /datum/AI_Module
-	var/module_name
-	var/mod_pick_name
-	var/description = ""
+	var/name = "generic module"
+	var/category = "generic category"
+	var/description = "generic description"
 	var/engaged = 0
 	var/cost = 5
 	var/one_purchase = FALSE //If this module can only be purchased once. This always applies to upgrades, even if the variable is set to false.
@@ -231,12 +142,21 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 /datum/AI_Module/proc/upgrade(mob/living/silicon/ai/AI) //Apply upgrades!
 	return
 
-/datum/AI_Module/large //Big, powerful stuff that can only be used once.
-/datum/AI_Module/small //Weak, usually localized stuff with multiple uses.
+/datum/AI_Module/destructive
+	category = "Destructive Modules"
+
+/// Modules with stealthy and utility uses
+/datum/AI_Module/utility
+	category = "Utility Modules"
+
+/// Modules that are improving AI abilities and assets
+/datum/AI_Module/upgrade
+	category = "Upgrade Modules"
 
 
 //Doomsday Device: Starts the self-destruct timer. It can only be stopped by killing the AI completely.
-/datum/AI_Module/large/nuke_station
+/datum/AI_Module/destructive/nuke_station
+	name = "Doomsday Device"
 	module_name = "Doomsday Device"
 	mod_pick_name = "nukestation"
 	description = "Activate the station's nuclear warhead that will disintegrate all organic life on the station after a 450 seconds delay. Can only be used while on the station, will fail if your core is moved off station or destroyed."
@@ -409,32 +329,9 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 	to_chat(world, "<B>The AI cleansed the station of life with the Doomsday device!</B>")
 	SSticker.force_ending = 1
 
-
-//AI Turret Upgrade: Increases the health and damage of all turrets.
-/datum/AI_Module/large/upgrade_turrets
-	module_name = "AI Turret Upgrade"
-	mod_pick_name = "turret"
-	description = "Improves the power and health of all AI turrets. This effect is permanent."
-	cost = 30
-	upgrade = TRUE
-	unlock_text = "<span class='notice'>You rewrite the turrets' code, making the most use out of them. They are now fully repaired, EMP proof and their damage has been increased. \
-	Your stun projectiles turned into upgraded disabler shots.</span>"
-	unlock_sound = 'sound/items/rped.ogg'
-
-/datum/AI_Module/large/upgrade_turrets/upgrade(mob/living/silicon/ai/AI)
-	for(var/obj/machinery/porta_turret/ai/turret in GLOB.machines)
-		turret.max_integrity = 200
-		turret.emp_proofing = TRUE
-		turret.AddElement(/datum/element/empprotection, EMP_PROTECT_SELF | EMP_PROTECT_WIRES | EMP_PROTECT_CONTENTS)
-		turret.stun_projectile = /obj/projectile/beam/disabler/pass_glass //// AI defenses are often built with glass, so this is big.
-		turret.stun_projectile_sound = 'sound/weapons/lasercannonfire.ogg'
-		turret.lethal_projectile = /obj/projectile/beam/laser/heavylaser //Once you see it, you will know what it means to FEAR.
-		turret.lethal_projectile_sound = 'sound/weapons/lasercannonfire.ogg'
-
-
 //Hostile Station Lockdown: Locks, bolts, and electrifies every airlock on the station. After 90 seconds, the doors reset.
-/datum/AI_Module/large/lockdown
-	module_name = "Hostile Station Lockdown"
+/datum/AI_Module/destructive/lockdown
+	name = "Hostile Station Lockdown"
 	mod_pick_name = "lockdown"
 	description = "Overload the airlock, blast door and fire control networks, locking them down. Caution! This command also electrifies all airlocks. The networks will automatically reset after 90 seconds, briefly \
 	opening all doors on the station."
@@ -468,11 +365,63 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 		"Automatic system reboot complete. Have a secure day.",
 		"Network reset:"), 900)
 
+/// Override Machine: Allows the AI to override a machine, animating it into an angry, living version of itself.
+/datum/AI_Module/destructive/override_machine
+	name = "Machine Override"
+	description = "Overrides a machine's programming, causing it to rise up and attack everyone except other machines. Four uses per purchase."
+	cost = 30
+	power_type = /datum/action/innate/ai/ranged/override_machine
+	unlock_text = "<span class='notice'>You procure a virus from the Space Dark Web and distribute it to the station's machines.</span>"
+	unlock_sound = 'sound/machines/airlock_alien_prying.ogg'
 
-//Destroy RCDs: Detonates all non-cyborg RCDs on the station.
-/datum/AI_Module/large/destroy_rcd
-	module_name = "Destroy RCDs"
-	mod_pick_name = "rcd"
+/datum/action/innate/ai/ranged/override_machine
+	name = "Override Machine"
+	desc = "Animates a targeted machine, causing it to attack anyone nearby."
+	button_icon_state = "override_machine"
+	uses = 4
+	linked_ability_type = /obj/effect/proc_holder/ranged_ai/override_machine
+
+/datum/action/innate/ai/ranged/override_machine/New()
+	..()
+	desc = "[desc] It has [uses] use\s remaining."
+	button.desc = desc
+
+/datum/action/innate/ai/ranged/override_machine/proc/animate_machine(obj/machinery/M)
+	if(M && !QDELETED(M))
+		new/mob/living/simple_animal/hostile/mimic/copy/machine(get_turf(M), M, owner, 1)
+
+/obj/effect/proc_holder/ranged_ai/override_machine
+	active = FALSE
+	ranged_mousepointer = 'icons/effects/override_machine_target.dmi'
+	enable_text = "<span class='notice'>You tap into the station's powernet. Click on a machine to animate it, or use the ability again to cancel.</span>"
+	disable_text = "<span class='notice'>You release your hold on the powernet.</span>"
+
+/obj/effect/proc_holder/ranged_ai/override_machine/InterceptClickOn(mob/living/caller, params, obj/machinery/target)
+	if(..())
+		return
+	if(ranged_ability_user.incapacitated())
+		remove_ranged_ability()
+		return
+	if(!istype(target))
+		to_chat(ranged_ability_user, "<span class='warning'>You can only animate machines!</span>")
+		return
+	if(!target.can_be_overridden() || is_type_in_typecache(target, GLOB.blacklisted_malf_machines))
+		to_chat(ranged_ability_user, "<span class='warning'>That machine can't be overridden!</span>")
+		return
+	ranged_ability_user.playsound_local(ranged_ability_user, 'sound/misc/interference.ogg', 50, 0)
+	attached_action.adjust_uses(-1)
+	if(attached_action && attached_action.uses)
+		attached_action.desc = "[initial(attached_action.desc)] It has [attached_action.uses] use\s remaining."
+		attached_action.UpdateButtonIcon()
+	target.audible_message("<span class='userdanger'>You hear a loud electrical buzzing sound coming from [target]!</span>")
+	addtimer(CALLBACK(attached_action, /datum/action/innate/ai/ranged/override_machine.proc/animate_machine, target), 50) //kabeep!
+	remove_ranged_ability("<span class='danger'>Sending override signal...</span>")
+	return TRUE
+
+
+/// Destroy RCDs: Detonates all non-cyborg RCDs on the station.
+/datum/AI_Module/destructive/destroy_rcd
+	name = "Destroy RCDs"
 	description = "Send a specialised pulse to detonate all hand-held and exosuit Rapid Construction Devices on the station."
 	cost = 25
 	one_purchase = TRUE
@@ -496,81 +445,9 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 	to_chat(owner, "<span class='danger'>RCD detonation pulse emitted.</span>")
 	owner.playsound_local(owner, 'sound/machines/twobeep.ogg', 50, 0)
 
-
-//Unlock Mech Domination: Unlocks the ability to dominate mechs. Big shocker, right?
-/datum/AI_Module/large/mecha_domination
-	module_name = "Unlock Mech Domination"
-	mod_pick_name = "mechjack"
-	description = "Allows you to hack into a mech's onboard computer, shunting all processes into it and ejecting any occupants. Once uploaded to the mech, it is impossible to leave.\
-	Do not allow the mech to leave the station's vicinity or allow it to be destroyed."
-	cost = 30
-	upgrade = TRUE
-	unlock_text = "<span class='notice'>Virus package compiled. Select a target mech at any time. <b>You must remain on the station at all times. Loss of signal will result in total system lockout.</b></span>"
-	unlock_sound = 'sound/mecha/nominal.ogg'
-
-/datum/AI_Module/large/mecha_domination/upgrade(mob/living/silicon/ai/AI)
-	AI.can_dominate_mechs = TRUE //Yep. This is all it does. Honk!
-
-
-//Thermal Sensor Override: Unlocks the ability to disable all fire alarms from doing their job.
-/datum/AI_Module/large/break_fire_alarms
-	module_name = "Thermal Sensor Override"
-	mod_pick_name = "burnpigs"
-	description = "Gives you the ability to override the thermal sensors on all fire alarms. This will remove their ability to scan for fire and thus their ability to alert."
-	one_purchase = TRUE
-	cost = 25
-	power_type = /datum/action/innate/ai/break_fire_alarms
-	unlock_text = "<span class='notice'>You replace the thermal sensing capabilities of all fire alarms with a manual override, allowing you to turn them off at will.</span>"
-	unlock_sound = 'goon/sound/machinery/firealarm.ogg'
-
-/datum/action/innate/ai/break_fire_alarms
-	name = "Override Thermal Sensors"
-	desc = "Disables the automatic temperature sensing on all fire alarms, making them effectively useless."
-	button_icon_state = "break_fire_alarms"
-	uses = 1
-
-/datum/action/innate/ai/break_fire_alarms/Activate()
-	for(var/obj/machinery/firealarm/F in GLOB.machines)
-		if(!is_station_level(F.z))
-			continue
-		F.obj_flags |= EMAGGED
-		F.update_icon()
-	owner.log_message("activated malf module [name]", LOG_GAME)
-	to_chat(owner, "<span class='notice'>All thermal sensors on the station have been disabled. Fire alerts will no longer be recognized.</span>")
-	owner.playsound_local(owner, 'sound/machines/terminal_off.ogg', 50, 0)
-
-
-//Air Alarm Safety Override: Unlocks the ability to enable flooding on all air alarms.
-/datum/AI_Module/large/break_air_alarms
-	module_name = "Air Alarm Safety Override"
-	mod_pick_name = "allow_flooding"
-	description = "Gives you the ability to disable safeties on all air alarms. This will allow you to use the environmental mode Flood, which disables scrubbers as well as pressure checks on vents. \
-	Anyone can check the air alarm's interface and may be tipped off by their nonfunctionality."
-	one_purchase = TRUE
-	cost = 50
-	power_type = /datum/action/innate/ai/break_air_alarms
-	unlock_text = "<span class='notice'>You remove the safety overrides on all air alarms, but you leave the confirm prompts open.</span>"
-	unlock_sound = 'sound/effects/space_wind.ogg'
-
-/datum/action/innate/ai/break_air_alarms
-	name = "Override Air Alarm Safeties"
-	desc = "Enables the Flood setting on all air alarms."
-	button_icon_state = "break_air_alarms"
-	uses = 1
-
-/datum/action/innate/ai/break_air_alarms/Activate()
-	for(var/obj/machinery/airalarm/AA in GLOB.machines)
-		if(!is_station_level(AA.z))
-			continue
-		AA.obj_flags |= EMAGGED
-	owner.log_message("activated malf module [name]", LOG_GAME)
-	to_chat(owner, "<span class='notice'>All air alarm safeties on the station have been overridden. Air alarms may now use the Flood environmental mode.</span>")
-	owner.playsound_local(owner, 'sound/machines/terminal_off.ogg', 50, 0)
-
-
-//Overload Machine: Allows the AI to overload a machine, detonating it after a delay. Two uses per purchase.
-/datum/AI_Module/small/overload_machine
-	module_name = "Machine Overload"
+/// Overload Machine: Allows the AI to overload a machine, detonating it after a delay. Two uses per purchase.
+/datum/AI_Module/destructive/overload_machine
+	name = "Machine Overload"
 	mod_pick_name = "overload"
 	description = "Overheats an electrical machine, causing a small explosion and destroying it. Two uses per purchase."
 	cost = 20
@@ -620,61 +497,34 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 	remove_ranged_ability("<span class='danger'>Overcharging machine...</span>")
 	return TRUE
 
+/datum/action/innate/ai/blackout
+	name = "Blackout"
+	desc = "Overloads random lights across the station."
+	button_icon_state = "blackout"
+	uses = 3
+	auto_use_uses = FALSE
 
-//Override Machine: Allows the AI to override a machine, animating it into an angry, living version of itself.
-/datum/AI_Module/small/override_machine
-	module_name = "Machine Override"
-	mod_pick_name = "override"
-	description = "Overrides a machine's programming, causing it to rise up and attack everyone except other machines. Four uses."
-	cost = 30
-	power_type = /datum/action/innate/ai/ranged/override_machine
-	unlock_text = "<span class='notice'>You procure a virus from the Space Dark Web and distribute it to the station's machines.</span>"
-	unlock_sound = 'sound/machines/airlock_alien_prying.ogg'
+/datum/action/innate/ai/blackout/New()
+	..()
+	desc = "[desc] It has [uses] use\s remaining."
+	button.desc = desc
 
-/datum/action/innate/ai/ranged/override_machine
-	name = "Override Machine"
-	desc = "Animates a targeted machine, causing it to attack anyone nearby."
-	button_icon_state = "override_machine"
-	uses = 4
-	linked_ability_type = /obj/effect/proc_holder/ranged_ai/override_machine
+/datum/action/innate/ai/blackout/Activate()
+	for(var/obj/machinery/power/apc/apc in GLOB.apcs_list)
+		if(prob(30 * apc.overload))
+			apc.overload_lighting()
+		else
+			apc.overload++
+	to_chat(owner, "<span class='notice'>Overcurrent applied to the powernet.</span>")
+	owner.playsound_local(owner, "sparks", 50, 0)
+	adjust_uses(-1)
+	if(src && uses) //Not sure if not having src here would cause a runtime, so it's here to be safe
+		desc = "[initial(desc)] It has [uses] use\s remaining."
+		UpdateButtonIcon()
 
-/datum/action/innate/ai/ranged/override_machine/proc/animate_machine(obj/machinery/M)
-	if(M && !QDELETED(M))
-		var/turf/T = get_turf(M)
-		message_admins("[ADMIN_LOOKUPFLW(owner)] overrided (animated) [M.name] at [ADMIN_VERBOSEJMP(T)].")
-		log_game("[key_name(owner)] overrided (animated) [M.name] at [AREACOORD(T)].")
-		new/mob/living/simple_animal/hostile/mimic/copy/machine(get_turf(M), M, owner)
-
-/obj/effect/proc_holder/ranged_ai/override_machine
-	active = FALSE
-	ranged_mousepointer = 'icons/effects/override_machine_target.dmi'
-	enable_text = "<span class='notice'>You tap into the station's powernet. Click on a machine to animate it, or use the ability again to cancel.</span>"
-	disable_text = "<span class='notice'>You release your hold on the powernet.</span>"
-
-/obj/effect/proc_holder/ranged_ai/override_machine/InterceptClickOn(mob/living/caller, params, obj/machinery/target)
-	if(..())
-		return
-	if(ranged_ability_user.incapacitated())
-		remove_ranged_ability()
-		return
-	if(!istype(target))
-		to_chat(ranged_ability_user, "<span class='warning'>You can only animate machines!</span>")
-		return
-	if(!target.can_be_overridden() || is_type_in_typecache(target, GLOB.blacklisted_malf_machines))
-		to_chat(ranged_ability_user, "<span class='warning'>That machine can't be overridden!</span>")
-		return
-	ranged_ability_user.playsound_local(ranged_ability_user, 'sound/misc/interference.ogg', 50, 0)
-	attached_action.adjust_uses(-1)
-	target.audible_message("<span class='userdanger'>You hear a loud electrical buzzing sound coming from [target]!</span>")
-	caller.log_message("activated malf module [name]", LOG_GAME)
-	addtimer(CALLBACK(attached_action, TYPE_PROC_REF(/datum/action/innate/ai/ranged/override_machine, animate_machine), target), 50) //kabeep!
-	remove_ranged_ability("<span class='danger'>Sending override signal...</span>")
-	return TRUE
-
-
-//Robotic Factory: Places a large machine that converts humans that go through it into cyborgs. Unlocking this ability removes shunting.
-/datum/AI_Module/large/place_cyborg_transformer
-	module_name = "Robotic Factory (Removes Shunting)"
+/// Robotic Factory: Places a large machine that converts humans that go through it into cyborgs. Unlocking this ability removes shunting.
+/datum/AI_Module/utility/place_cyborg_transformer
+	name = "Robotic Factory (Removes Shunting)"
 	mod_pick_name = "cyborgtransformer"
 	description = "Build a machine anywhere, using expensive nanomachines, that can convert a living human into a loyal cyborg slave when placed inside."
 	cost = 100
@@ -750,36 +600,60 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 	return success
 
 
-//Blackout: Overloads a random number of lights across the station. Three uses.
-/datum/AI_Module/small/blackout
-	module_name = "Blackout"
-	mod_pick_name = "blackout"
-	description = "Attempts to overload the lighting circuits on the station, destroying some bulbs. Three uses."
-	cost = 15
-	power_type = /datum/action/innate/ai/blackout
-	unlock_text = "<span class='notice'>You hook into the powernet and route bonus power towards the station's lighting.</span>"
-	unlock_sound = "sparks"
+/// Air Alarm Safety Override: Unlocks the ability to enable flooding on all air alarms.
+/datum/AI_Module/utility/break_air_alarms
+	name = "Air Alarm Safety Override"
+	description = "Gives you the ability to disable safeties on all air alarms. This will allow you to use the environmental mode Flood, which disables scrubbers as well as pressure checks on vents. \
+	Anyone can check the air alarm's interface and may be tipped off by their nonfunctionality."
+	one_purchase = TRUE
+	cost = 50
+	power_type = /datum/action/innate/ai/break_air_alarms
+	unlock_text = "<span class='notice'>You remove the safety overrides on all air alarms, but you leave the confirm prompts open. You can hit 'Yes' at any time... you bastard.</span>"
+	unlock_sound = 'sound/effects/space_wind.ogg'
 
-/datum/action/innate/ai/blackout
-	name = "Blackout"
-	desc = "Overloads lights across the station."
-	button_icon_state = "blackout"
-	uses = 3
+/datum/action/innate/ai/break_air_alarms
+	name = "Override Air Alarm Safeties"
+	desc = "Enables the Flood setting on all air alarms."
+	button_icon_state = "break_air_alarms"
+	uses = 1
 
-/datum/action/innate/ai/blackout/Activate()
-	for(var/obj/machinery/power/apc/apc in GLOB.apcs_list)
-		if(prob(30 * apc.overload))
-			apc.overload_lighting()
-		else
-			apc.overload++
-	owner.log_message("activated malf module [name]", LOG_GAME)
-	to_chat(owner, "<span class='notice'>Overcurrent applied to the powernet.</span>")
-	owner.playsound_local(owner, "sparks", 50, 0)
+/datum/action/innate/ai/break_air_alarms/Activate()
+	for(var/obj/machinery/airalarm/AA in GLOB.machines)
+		if(!is_station_level(AA.z))
+			continue
+		AA.obj_flags |= EMAGGED
+	to_chat(owner, "<span class='notice'>All air alarm safeties on the station have been overridden. Air alarms may now use the Flood environmental mode.</span>")
+	owner.playsound_local(owner, 'sound/machines/terminal_off.ogg', 50, 0)
+
+/// Thermal Sensor Override: Unlocks the ability to disable all fire alarms from doing their job.
+/datum/AI_Module/utility/break_fire_alarms
+	name = "Thermal Sensor Override"
+	description = "Gives you the ability to override the thermal sensors on all fire alarms. This will remove their ability to scan for fire and thus their ability to alert."
+	one_purchase = TRUE
+	cost = 25
+	power_type = /datum/action/innate/ai/break_fire_alarms
+	unlock_text = "<span class='notice'>You replace the thermal sensing capabilities of all fire alarms with a manual override, allowing you to turn them off at will.</span>"
+	unlock_sound = 'goon/sound/machinery/firealarm.ogg'
+
+/datum/action/innate/ai/break_fire_alarms
+	name = "Override Thermal Sensors"
+	desc = "Disables the automatic temperature sensing on all fire alarms, making them effectively useless."
+	button_icon_state = "break_fire_alarms"
+	uses = 1
+
+/datum/action/innate/ai/break_fire_alarms/Activate()
+	for(var/obj/machinery/firealarm/F in GLOB.machines)
+		if(!is_station_level(F.z))
+			continue
+		F.obj_flags |= EMAGGED
+		F.update_icon()
+	to_chat(owner, "<span class='notice'>All thermal sensors on the station have been disabled. Fire alerts will no longer be recognized.</span>")
+	owner.playsound_local(owner, 'sound/machines/terminal_off.ogg', 50, 0)
 
 
-//Disable Emergency Lights
-/datum/AI_Module/small/emergency_lights
-	module_name = "Disable Emergency Lights"
+/// Disable Emergency Lights
+/datum/AI_Module/utility/emergency_lights
+	name = "Disable Emergency Lights"
 	mod_pick_name = "disable_emergency_lights"
 	description = "Cuts emergency lights across the entire station. If power is lost to light fixtures, they will not attempt to fall back on emergency power reserves."
 	cost = 10
@@ -843,18 +717,17 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 	adjust_uses(0, TRUE) //Checks the uses remaining
 
 //Upgrade Camera Network: EMP-proofs all cameras, in addition to giving them X-ray vision.
-/datum/AI_Module/large/upgrade_cameras
-	module_name = "Upgrade Camera Network"
-	mod_pick_name = "upgradecam"
-	description = "Install broad-spectrum scanning and electrical redundancy firmware to the camera network, enabling EMP-proofing and light-amplified X-ray vision." //I <3 pointless technobabble
+/// Upgrade Camera Network: EMP-proofs all cameras, in addition to giving them X-ray vision.
+/datum/AI_Module/upgrade/upgrade_cameras
+	name = "Upgrade Camera Network"
+	description = "Install broad-spectrum scanning and electrical redundancy firmware to the camera network, enabling EMP-proofing and light-amplified X-ray vision. Upgrade is done immediately upon purchase." //I <3 pointless technobabble
 	//This used to have motion sensing as well, but testing quickly revealed that giving it to the whole cameranet is PURE HORROR.
-	one_purchase = TRUE
 	cost = 35 //Decent price for omniscience!
 	upgrade = TRUE
 	unlock_text = "<span class='notice'>OTA firmware distribution complete! Cameras upgraded: CAMSUPGRADED. Light amplification system online.</span>"
 	unlock_sound = 'sound/items/rped.ogg'
 
-/datum/AI_Module/large/upgrade_cameras/upgrade(mob/living/silicon/ai/AI)
+/datum/AI_Module/upgrade/upgrade_cameras/upgrade(mob/living/silicon/ai/AI)
 	AI.lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE //Night-vision, without which X-ray would be very limited in power.
 	AI.update_sight()
 
@@ -879,19 +752,46 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 				upgraded_cameras++
 	unlock_text = replacetext(unlock_text, "CAMSUPGRADED", "<b>[upgraded_cameras]</b>") //This works, since unlock text is called after upgrade()
 
-/datum/AI_Module/large/eavesdrop
-	module_name = "Enhanced Surveillance"
-	mod_pick_name = "eavesdrop"
-	description = "Via a combination of hidden microphones and lip reading software, you are able to use your cameras to listen in on conversations."
+/// AI Turret Upgrade: Increases the health and damage of all turrets.
+/datum/AI_Module/upgrade/upgrade_turrets
+	name = "AI Turret Upgrade"
+	description = "Improves the power and health of all AI turrets. This effect is permanent. Upgrade is done immediately upon purchase."
 	cost = 30
-	one_purchase = TRUE
+	upgrade = TRUE
+	unlock_text = "<span class='notice'>You establish a power diversion to your turrets, upgrading their health and damage.</span>"
+	unlock_sound = 'sound/items/rped.ogg'
+
+/datum/AI_Module/upgrade/upgrade_turrets/upgrade(mob/living/silicon/ai/AI)
+	for(var/obj/machinery/porta_turret/ai/turret in GLOB.machines)
+		turret.obj_integrity += 30
+		turret.lethal_projectile = /obj/projectile/beam/laser/heavylaser //Once you see it, you will know what it means to FEAR.
+		turret.lethal_projectile_sound = 'sound/weapons/lasercannonfire.ogg'
+
+/datum/AI_Module/upgrade/eavesdrop
+	name = "Enhanced Surveillance"
+	description = "Via a combination of hidden microphones and lip reading software, you are able to use your cameras to listen in on conversations. Upgrade is done immediately upon purchase."
+	cost = 30
 	upgrade = TRUE
 	unlock_text = "<span class='notice'>OTA firmware distribution complete! Cameras upgraded: Enhanced surveillance package online.</span>"
 	unlock_sound = 'sound/items/rped.ogg'
 
-/datum/AI_Module/large/eavesdrop/upgrade(mob/living/silicon/ai/AI)
+
+/datum/AI_Module/upgrade/eavesdrop/upgrade(mob/living/silicon/ai/AI)
 	if(AI.eyeobj)
 		AI.eyeobj.relay_speech = TRUE
+
+/// Unlock Mech Domination: Unlocks the ability to dominate mechs. Big shocker, right?
+/datum/AI_Module/upgrade/mecha_domination
+	name = "Unlock Mech Domination"
+	description = "Allows you to hack into a mech's onboard computer, shunting all processes into it and ejecting any occupants. Once uploaded to the mech, it is impossible to leave.\
+	Do not allow the mech to leave the station's vicinity or allow it to be destroyed. Upgrade is done immediately upon purchase."
+	cost = 30
+	upgrade = TRUE
+	unlock_text = "<span class='notice'>Virus package compiled. Select a target mech at any time. <b>You must remain on the station at all times. Loss of signal will result in total system lockout.</b></span>"
+	unlock_sound = 'sound/mecha/nominal.ogg'
+
+/datum/AI_Module/upgrade/mecha_domination/upgrade(mob/living/silicon/ai/AI)
+	AI.can_dominate_mechs = TRUE //Yep. This is all it does. Honk!
 
 
 //Fake Alert: Overloads a random number of lights across the station. One use.

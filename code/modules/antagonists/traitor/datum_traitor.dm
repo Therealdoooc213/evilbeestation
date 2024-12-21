@@ -9,7 +9,6 @@
 	var/special_role = ROLE_TRAITOR
 	/// Shown when giving uplinks and codewords to the player
 	var/employer = "The Syndicate"
-	var/traitor_kind = TRAITOR_HUMAN //Set on initial assignment
 	var/datum/weakref/uplink_ref
 	var/datum/contractor_hub/contractor_hub
 	/// If this specific traitor has been assigned codewords. This is not always true, because it varies by faction.
@@ -32,6 +31,12 @@
 
 /datum/antagonist/traitor/remove_innate_effects()
 	handle_clown_mutation(owner.current, removing=FALSE)
+	var/mob/living/datum_owner = mob_override || owner.current
+	remove_antag_hud(antag_hud_type, datum_owner)
+
+	for(var/datum/component/codeword_hearing/component as anything in datum_owner.GetComponents(/datum/component/codeword_hearing))
+		component.delete_if_from_source(src)
+
 
 /datum/antagonist/traitor/on_removal()
 	//Remove malf powers.

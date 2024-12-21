@@ -17,6 +17,8 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 		/obj/machinery/syndicatebomb/training
 	)))
 
+GLOBAL_LIST_INIT(malf_modules, subtypesof(/datum/AI_Module))
+
 //The malf AI action subtype. All malf actions are subtypes of this.
 /datum/action/innate/ai
 	name = "AI Action"
@@ -122,96 +124,11 @@ GLOBAL_LIST_INIT(blacklisted_malf_machines, typecacheof(list(
 	else
 		add_ranged_ability(user, enable_text)
 
-
-//The datum and interface for the malf unlock menu, which lets them choose actions to unlock.
-/datum/module_picker
-	var/temp
-	var/processing_time = 50
-	var/list/possible_modules
-
-/datum/module_picker/New()
-	possible_modules = list()
-	for(var/type in typesof(/datum/AI_Module))
-		var/datum/AI_Module/AM = new type
-		if((AM.power_type && AM.power_type != /datum/action/innate/ai) || AM.upgrade)
-			possible_modules += AM
-
-/datum/module_picker/proc/use(mob/user)
-	var/list/dat = list()
-	dat += "<B>Select use of processing time: (currently #[processing_time] left.)</B><BR>"
-	dat += "<HR>"
-	dat += "<B>Install Module:</B><BR>"
-	dat += "<I>The number afterwards is the amount of processing time it consumes.</I><BR>"
-	for(var/datum/AI_Module/large/module in possible_modules)
-		dat += "<A href='byond://?src=[REF(src)];[module.mod_pick_name]=1'>[module.module_name]</A><A href='byond://?src=[REF(src)];showdesc=[module.mod_pick_name]'>\[?\]</A> ([module.cost])<BR>"
-	for(var/datum/AI_Module/small/module in possible_modules)
-		dat += "<A href='byond://?src=[REF(src)];[module.mod_pick_name]=1'>[module.module_name]</A><A href='byond://?src=[REF(src)];showdesc=[module.mod_pick_name]'>\[?\]</A> ([module.cost])<BR>"
-	dat += "<HR>"
-	if(temp)
-		dat += "[temp]"
-	var/datum/browser/popup = new(user, "modpicker", "Malf Module Menu")
-	popup.set_content(dat.Join())
-	popup.open()
-
-/datum/module_picker/Topic(href, href_list)
-	..()
-
-	if(!isAI(usr))
-		return
-	var/mob/living/silicon/ai/A = usr
-
-	if(A.stat == DEAD)
-		to_chat(A, "<span class='warning'>You are already dead!</span>")
-		return
-
-	for(var/datum/AI_Module/AM in possible_modules)
-		if (href_list[AM.mod_pick_name])
-
-			// Cost check
-			if(AM.cost > processing_time)
-				temp = "You cannot afford this module."
-				to_chat(A, "<span class='notice'>You cannot afford this module.</span>")
-				break
-
-			var/datum/action/innate/ai/action = locate(AM.power_type) in A.actions
-			// Give the power and take away the money.
-			if(AM.upgrade) //upgrade and upgrade() are separate, be careful!
-				AM.upgrade(A)
-				possible_modules -= AM
-				to_chat(A, AM.unlock_text)
-				A.playsound_local(A, AM.unlock_sound, 50, 0)
-				A.log_message("purchased malf module [AM.module_name] (NEW PROCESSING: [processing_time - AM.cost])", LOG_GAME)
-			else
-				if(AM.power_type)
-					if(AM.unlock_text)
-						to_chat(A, AM.unlock_text)
-					if(AM.unlock_sound)
-						A.playsound_local(A, AM.unlock_sound, 50, 0)
-					if(!action) //Unlocking for the first time
-						var/datum/action/AC = new AM.power_type
-						AC.Grant(A)
-						A.current_modules += new AM.type
-						temp = AM.description
-						if(AM.one_purchase)
-							possible_modules -= AM
-						A.log_message("purchased malf module [AM.module_name] (NEW PROCESSING: [processing_time - AM.cost])", LOG_GAME)
-					else //Adding uses to an existing module
-						action.uses += initial(action.uses)
-						temp = "Additional use[action.uses > 1 ? "s" : ""] added to [action.name]!"
-						action.update_desc()
-						A.log_message("purchased malf module [AM.module_name] (NEW USES: [action.uses]) (NEW PROCESSING: [processing_time - AM.cost])", LOG_GAME)
-			processing_time -= AM.cost
-
-		if(href_list["showdesc"])
-			if(AM.mod_pick_name == href_list["showdesc"])
-				temp = AM.description
-	use(usr)
-
-
 //The base module type, which holds info about each ability.
 /datum/AI_Module
 	var/module_name
 	var/mod_pick_name
+	var/category = "generic category"
 	var/description = ""
 	var/engaged = 0
 	var/cost = 5

@@ -619,7 +619,7 @@ CREATION_TEST_IGNORE_SUBTYPES(/mob/living/silicon/ai)
 	set category = "Malfunction"
 	set name = "Choose Module"
 
-	malf_picker.use(src)
+	malf_picker.ui_interact(src)
 
 //I am the icon meister. Bow fefore me.	//>fefore
 /mob/living/silicon/ai/proc/ai_hologram_change()
@@ -940,9 +940,11 @@ CREATION_TEST_IGNORE_SUBTYPES(/mob/living/silicon/ai)
 
 /mob/living/silicon/ai/revive(full_heal = 0, admin_revive = 0)
 	. = ..()
-	if(.) //successfully ressuscitated from death
-		set_core_display_icon(display_icon_override)
-		set_eyeobj_visible(TRUE)
+	if(!.) //successfully resuscitated from death
+		return
+
+	set_core_display_icon(display_icon_override)
+	set_eyeobj_visible(TRUE)
 
 /mob/living/silicon/ai/proc/malfhacked(obj/machinery/power/apc/apc)
 	malfhack = null

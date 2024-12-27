@@ -32,7 +32,7 @@
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
 	var/turns_since_scan = 0
-	var/mob/living/simple_animal/mouse/movement_target
+	var/mob/living/basic/mouse/movement_target
 	gold_core_spawnable = FRIENDLY_SPAWN
 	collar_type = "cat"
 	can_be_held = TRUE
@@ -171,7 +171,7 @@
 		if(stat || resting || buckled)
 			return .
 
-		for(var/mob/living/simple_animal/mouse/M in get_turf(src))
+		for(var/mob/living/basic/mouse/M in get_turf(src))
 			if(!M.stat)
 				INVOKE_ASYNC(src, TYPE_PROC_REF(/mob, emote), "me", 1, "splats \the [M]!")
 				M.splat()
@@ -229,7 +229,7 @@
 			if(!movement_target || !(src in viewers(3, movement_target.loc)))
 				movement_target = null
 				stop_automated_movement = 0
-				for(var/mob/living/simple_animal/mouse/snack in oview(3, src))
+				for(var/mob/living/basic/mouse/snack in oview(3, src))
 					if(!snack.stat)
 						movement_target = snack
 						break

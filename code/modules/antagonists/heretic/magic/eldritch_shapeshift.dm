@@ -5,7 +5,7 @@
 	invocation_type = INVOCATION_WHISPER
 	clothes_req = FALSE
 	possible_shapes = list(
-		/mob/living/simple_animal/mouse,
+		/mob/living/basic/mouse,
 		/mob/living/simple_animal/pet/dog/corgi,
 		/mob/living/simple_animal/hostile/carp,
 		/mob/living/simple_animal/bot/secbot,

@@ -56,7 +56,7 @@
 	var/list/mice = list()
 	for(var/mob/living/HM in oview(vision_range, target_from))
 		//Yum a tasty mouse
-		if(istype(HM, /mob/living/simple_animal/mouse))
+		if(istype(HM, /mob/living/basic/mouse))
 			mice += HM
 			continue
 		living_mobs += HM
@@ -68,7 +68,7 @@
 	return mice
 
 /mob/living/simple_animal/hostile/retaliate/poison/snake/AttackingTarget()
-	if(istype(target, /mob/living/simple_animal/mouse))
+	if(istype(target, /mob/living/basic/mouse))
 		visible_message("<span class='notice'>[name] consumes [target] in a single gulp!</span>", "<span class='notice'>You consume [target] in a single gulp!</span>")
 		QDEL_NULL(target)
 		adjustBruteLoss(-2)

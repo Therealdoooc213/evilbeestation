@@ -199,7 +199,7 @@
 
 	if(pests)
 		target_types += /mob/living/basic/cockroach
-		target_types += /mob/living/simple_animal/mouse
+		target_types += /mob/living/basic/mouse
 
 	if(drawn)
 		target_types += /obj/effect/decal/cleanable/crayon
@@ -230,7 +230,7 @@
 		visible_message("<span class='danger'>[src] sprays hydrofluoric acid at [A]!</span>")
 		playsound(src, 'sound/effects/spray2.ogg', 50, TRUE, -6)
 		A.acid_act(75, 10)
-	else if(istype(A, /mob/living/basic/cockroach) || istype(A, /mob/living/simple_animal/mouse))
+	else if(istype(A, /mob/living/basic/cockroach) || istype(A, /mob/living/basic/mouse))
 		var/mob/living/simple_animal/M = target
 		if(!M.stat)
 			visible_message("<span class='danger'>[src] smashes [target] with its mop!</span>")
@@ -344,7 +344,7 @@
 		visible_message("<span class='danger'>[src] sprays hydrofluoric acid at [A]!</span>")
 		playsound(src, 'sound/effects/spray2.ogg', 50, 1, -6)
 		A.acid_act(75, 10)
-	else if(istype(A, /mob/living/basic/cockroach) || istype(A, /mob/living/simple_animal/mouse))
+	else if(istype(A, /mob/living/basic/cockroach) || istype(A, /mob/living/basic/mouse))
 		var/mob/living/simple_animal/M = target
 		if(!M.stat)
 			visible_message("<span class='danger'>[src] smashes [target] with its mop!</span>")

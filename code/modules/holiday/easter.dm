@@ -26,11 +26,11 @@
 		if(R.name != "blobspawn")
 			if(prob(35))
 				if(isspaceturf(R.loc))
-					new /mob/living/simple_animal/chicken/rabbit/easter/space(R.loc)
+					new /mob/living/simple_animal/rabbit/easter/space(R.loc)
 				else
-					new /mob/living/simple_animal/chicken/rabbit/easter(R.loc)
+					new /mob/living/simple_animal/rabbit/easter(R.loc)
 
-/mob/living/simple_animal/chicken/rabbit/easter
+/mob/living/simple_animal/rabbit/easter
 	desc = "The hippiest hop around."
 	icon_state = "rabbit_white"
 	icon_living = "rabbit_white"
@@ -45,7 +45,7 @@
 	eggsFertile = FALSE
 	layMessage = list("hides an egg.","scampers around suspiciously.","begins making a huge racket.","begins shuffling.")
 
-/mob/living/simple_animal/chicken/rabbit/easter/space
+/mob/living/simple_animal/rabbit/easter/space
 	icon_prefix = "s_rabbit"
 	icon_state = "s_rabbit_white"
 	icon_living = "s_rabbit_white"

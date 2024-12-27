@@ -136,7 +136,12 @@
 
 /mob/living/simple_animal/cow/Initialize(mapload)
 	AddComponent(/datum/component/udder)
+	make_tameable()
 	. = ..()
+
+///wrapper for the tameable component addition so you can have non tamable cow subtypes
+/mob/living/simple_animal/cow/proc/make_tameable()
+	AddComponent(/datum/component/tameable, food_types = list(/obj/item/food/grown/wheat), tame_chance = 25, bonus_tame_chance = 15, after_tame = CALLBACK(src, .proc/tamed))
 
 /mob/living/simple_animal/cow/attack_hand(mob/living/carbon/M)
 	if(!stat && M.a_intent == INTENT_DISARM && icon_state != icon_dead)
@@ -369,9 +374,13 @@
 	gold_core_spawnable = FRIENDLY_SPAWN
 	chat_color = "#FFDC9B"
 
-/mob/living/simple_animal/chicken/rabbit
+/mob/living/simple_animal/rabbit
 	name = "\improper rabbit"
 	desc = "It's a rabbit, everyone knows what a rabbit is."
+	gender = PLURAL
+	mob_biotypes = MOB_ORGANIC|MOB_BEAST
+	health = 15
+	maxHealth = 15
 	icon = 'icons/mob/easter.dmi'
 	icon_state = "b_rabbit_white"
 	icon_living = "b_rabbit_white"
@@ -381,6 +390,42 @@
 	emote_hear = list("hops.")
 	emote_see = list("hops around","bounces up and down")
 	icon_prefix = "b_rabbit"
-	feedMessages = list("It nibbles happily.","It noms happily.")
 	butcher_results = list(/obj/item/food/meat/slab = 1)
 	food_type = /obj/item/food/grown/carrot
+	density = FALSE
+	speak_chance = 2
+	turns_per_move = 3
+	response_help_continuous = "pets"
+	response_help_simple = "pet"
+	response_disarm_continuous = "gently pushes aside"
+	response_disarm_simple = "gently push aside"
+	response_harm_continuous = "kicks"
+	response_harm_simple = "kick"
+	attack_verb_continuous = "kicks"
+	attack_verb_simple = "kick"
+	pass_flags = PASSTABLE | PASSMOB
+	mob_size = MOB_SIZE_SMALL
+	gold_core_spawnable = FRIENDLY_SPAWN
+	///passed to animal_variety component as the prefix icon.
+	var/icon_prefix = "rabbit"
+	///passed to egg_layer component as how many eggs it starts out as able to lay.
+	var/initial_egg_amount = 10
+
+/mob/living/simple_animal/rabbit/Initialize()
+	. = ..()
+	AddElement(/datum/element/animal_variety, icon_prefix, pick("brown","black","white"), TRUE)
+	var/list/feed_messages = list("[p_they()] nibbles happily.", "[p_they()] noms happily.")
+	var/eggs_added_from_eating = rand(1, 4)
+	var/max_eggs_held = 8
+	AddComponent(/datum/component/egg_layer,\
+		/obj/item/food/egg/loaded,\
+		list(/obj/item/food/grown/carrot),\
+		feed_messages,\
+		list("hides an egg.","scampers around suspiciously.","begins making a huge racket.","begins shuffling."),\
+		initial_egg_amount,\
+		eggs_added_from_eating,\
+		max_eggs_held\
+	)
+
+/mob/living/simple_animal/rabbit/empty //top hats summon these kinds of rabbits instead of the normal kind
+	initial_egg_amount = 0

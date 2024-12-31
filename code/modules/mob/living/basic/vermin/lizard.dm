@@ -14,11 +14,9 @@
 	speak_emote = list("hisses")
 	health = 10
 	maxHealth = 10
-	faction = list(FACTION_LIZARD)
+	faction = list("neutral")
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
-	melee_damage_lower = 1
-	melee_damage_upper = 2
 	response_help_continuous = "pets"
 	response_help_simple = "pet"
 	response_disarm_continuous = "shoos"
@@ -28,7 +26,7 @@
 	density = FALSE
 	pass_flags = PASSTABLE | PASSMOB
 	mob_size = MOB_SIZE_SMALL
-	mob_biotypes = MOB_ORGANIC|MOB_BEAST|MOB_REPTILE
+	mob_biotypes = MOB_ORGANIC | MOB_BEAST | MOB_REPTILE
 	gold_core_spawnable = FRIENDLY_SPAWN
 	obj_damage = 0
 	environment_smash = ENVIRONMENT_SMASH_NONE

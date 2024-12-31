@@ -41,3 +41,8 @@
 /datum/ai_planning_subtree/random_speech/mothroach
 	speech_chance = 2
 	emote_hear = list("flutters.", "flaps its wings.", "flaps its wings aggressively!")
+
+/datum/ai_planning_subtree/random_speech/lizard // all of these have to be three words long or i'm killing you. you're dead.
+	speech_chance = 3
+	emote_hear = list("stamps around some.", "hisses a bit.")
+	emote_see = list("blehs the tongue.", "tilts the head.", "does a spin.")

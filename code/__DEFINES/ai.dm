@@ -186,6 +186,9 @@
 #define BB_BASIC_MOB_CURRENT_TARGET_HIDING_LOCATION "BB_basic_current_target_hiding_location"
 #define BB_TARGETTING_DATUM "targetting_datum"
 
+///list of foods this mob likes
+#define BB_BASIC_FOODS "BB_basic_foods"
+
 // AI laws
 #define LAW_VALENTINES "valentines"
 #define LAW_DEVIL "devil"

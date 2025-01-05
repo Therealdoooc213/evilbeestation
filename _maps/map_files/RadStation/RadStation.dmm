@@ -1124,10 +1124,8 @@
 /turf/open/floor/iron/dark,
 /area/security/brig/dock)
 "arz" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/mapping_helpers/tile_breaker,
 /turf/open/floor/wood,
-/area/vacant_room/office)
+/area/liason_office)
 "arL" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -2132,6 +2130,8 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /turf/open/floor/iron,
 /area/hallway/primary/port)
 "aHc" = (
@@ -7821,10 +7821,6 @@
 	},
 /turf/open/floor/iron,
 /area/engine/engine_room)
-"cwG" = (
-/obj/effect/mapping_helpers/tile_breaker,
-/turf/open/floor/wood,
-/area/vacant_room/office)
 "cwJ" = (
 /obj/machinery/door/airlock/grunge{
 	name = "Chapel Morgue";
@@ -7921,6 +7917,12 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/iron/dark,
 /area/crew_quarters/bar)
+"cxV" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating{
+	broken = 1
+	},
+/area/liason_office)
 "cxX" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 6
@@ -8924,10 +8926,13 @@
 /turf/open/floor/plating,
 /area/maintenance/department/security)
 "cQm" = (
-/turf/open/floor/wood{
-	broken = 1
+/obj/effect/turf_decal/siding/wood,
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
 	},
-/area/vacant_room/office)
+/turf/open/floor/wood,
+/area/liason_office)
 "cQA" = (
 /obj/effect/turf_decal/bot,
 /obj/machinery/gravity_generator/main/station,
@@ -9778,11 +9783,11 @@
 /turf/open/space/basic,
 /area/space)
 "deu" = (
-/obj/structure/frame/computer,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/turf_decal/bot,
+/obj/structure/bed,
+/obj/item/bedsheet/centcom,
+/obj/effect/landmark/start/randommaint/liason,
 /turf/open/floor/wood,
-/area/vacant_room/office)
+/area/liason_office)
 "deE" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -10066,7 +10071,7 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/siding/wood/corner{
-	dir = 4
+	dir = 8
 	},
 /turf/open/floor/wood,
 /area/crew_quarters/dorms)
@@ -10948,8 +10953,12 @@
 /turf/open/space/basic,
 /area/solar/port/aft)
 "dyM" = (
+/obj/machinery/door/airlock/command{
+	req_access_txt = "105";
+	name = "Centcom Liason's Quarters"
+	},
 /turf/open/floor/wood,
-/area/vacant_room/office)
+/area/liason_office)
 "dyS" = (
 /obj/structure/table,
 /obj/item/book/manual/wiki/sopsecurity{
@@ -11930,17 +11939,9 @@
 	},
 /area/science/lobby)
 "dMT" = (
-/obj/structure/table/wood,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -26
-	},
-/obj/item/kirbyplants/dead{
-	pixel_y = 11
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/cobweb,
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/wood,
-/area/vacant_room/office)
+/area/liason_office)
 "dNa" = (
 /obj/effect/turf_decal/tile/blue/half{
 	dir = 1
@@ -13328,15 +13329,8 @@
 /turf/open/floor/iron/techmaint,
 /area/gateway)
 "elv" = (
-/obj/structure/table/wood,
-/obj/item/flashlight/lamp/green{
-	on = 0;
-	pixel_x = -5;
-	pixel_y = 8
-	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood,
-/area/vacant_room/office)
+/turf/open/floor/carpet/green,
+/area/liason_office)
 "elG" = (
 /obj/effect/turf_decal/tile/dark_red/half/contrasted{
 	alpha = 180;
@@ -14070,16 +14064,6 @@
 	},
 /turf/open/floor/iron,
 /area/crew_quarters/dorms)
-"ewX" = (
-/obj/structure/chair/office,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/power/apc/auto_name/directional/north,
-/obj/structure/cable/yellow{
-	icon_state = "0-4"
-	},
-/obj/effect/mapping_helpers/apc/discharged,
-/turf/open/floor/wood,
-/area/vacant_room/office)
 "ewZ" = (
 /obj/machinery/camera/directional/north,
 /turf/open/floor/engine/plasma,
@@ -17019,15 +17003,6 @@
 	},
 /turf/open/floor/wood,
 /area/maintenance/central)
-"fpG" = (
-/obj/structure/table/wood,
-/obj/item/folder/blue{
-	pixel_x = 6;
-	pixel_y = 1
-	},
-/obj/item/camera,
-/turf/open/floor/wood,
-/area/vacant_room/office)
 "fpJ" = (
 /obj/machinery/door/airlock/external{
 	name = "Arrival Shuttle Airlock"
@@ -17203,7 +17178,7 @@
 /area/quartermaster/miningdock)
 "fsy" = (
 /turf/closed/wall/rust,
-/area/vacant_room/office)
+/area/liason_office)
 "fsA" = (
 /obj/effect/turf_decal/tile/neutral/anticorner{
 	dir = 9
@@ -18153,14 +18128,18 @@
 /turf/closed/wall,
 /area/chapel/office)
 "fIf" = (
-/obj/structure/frame/computer,
-/obj/machinery/newscaster{
-	pixel_y = 32
+/obj/structure/table/wood,
+/obj/item/toy/plush/lizard_plushie/green{
+	name = "Spams-The-Faxes";
+	desc = "A threatning lizard plushie mailed to the liason by Central Command, warning them to not use their fax machine too much."
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/turf_decal/bot,
+/obj/item/reagent_containers/cup/glass/mug{
+	pixel_y = 5;
+	pixel_x = 7
+	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/wood,
-/area/vacant_room/office)
+/area/liason_office)
 "fIm" = (
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/dark_blue/fourcorners/contrasted{
@@ -19804,9 +19783,9 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/hallway/primary/central)
 "giD" = (
-/obj/effect/landmark/blobstart,
-/turf/open/floor/wood,
-/area/vacant_room/office)
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/carpet/green,
+/area/liason_office)
 "giZ" = (
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
@@ -21238,10 +21217,12 @@
 /turf/open/floor/iron/dark,
 /area/crew_quarters/heads/chief)
 "gHl" = (
-/obj/structure/bookcase/random,
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/chair/wood/wings{
+	dir = 4
+	},
+/obj/machinery/camera/directional/west,
 /turf/open/floor/wood,
-/area/vacant_room/office)
+/area/liason_office)
 "gHo" = (
 /obj/item/storage/bag/money{
 	pixel_y = 3
@@ -21799,7 +21780,7 @@
 "gRs" = (
 /obj/structure/sign/departments/minsky/research/research,
 /turf/closed/wall,
-/area/vacant_room/office)
+/area/liason_office)
 "gRA" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -21886,11 +21867,9 @@
 /turf/open/floor/iron/cafeteria,
 /area/crew_quarters/kitchen)
 "gSS" = (
-/obj/effect/decal/cleanable/cobweb/cobweb2,
-/obj/structure/filingcabinet/chestdrawer,
-/obj/effect/turf_decal/bot,
+/obj/machinery/light/directional/north,
 /turf/open/floor/wood,
-/area/vacant_room/office)
+/area/liason_office)
 "gSZ" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -22000,9 +21979,14 @@
 /turf/open/floor/iron,
 /area/hallway/primary/port)
 "gTU" = (
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/table/wood,
+/obj/item/clothing/glasses/regular,
+/obj/item/flashlight/lamp/green{
+	pixel_x = -6;
+	pixel_y = 14
+	},
 /turf/open/floor/wood,
-/area/vacant_room/office)
+/area/liason_office)
 "gUa" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/machinery/light/small{
@@ -22021,19 +22005,21 @@
 /turf/open/floor/plating,
 /area/crew_quarters/kitchen)
 "gUl" = (
-/obj/structure/rack,
-/obj/item/storage/briefcase{
-	pixel_x = 2;
-	pixel_y = 5
+/obj/structure/table/wood,
+/obj/item/flashlight/lamp/green{
+	on = 0;
+	pixel_x = -7
 	},
-/obj/item/storage/briefcase{
-	pixel_y = 1
+/obj/item/storage/fancy/cigarettes/cigars/havana{
+	pixel_x = 1;
+	pixel_y = 4
 	},
-/obj/machinery/airalarm/directional/west{
-	pixel_x = -23
+/obj/item/lighter,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 1
 	},
-/turf/open/floor/wood,
-/area/vacant_room/office)
+/turf/open/floor/carpet/green,
+/area/liason_office)
 "gUo" = (
 /obj/structure/chair{
 	dir = 8
@@ -22321,10 +22307,9 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/hallway/primary/central)
 "gYa" = (
-/obj/machinery/photocopier,
-/obj/effect/turf_decal/bot,
+/obj/structure/bookcase/random/reference,
 /turf/open/floor/wood,
-/area/vacant_room/office)
+/area/liason_office)
 "gYb" = (
 /obj/effect/turf_decal/tile/purple/fourcorners/contrasted,
 /obj/structure/cable/yellow{
@@ -22743,15 +22728,6 @@
 /obj/effect/turf_decal/tile/neutral/opposingcorners,
 /turf/open/floor/iron,
 /area/maintenance/starboard/aft)
-"hfC" = (
-/obj/machinery/door/airlock/maintenance_hatch{
-	id_tag = "commissarydoor";
-	name = "Maintenance Hatch";
-	req_access_txt = "12"
-	},
-/obj/effect/mapping_helpers/airlock/abandoned,
-/turf/open/floor/plating,
-/area/vacant_room/office)
 "hfG" = (
 /obj/effect/turf_decal/tile/dark_red/fourcorners/contrasted{
 	alpha = 180;
@@ -28287,9 +28263,16 @@
 /turf/open/floor/iron,
 /area/crew_quarters/dorms)
 "jap" = (
-/mob/living/basic/cockroach,
+/obj/effect/turf_decal/siding/wood,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
 /turf/open/floor/wood,
-/area/vacant_room/office)
+/area/liason_office)
 "jaC" = (
 /obj/structure/chair/office/light{
 	dir = 1
@@ -30183,7 +30166,9 @@
 /obj/structure/chair/office{
 	dir = 8
 	},
-/obj/effect/turf_decal/siding/wood/corner,
+/obj/effect/turf_decal/siding/wood/corner{
+	dir = 8
+	},
 /obj/item/radio/intercom{
 	dir = 1;
 	pixel_x = 1;
@@ -30256,13 +30241,13 @@
 /turf/open/floor/iron/dark,
 /area/security/prison)
 "jGK" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/structure/cable/yellow{
-	icon_state = "1-8"
+	icon_state = "1-2"
 	},
-/turf/open/floor/wood{
-	broken = 1
-	},
-/area/vacant_room/office)
+/turf/open/floor/wood,
+/area/liason_office)
 "jGN" = (
 /obj/effect/turf_decal/tile/dark_blue/fourcorners/contrasted{
 	alpha = 180
@@ -30546,9 +30531,12 @@
 /turf/open/floor/plating,
 /area/maintenance/department/medical)
 "jLb" = (
-/obj/structure/chair/office,
-/turf/open/floor/wood,
-/area/vacant_room/office)
+/obj/structure/chair/office{
+	dir = 1
+	},
+/obj/effect/landmark/start/randommaint/liason,
+/turf/open/floor/carpet/green,
+/area/liason_office)
 "jLh" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/iron/dark,
@@ -32553,6 +32541,18 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/maintenance/port/aft)
+"ktz" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/structure/disposalpipe/segment{
+	dir = 2
+	},
+/turf/open/floor/iron/dark/side{
+	dir = 4
+	},
+/area/hallway/primary/central)
 "ktQ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -41482,17 +41482,13 @@
 /turf/open/floor/iron/dark,
 /area/engine/atmos)
 "niR" = (
-/obj/structure/table/wood,
-/obj/item/radio{
-	desc = "An old handheld radio. You could use it, if you really wanted to.";
-	icon_state = "radio";
-	name = "old radio";
-	pixel_x = -5;
-	pixel_y = 2
+/obj/machinery/photocopier,
+/obj/machinery/airalarm/directional/south{
+	pixel_y = -22
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood,
-/area/vacant_room/office)
+/obj/machinery/camera/directional/south,
+/turf/open/floor/carpet/green,
+/area/liason_office)
 "niS" = (
 /obj/machinery/atmospherics/pipe/simple/general/visible{
 	dir = 1
@@ -44694,7 +44690,7 @@
 /area/security/prison)
 "oiI" = (
 /turf/closed/wall,
-/area/vacant_room/office)
+/area/liason_office)
 "oiP" = (
 /obj/structure/grille/broken,
 /obj/effect/decal/cleanable/dirt,
@@ -46215,10 +46211,13 @@
 /turf/open/floor/engine/vacuum,
 /area/engine/atmospherics_engine)
 "oKM" = (
-/obj/effect/decal/cleanable/ash,
-/obj/effect/landmark/xeno_spawn,
-/turf/open/floor/wood,
-/area/vacant_room/office)
+/obj/structure/table/wood,
+/obj/item/pen/red,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 1
+	},
+/turf/open/floor/carpet/green,
+/area/liason_office)
 "oKQ" = (
 /obj/effect/turf_decal/guideline/guideline_edge/blue{
 	dir = 1
@@ -49583,6 +49582,14 @@
 	},
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai_upload)
+"pJK" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/turf/open/floor/iron,
+/area/hallway/primary/port)
 "pJO" = (
 /obj/machinery/vending/cigarette,
 /turf/open/floor/prison,
@@ -52044,12 +52051,9 @@
 /turf/open/floor/iron,
 /area/maintenance/department/security)
 "qzd" = (
-/obj/structure/sign/poster/official/work_for_a_future{
-	pixel_y = -32
-	},
-/obj/effect/decal/cleanable/glass,
-/turf/open/floor/wood,
-/area/vacant_room/office)
+/obj/machinery/vending/coffee,
+/turf/open/floor/carpet/green,
+/area/liason_office)
 "qzz" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -52964,10 +52968,12 @@
 /area/security/detectives_office)
 "qOU" = (
 /obj/structure/table/wood,
-/obj/item/folder/red,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood,
-/area/vacant_room/office)
+/obj/machinery/fax{
+	fax_name = "CentCom Liason's Office";
+	name = "Liason's Fax Machine"
+	},
+/turf/open/floor/carpet/green,
+/area/liason_office)
 "qOZ" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -53468,18 +53474,6 @@
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/aft)
-"qWW" = (
-/obj/structure/table/wood,
-/obj/item/flashlight/lamp/green{
-	pixel_x = -5;
-	pixel_y = 8
-	},
-/obj/item/phone{
-	pixel_x = 8;
-	pixel_y = 7
-	},
-/turf/open/floor/wood,
-/area/vacant_room/office)
 "qWY" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -57988,11 +57982,17 @@
 /turf/open/floor/iron,
 /area/janitor)
 "ssN" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood{
-	broken = 1
+/obj/structure/table/wood,
+/obj/item/paper_bin{
+	pixel_x = 5;
+	pixel_y = 4
 	},
-/area/vacant_room/office)
+/obj/item/stamp/centcom{
+	pixel_y = 5;
+	pixel_x = -7
+	},
+/turf/open/floor/carpet/green,
+/area/liason_office)
 "ssS" = (
 /obj/effect/turf_decal/tile/blue/opposingcorners{
 	dir = 1
@@ -59038,11 +59038,6 @@
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/glass/reinforced,
 /area/chapel/main)
-"sMy" = (
-/obj/structure/table/wood,
-/obj/item/stack/package_wrap,
-/turf/open/floor/wood,
-/area/vacant_room/office)
 "sMK" = (
 /obj/structure/disposalpipe/sorting/mail{
 	dir = 4;
@@ -59074,14 +59069,8 @@
 /area/security/prison)
 "sNq" = (
 /obj/structure/table/wood,
-/obj/item/pen/red,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/light_switch{
-	pixel_x = 1;
-	pixel_y = -21
-	},
-/turf/open/floor/wood,
-/area/vacant_room/office)
+/turf/open/floor/carpet/green,
+/area/liason_office)
 "sNs" = (
 /obj/effect/turf_decal/tile/blue/fourcorners/contrasted,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
@@ -62752,11 +62741,13 @@
 /turf/open/floor/iron,
 /area/security/main)
 "tQR" = (
-/obj/structure/table/wood,
-/obj/item/paicard,
-/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/wood,
+/obj/item/radio/intercom/directional/west,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 6
+	},
 /turf/open/floor/wood,
-/area/vacant_room/office)
+/area/liason_office)
 "tQS" = (
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible{
 	dir = 1
@@ -63480,8 +63471,7 @@
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp/green{
 	on = 0;
-	pixel_x = -5;
-	pixel_y = -2
+	pixel_x = -5
 	},
 /obj/item/wirecutters{
 	pixel_x = 6;
@@ -64463,11 +64453,14 @@
 /turf/open/floor/iron,
 /area/security/brig)
 "uwF" = (
-/obj/structure/chair/office{
-	dir = 8
+/obj/item/clothing/under/rank/centcom/officer,
+/obj/structure/closet/secure_closet{
+	name = "centcom liason's locker"
 	},
+/obj/item/clothing/glasses/sunglasses/advanced,
+/obj/item/clothing/shoes/laceup,
 /turf/open/floor/wood,
-/area/vacant_room/office)
+/area/liason_office)
 "uwZ" = (
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{
 	alpha = 180;
@@ -64555,12 +64548,9 @@
 /turf/open/floor/iron,
 /area/hallway/primary/starboard)
 "uxS" = (
-/obj/structure/noticeboard{
-	pixel_y = 31
-	},
-/obj/effect/decal/cleanable/shreds,
+/obj/item/kirbyplants/random,
 /turf/open/floor/wood,
-/area/vacant_room/office)
+/area/liason_office)
 "uxV" = (
 /obj/structure/chair/office/light,
 /obj/structure/cable/yellow{
@@ -67039,11 +67029,6 @@
 	},
 /turf/open/floor/circuit,
 /area/ai_monitored/storage/satellite)
-"vqu" = (
-/mob/living/basic/cockroach,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/wood,
-/area/vacant_room/office)
 "vqC" = (
 /obj/effect/turf_decal/tile/dark_blue/fourcorners/contrasted{
 	alpha = 180
@@ -68164,16 +68149,17 @@
 	},
 /area/science/research)
 "vKL" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "Vacant Office A";
-	req_access_txt = "12"
-	},
-/obj/structure/barricade/wooden/crude,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/machinery/door/airlock/command/glass{
+	name = "CentCom Liason's Quarters";
+	req_access_txt = "105"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /turf/open/floor/iron,
-/area/vacant_room/office)
+/area/liason_office)
 "vLA" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2
@@ -68644,13 +68630,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/engine,
 /area/science/xenobiology)
-"vTx" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/wood{
-	broken = 1
-	},
-/area/vacant_room/office)
 "vTD" = (
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 8
@@ -69361,11 +69340,6 @@
 	dir = 8
 	},
 /area/hallway/primary/central)
-"wfF" = (
-/obj/structure/table/wood,
-/obj/item/hand_labeler,
-/turf/open/floor/wood,
-/area/vacant_room/office)
 "wfJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment{
@@ -71641,17 +71615,17 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
+	dir = 1
 	},
 /turf/open/floor/iron,
 /area/hallway/primary/port)
@@ -75028,17 +75002,12 @@
 /turf/open/floor/iron,
 /area/hallway/primary/port)
 "xYW" = (
-/obj/structure/table/wood,
-/obj/item/folder/blue{
-	pixel_x = 6;
-	pixel_y = 1
+/obj/effect/turf_decal/siding/wood,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
 	},
-/obj/item/pen/charcoal{
-	pixel_y = 8
-	},
-/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood,
-/area/vacant_room/office)
+/area/liason_office)
 "xYY" = (
 /obj/machinery/door/airlock/external{
 	name = "Arrival Shuttle Airlock"
@@ -103922,8 +103891,8 @@ lKq
 fYs
 gZQ
 ceW
-oiI
-ewX
+cxV
+arz
 xYW
 ssN
 jLb
@@ -104178,12 +104147,12 @@ ybl
 vEI
 wSx
 aGC
-vEI
+pJK
 vKL
 jGK
 jap
 oKM
-cwG
+elv
 sNq
 oiI
 faP
@@ -104436,11 +104405,11 @@ hCT
 fYs
 gZQ
 nIx
-oiI
+cxV
 uxS
 cQm
 giD
-ssN
+elv
 qzd
 oiI
 cOA
@@ -104694,11 +104663,11 @@ fYs
 gZQ
 gbm
 oiI
-qWW
-fpG
-wfF
+oiI
+oiI
+oiI
 dyM
-gHl
+oiI
 oiI
 izF
 cFO
@@ -104953,10 +104922,10 @@ bGs
 oiI
 fIf
 uwF
-sMy
-gTU
+oiI
+arz
 gHl
-fsy
+oiI
 nkK
 kBJ
 uin
@@ -105209,11 +105178,11 @@ wjO
 sre
 gRs
 deu
-vTx
+arz
+dyM
+arz
 gTU
-vqu
-gTU
-hfC
+oiI
 hOZ
 mZq
 ydZ
@@ -105470,7 +105439,7 @@ oiI
 oiI
 gSS
 arz
-fsy
+oiI
 xIX
 pro
 aoM
@@ -105727,7 +105696,7 @@ bBu
 oiI
 oiI
 gYa
-fsy
+oiI
 wgf
 fRc
 xVG
@@ -106239,7 +106208,7 @@ hCu
 pTR
 lkm
 qEf
-iLp
+ktz
 aJZ
 uhy
 eXl

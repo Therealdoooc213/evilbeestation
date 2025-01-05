@@ -1829,3 +1829,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/tcommsat/relay
 	name = "Telecommunications Relay"
 	icon_state = "tcom_sat_cham"
+
+/area/liason_office
+	name = "Liason's Office"
+	icon_state = "liason"
+	mood_job_allowed = list(JOB_NAME_LIASON, JOB_CENTCOM_CENTRAL_COMMAND, JOB_CENTCOM_COMMANDER, JOB_CENTCOM_OFFICIAL, JOB_CENTCOM_ADMIRAL)
+	mood_bonus = 3
+	mood_message = "<span class='nicegreen'>It's great to be the best on this stupid station."

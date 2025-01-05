@@ -457,3 +457,13 @@
 		/obj/item/storage/box/handcuffs = 5,
 		/obj/item/melee/classic_baton/police/telescopic = 1,
 		)
+
+/datum/job/gimmick/liason
+	mail_goodies = list(
+		/obj/item/storage/fancy/cigarettes/cigars/havana = 15,
+		/obj/item/lighter = 10,
+		/obj/item/toy/plush/nukeplushie = 5, // Their worst nightmare!
+		/obj/item/coin/adamantine = 5,
+		/obj/item/coin/diamond = 5,	// Rich bastards...
+		/obj/item/encryptionkey/headset_cent = 1, // Finally, central command gave them their rightfully deserved encryption key.
+	)

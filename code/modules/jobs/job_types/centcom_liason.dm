@@ -5,8 +5,8 @@
 	bank_account_department = ACCOUNT_VIP_BITFLAG
 	exp_requirements = 1200
 	exp_type_department = EXP_TYPE_COMMAND
-	payment_per_department = list(ACCOUNT_VIP_ID = PAYCHECK_COMMAND_DEPT)
-	department_for_prefs = DEPT_NAME_CENTCOM
+	payment_per_department = list(ACCOUNT_VIP_ID = PAYCHECK_COMMAND_DEPT) //I'm sure Burke wasn't paid that much, considering at how shit he was at his job.
+	department_for_prefs = DEPT_NAME_VIP
 	departments = DEPT_BITFLAG_CENTCOM
 	selection_color = "#10bd01d2"
 

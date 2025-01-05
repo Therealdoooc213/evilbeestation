@@ -11071,7 +11071,7 @@
 "bBk" = (
 /obj/structure/bed,
 /obj/item/bedsheet/centcom,
-/obj/effect/landmark/start/liason,
+/obj/effect/landmark/start/randommaint/liason,
 /turf/open/floor/wood,
 /area/liason_office)
 "bBl" = (

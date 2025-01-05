@@ -302,9 +302,9 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	keyslot = null
 	bang_protect = 1
 
-/obj/item/radio/headset/headset_cent/liason
-	name = "\improper CentCom liason's headset"
-	desc = "A headset worn by CentCom liason's, missing a central command radio key due to budget cuts."
+/obj/item/radio/headset/headset_cent/liaison
+	name = "\improper CentCom liaison's headset"
+	desc = "A headset worn by CentCom liaison's, missing a central command radio key due to budget cuts."
 	keyslot = new /obj/item/encryptionkey/headset_com
 
 /obj/item/radio/headset/silicon/pai

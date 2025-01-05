@@ -458,7 +458,7 @@
 		/obj/item/melee/classic_baton/police/telescopic = 1,
 		)
 
-/datum/job/gimmick/liason
+/datum/job/liaison
 	mail_goodies = list(
 		/obj/item/storage/fancy/cigarettes/cigars/havana = 15,
 		/obj/item/lighter = 10,

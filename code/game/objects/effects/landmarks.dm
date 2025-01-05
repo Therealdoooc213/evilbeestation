@@ -247,9 +247,9 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Virologist"
 	job= "Virologist"
 
-/obj/effect/landmark/start/randommaint/liason
-	name = "CentCom Liason"
-	job = "CentCom Liason"
+/obj/effect/landmark/start/randommaint/liaison
+	name = "CentCom Liaison"
+	job = "CentCom Liaison"
 
 //Department Security spawns
 

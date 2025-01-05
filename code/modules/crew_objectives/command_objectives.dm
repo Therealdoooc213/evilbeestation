@@ -37,7 +37,7 @@
 
 /datum/objective/crew/stamp
 	explanation_text = "Make sure your prized CENTCOM Rubber Stamp is on you by the end of the shift."
-	jobs = JOB_NAME_LIASON
+	jobs = JOB_NAME_LIAISON
 
 /datum/objective/crew/stamp/check_completion()
 	return ..() || owner?.current?.check_contents_for(/obj/item/stamp/centcom)

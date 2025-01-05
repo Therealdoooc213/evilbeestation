@@ -1,5 +1,5 @@
-/datum/job/liason
-	title = JOB_NAME_LIASON
+/datum/job/liaison
+	title = JOB_NAME_LIAISON
 	description = "Get your radio stolen by a assistant. Relay information to Central Command via fax, get your fax blown up by Central Command for abusing it."
 	supervisors = "the captain, central command, space law."
 	bank_account_department = ACCOUNT_VIP_BITFLAG
@@ -10,17 +10,17 @@
 	departments = DEPT_BITFLAG_CENTCOM
 	selection_color = "#10bd01d2"
 
-	outfit = /datum/outfit/job/gimmick/liason
+	outfit = /datum/outfit/job/liaison
 	base_access = list(ACCESS_HEADS, ACCESS_CENT_LIVING) //This access isn't used anywhere else (to my knowledge), so it should be fine.
 	species_outfits = list(
 		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/official
 	)
 	rpg_title = "Town Crier"
-	display_order = JOB_DISPLAY_ORDER_LIASON
+	display_order = JOB_DISPLAY_ORDER_LIAISON
 
-/datum/outfit/job/gimmick/liason
-	name = JOB_NAME_LIASON
-	jobtype = /datum/job/gimmick/liason
+/datum/outfit/job/liaison
+	name = JOB_NAME_LIAISON
+	jobtype = /datum/job/liason
 	id = /obj/item/card/id/centcom
 	belt = /obj/item/clipboard
 	glasses = /obj/item/clothing/glasses/sunglasses/advanced

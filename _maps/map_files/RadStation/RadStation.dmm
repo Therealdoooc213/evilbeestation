@@ -9789,7 +9789,7 @@
 "deu" = (
 /obj/structure/bed,
 /obj/item/bedsheet/centcom,
-/obj/effect/landmark/start/liason,
+/obj/effect/landmark/start/randommaint/liason,
 /turf/open/floor/wood,
 /area/liason_office)
 "deE" = (
@@ -10959,7 +10959,7 @@
 "dyM" = (
 /obj/machinery/door/airlock/command{
 	req_access_txt = "105";
-	name = "Centcom Liason's Quarters"
+	name = "Centcom Liaison's Quarters"
 	},
 /obj/machinery/door/firedoor,
 /turf/open/floor/wood,
@@ -44428,6 +44428,14 @@
 /obj/machinery/meter,
 /turf/open/floor/iron/tech,
 /area/engine/engine_room)
+"oeU" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/command{
+	req_access_txt = "105";
+	name = "Centcom Liaison's Quarters"
+	},
+/turf/open/floor/wood,
+/area/liason_office)
 "oeW" = (
 /obj/effect/landmark/start/security_officer,
 /obj/structure/toilet{
@@ -52974,8 +52982,8 @@
 "qOU" = (
 /obj/structure/table/wood,
 /obj/machinery/fax{
-	fax_name = "CentCom Liason's Office";
-	name = "Liason's Fax Machine"
+	fax_name = "CentCom Liaison's Office";
+	name = "Liaison's Fax Machine"
 	},
 /turf/open/floor/carpet/green,
 /area/liason_office)
@@ -68164,7 +68172,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command/glass{
-	name = "CentCom Liason's Office";
+	name = "CentCom Liaison's Office";
 	req_access_txt = "105"
 	},
 /turf/open/floor/wood,
@@ -105189,7 +105197,7 @@ sre
 gRs
 deu
 arz
-dyM
+oeU
 arz
 gTU
 oiI

@@ -10752,16 +10752,16 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/command/glass{
-	name = "CentCom Liason's Office";
-	req_access_txt = "105"
-	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/machinery/door/airlock/command/glass{
+	name = "CentCom Liaison's Office";
+	req_access_txt = "105"
+	},
 /turf/open/floor/wood,
 /area/liason_office)
 "bzB" = (
@@ -12456,11 +12456,11 @@
 /area/maintenance/port)
 "bJt" = (
 /obj/structure/table/wood,
-/obj/machinery/fax{
-	fax_name = "CentCom Liason's Office";
-	name = "Liason's Fax Machine"
-	},
 /obj/machinery/camera/directional/south,
+/obj/machinery/fax{
+	fax_name = "CentCom Liaison's Office";
+	name = "Liaison's Fax Machine"
+	},
 /turf/open/floor/wood,
 /area/liason_office)
 "bJu" = (
@@ -63307,11 +63307,11 @@
 /turf/open/floor/iron,
 /area/hallway/primary/central)
 "sGV" = (
+/obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/command{
 	req_access_txt = "105";
-	name = "Centcom Liason's Quarters"
+	name = "Centcom Liaison's Quarters"
 	},
-/obj/machinery/door/firedoor,
 /turf/open/floor/wood,
 /area/liason_office)
 "sHl" = (

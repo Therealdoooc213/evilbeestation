@@ -52,7 +52,7 @@
 #define JOB_DISPLAY_ORDER_BRIG_PHYS 32
 #define JOB_DISPLAY_ORDER_AI 33
 #define JOB_DISPLAY_ORDER_CYBORG 34
-#define JOB_DISPLAY_ORDER_LIASON 35
+#define JOB_DISPLAY_ORDER_LIAISON 35
 
 // should check the ones in `\_DEFINES\economy.dm`
 // It's true that bitflags shouldn't be separated in two DEFINES if these are same, but just in case the system can be devided, it's remained separated.
@@ -144,7 +144,7 @@
 #define JOB_NAME_KING    "King"
 #define JOB_NAME_PRISONER "Prisoner"
 #define JOB_SPACE_POLICE "Space Police"
-#define JOB_NAME_LIASON "CentCom Liason"
+#define JOB_NAME_LIAISON "CentCom Liaison"
 
 
 

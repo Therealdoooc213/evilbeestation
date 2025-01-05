@@ -210,6 +210,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 /obj/effect/landmark/start/brig_physician
 	name = "Brig Physician"
 
+/obj/effect/landmark/start/liason
+	name = "CentCom Liason"
+	icon_state = "x3"
+
 /obj/effect/landmark/start/randommaint
 	name = "maintjobstart"
 	icon_state = "x3"
@@ -247,9 +251,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Virologist"
 	job= "Virologist"
 
-/obj/effect/landmark/start/randommaint/liason
-	name = "CentCom Liason"
-	job = "CentCom Liason"
 //Department Security spawns
 
 /obj/effect/landmark/start/depsec

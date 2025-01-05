@@ -34,3 +34,10 @@
 		if(goodboy.stat != DEAD && SSshuttle.emergency.shuttle_areas[get_area(goodboy)])
 			return TRUE
 	return FALSE
+
+/datum/objective/crew/stamp
+	explanation_text = "Make sure your prized CENTCOM Rubber Stamp is on you by the end of the shift."
+	jobs = JOB_NAME_LIASON
+
+/datum/objective/crew/stamp/check_completion()
+	return ..() || owner?.current?.check_contents_for(/obj/item/stamp/centcom)

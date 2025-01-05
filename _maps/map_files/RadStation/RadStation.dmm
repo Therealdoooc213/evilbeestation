@@ -7917,6 +7917,10 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/iron/dark,
 /area/crew_quarters/bar)
+"cxR" = (
+/obj/structure/sign/nanotrasen,
+/turf/closed/wall,
+/area/liason_office)
 "cxV" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating{
@@ -9785,7 +9789,7 @@
 "deu" = (
 /obj/structure/bed,
 /obj/item/bedsheet/centcom,
-/obj/effect/landmark/start/randommaint/liason,
+/obj/effect/landmark/start/liason,
 /turf/open/floor/wood,
 /area/liason_office)
 "deE" = (
@@ -10957,6 +10961,7 @@
 	req_access_txt = "105";
 	name = "Centcom Liason's Quarters"
 	},
+/obj/machinery/door/firedoor,
 /turf/open/floor/wood,
 /area/liason_office)
 "dyS" = (
@@ -11940,6 +11945,7 @@
 /area/science/lobby)
 "dMT" = (
 /obj/machinery/light/small/directional/north,
+/obj/machinery/firealarm/directional/west,
 /turf/open/floor/wood,
 /area/liason_office)
 "dNa" = (
@@ -59068,6 +59074,9 @@
 /area/security/prison)
 "sNq" = (
 /obj/structure/table/wood,
+/obj/item/reagent_containers/cup/glass/bottle/sake{
+	pixel_y = 5
+	},
 /turf/open/floor/carpet/green,
 /area/liason_office)
 "sNs" = (
@@ -68151,12 +68160,13 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/command/glass{
-	name = "CentCom Liason's Quarters";
-	req_access_txt = "105"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/command/glass{
+	name = "CentCom Liason's Office";
+	req_access_txt = "105"
+	},
 /turf/open/floor/wood,
 /area/liason_office)
 "vLA" = (
@@ -75005,6 +75015,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
+/obj/structure/chair/office,
 /turf/open/floor/wood,
 /area/liason_office)
 "xYY" = (
@@ -103633,7 +103644,7 @@ pqC
 bfF
 gZQ
 gbm
-oiI
+cxR
 dMT
 tQR
 gUl

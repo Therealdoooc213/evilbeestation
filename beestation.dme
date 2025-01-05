@@ -2845,6 +2845,7 @@
 #include "code\modules\jobs\job_types\brig_physician.dm"
 #include "code\modules\jobs\job_types\captain.dm"
 #include "code\modules\jobs\job_types\cargo_technician.dm"
+#include "code\modules\jobs\job_types\cargo_technician.dm"
 #include "code\modules\jobs\job_types\chaplain.dm"
 #include "code\modules\jobs\job_types\chemist.dm"
 #include "code\modules\jobs\job_types\chief_engineer.dm"

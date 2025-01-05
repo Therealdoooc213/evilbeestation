@@ -416,6 +416,8 @@ SUBSYSTEM_DEF(department)
 	dept_colour = "#00eba4"
 	dept_radio_channel = FREQ_CENTCOM
 
+	jobs = list(JOB_NAME_LIASON)
+
 	// currently not used, but just in case
 	manifest_category_name = DEPT_NAME_CENTCOM
 	manifest_category_order = DEPT_MANIFEST_ORDER_CENTCOM

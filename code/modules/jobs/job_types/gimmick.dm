@@ -164,10 +164,12 @@
 
 /datum/job/gimmick/liason
 	title = JOB_NAME_LIASON
-	description = "Get your radio stolen by a assistant. Relay information to Central Command via fax, get your fax blown up by Central Command for abusing it. THIS JOB IS NOT A POSITION OF POWER. YOU ANSWER TO THE CAPTAIN AND CENTRAL COMMAND."
+	description = "Get your radio stolen by a assistant. Relay information to Central Command via fax, get your fax blown up by Central Command for abusing it."
 	gimmick = TRUE
 	supervisors = "the captain, central command, space law."
 	bank_account_department = ACCOUNT_VIP_BITFLAG
+	exp_requirements = 1200
+	exp_type_department = EXP_TYPE_COMMAND
 	payment_per_department = list(ACCOUNT_VIP_ID = PAYCHECK_COMMAND_DEPT)
 	departments = DEPT_BITFLAG_CENTCOM
 
@@ -177,7 +179,6 @@
 		SPECIES_PLASMAMAN = /datum/outfit/plasmaman/official
 	)
 	rpg_title = "Town Crier"
-
 
 /datum/outfit/job/gimmick/liason
 	name = JOB_NAME_LIASON

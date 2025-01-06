@@ -189,6 +189,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Cyborg"
 	icon_state = "Cyborg"
 
+/obj/effect/landmark/start/liaison
+	name = "CentCom Liaison"
+	icon_state = "x3"
+
 /obj/effect/landmark/start/ai
 	name = "AI"
 	icon_state = "AI"
@@ -246,10 +250,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Virologist"
 	icon_state = "Virologist"
 	job= "Virologist"
-
-/obj/effect/landmark/start/randommaint/liaison
-	name = "CentCom Liaison"
-	job = "CentCom Liaison"
 
 //Department Security spawns
 

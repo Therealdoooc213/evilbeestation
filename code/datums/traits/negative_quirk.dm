@@ -170,7 +170,7 @@
 				heirloom_type = /obj/item/handmirror
 			if(JOB_NAME_STAGEMAGICIAN)
 				heirloom_type = /obj/item/gun/magic/wand
-			if(JOB_NAME_LIASON)
+			if(JOB_NAME_LIAISON)
 				heirloom_type = pick(/obj/item/clothing/head/hats/centcom_cap, /obj/item/clothing/head/hats/centhat, /obj/item/clothing/mask/cigarette/cigar/havana)
 			//Security/Command
 			if(JOB_NAME_CAPTAIN)

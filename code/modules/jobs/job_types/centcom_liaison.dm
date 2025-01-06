@@ -5,10 +5,12 @@
 	bank_account_department = ACCOUNT_VIP_BITFLAG
 	exp_requirements = 1200
 	exp_type_department = EXP_TYPE_COMMAND
-	payment_per_department = list(ACCOUNT_VIP_ID = PAYCHECK_COMMAND_DEPT) //I'm sure Burke wasn't paid that much, considering at how shit he was at his job.
-	department_for_prefs = DEPT_NAME_VIP
-	departments = DEPT_BITFLAG_CENTCOM
+	payment_per_department = list(ACCOUNT_VIP_ID = PAYCHECK_COMMAND_DEPT) //I'm sure Burke wasn't paid that much.
+	department_for_prefs = DEPT_NAME_OTHER
+	departments = DEPT_BITFLAG_CIV
 	selection_color = "#10bd01d2"
+	total_positions = 1
+	spawn_positions = 1
 
 	outfit = /datum/outfit/job/liaison
 	base_access = list(ACCESS_HEADS, ACCESS_CENT_LIVING) //This access isn't used anywhere else (to my knowledge), so it should be fine.
@@ -20,11 +22,11 @@
 
 /datum/outfit/job/liaison
 	name = JOB_NAME_LIAISON
-	jobtype = /datum/job/liason
+	jobtype = /datum/job/liaison
 	id = /obj/item/card/id/centcom
 	belt = /obj/item/clipboard
 	glasses = /obj/item/clothing/glasses/sunglasses/advanced
 	l_pocket = /obj/item/modular_computer/tablet/pda/heads
-	ears = /obj/item/radio/headset/headset_cent/liason
+	ears = /obj/item/radio/headset/headset_cent/liaison
 	uniform = /obj/item/clothing/under/rank/centcom/officer
 	shoes = /obj/item/clothing/shoes/laceup

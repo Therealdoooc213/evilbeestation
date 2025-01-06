@@ -76419,7 +76419,7 @@
 "suL" = (
 /obj/item/clothing/under/rank/centcom/officer,
 /obj/structure/closet/secure_closet{
-	name = "centcom liason's locker"
+	name = "centcom liaison's locker"
 	},
 /obj/item/clothing/glasses/sunglasses/advanced,
 /obj/item/clothing/shoes/laceup,
@@ -94560,7 +94560,7 @@
 "yaw" = (
 /obj/structure/bed,
 /obj/item/bedsheet/centcom,
-/obj/effect/landmark/start/randommaint/liason,
+/obj/effect/landmark/start/liaison,
 /turf/open/floor/carpet/green,
 /area/liason_office)
 "yaG" = (

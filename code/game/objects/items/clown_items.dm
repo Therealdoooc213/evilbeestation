@@ -215,3 +215,47 @@
 	desc = "Just looking at this makes you want to giggle."
 	icon_state = "laughter"
 	list_reagents = list(/datum/reagent/consumable/laughter = 50)
+
+
+// prank items used for the clowns toolbox choice beacon
+
+/obj/item/clown
+	name = "Make a GitHub issue if you see this."
+	desc = "Make a GitHub issue, PLEASE!!!"
+
+/obj/item/clown/pickup(mob/living/user)
+	..()
+	if(user.mind.assigned_role == JOB_NAME_CLOWN)
+		to_chat(user, "<span class='clown'>You carefully pickup the [src], making sure not to trigger its pranking mechanisms...</span>")
+	else
+		to_chat(user, "<span class='ratvar'>Pranked!</span>")
+		playsound(src, 'sound/misc/sadtrombone.ogg', 50, TRUE)
+
+/obj/item/clown/syndieduffel // we dont want this to be a storage item
+	name = "suspicious looking duffel bag"
+	desc = "A large duffel bag for holding extra tactical supplies."
+	icon = 'icons/obj/storage/backpack.dmi'
+	icon_state = "duffel-syndie"
+	item_state = "duffel-syndieammo"
+	lefthand_file = 'icons/mob/inhands/equipment/backpack_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
+	w_class = WEIGHT_CLASS_BULKY
+
+/obj/item/clown/syndieduffel/pickup(mob/living/user)
+	. = ..()
+	if(user.mind.assigned_role == JOB_NAME_CLOWN)
+		to_chat(user, "<span class='clown'>You resist the temptation to open the [src], trembling as you hold it.</span>")
+	else
+		to_chat(user, "<span class='warning'>You open the [src]... Only to find- MY EARS!!</span>")
+		user.adjustEarDamage(0, 2)
+		playsound(user, 'sound/items/AirHorn.ogg', 70, TRUE)
+
+/obj/item/clown/spareid
+	name = "captain's spare ID"
+	desc = "The spare ID of the High Lord himself."
+	icon = 'icons/obj/card.dmi'
+	icon_state = "gold"
+	item_state = "gold_id"
+	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
+

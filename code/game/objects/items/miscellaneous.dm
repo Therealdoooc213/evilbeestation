@@ -487,3 +487,28 @@
 
 /obj/item/choice_beacon/janicart/generate_display_names()
 	return list("janitor cart" = /obj/vehicle/ridden/janicart/upgraded/keyless)
+
+
+/obj/item/choice_beacon/clown
+	name = "clowns prank toolbox"
+	desc = "A strange toolbox, you can sometimes hear honking from it..."
+	icon = 'icons/obj/storage/toolbox.dmi'
+	icon_state = "gold"
+	item_state = "toolbox_yellow"
+	w_class = WEIGHT_CLASS_NORMAL
+	hitsound = 'sound/items/bikehorn.ogg'
+	uses = 5 // I be a generous god.
+	force = 1
+
+/obj/item/choice_beacon/clown/generate_display_names()
+	var/static/list/prank_items
+	if(!prank_items)
+		prank_items = list()
+		var/list/templist = list(
+				/obj/item/clown/syndieduffel,
+				/obj/item/clown/spareid,
+				/obj/item/sbeacondrop/bomb/clown)
+		for(var/V in templist)
+			var/atom/A = V
+			prank_items[initial(A.name)] = A
+	return prank_items

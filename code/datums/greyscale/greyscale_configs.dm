@@ -285,3 +285,8 @@
 	name = "Worn CTF Light Vest"
 	icon_file = 'icons/mob/clothing/suits/ctf.dmi'
 	json_config = 'code/datums/greyscale/json_configs/ctf_light_worn.json'
+
+/datum/greyscale_config/garden_gnome
+	name = "Garden Gnome"
+	icon_file = 'icons/mob/simple/garden_gnome.dmi'
+	json_config = 'code/datums/greyscale/json_configs/garden_gnome.json'

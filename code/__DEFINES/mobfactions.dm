@@ -79,6 +79,8 @@
 #define FACTION_VINES "vines"
 /// Diona nymphs
 #define FACTION_DIONA "diona"
+//Gnomes!
+#define FACTION_GNOME "gnome"
 
 // Antagonist factions
 

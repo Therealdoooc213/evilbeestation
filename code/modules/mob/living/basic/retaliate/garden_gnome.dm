@@ -13,7 +13,7 @@
 	ventcrawler = VENTCRAWLER_ALWAYS
 
 	obj_damage = 20
-	melee_damage = 7 //I will complain about bee not having melee_damage_upper/lower until the end of time. -Doc
+	melee_damage = 7 //I will complain about bee not having melee_damage_upper/lower until the end of time.
 	attack_verb_continuous = "punches"
 	attack_verb_simple = "punch"
 	attack_sound = 'sound/weapons/punch1.ogg'

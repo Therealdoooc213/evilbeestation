@@ -10,6 +10,7 @@
 	maxHealth = 40
 	health = 40
 	basic_mob_flags = DEL_ON_DEATH
+	ventcrawler = VENTCRAWLER_ALWAYS
 
 	obj_damage = 20
 	melee_damage = 7 //I will complain about bee not having melee_damage_upper/lower until the end of time. -Doc
@@ -19,9 +20,9 @@
 	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 1, CLONE = 1, STAMINA = 0, OXY = 1)
 	speak_emote = list("announces")
 
-	unsuitable_atmos_damage = 0
-	minimum_survivable_temperature = 0
-	maximum_survivable_temperature = 500
+	//unsuitable_atmos_damage = 0
+	//minimum_survivable_temperature = 0
+	//maximum_survivable_temperature = 500
 
 	faction = list(FACTION_GNOME)
 	mob_size = MOB_SIZE_SMALL
@@ -108,8 +109,8 @@
 	AddComponent(/datum/component/swarming)
 	AddComponent(/datum/component/ground_sinking, target_icon_state = icon_state, outline_colour = chosen_hat_colour, damage_res_sinked = resistance_when_sinked)
 	AddComponent(/datum/component/caltrop, min_damage = 5, max_damage = 10, paralyze_duration = 1 SECONDS, flags = CALTROP_BYPASS_SHOES)
-	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
-	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
+	//ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
+	//ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
 
 /mob/living/basic/garden_gnome/proc/apply_colour()
 	if(!greyscale_config)

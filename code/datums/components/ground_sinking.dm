@@ -35,7 +35,7 @@
 			sink_speed = 1 SECONDS,
 			heal_when_sinked = TRUE,
 			health_per_second = 1,
-			outline_colour = COLOR_PALE_GREEN,
+			outline_colour = COLOR_GREEN,
 			damage_res_sinked = list(BRUTE = 1, BURN = 1, TOX = 1, CLONE = 1, STAMINA = 0, OXY = 1))
 
 	if (!isbasicmob(parent))

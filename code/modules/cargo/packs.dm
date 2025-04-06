@@ -2915,7 +2915,7 @@
 	name = "Garden Gnome Crate"
 	desc = "Collect them all for your garden. Comes with three!"
 	hidden = TRUE
-	cost = CARGO_CRATE_VALUE * 20
+	cost = 2000
 	contains = list(/mob/living/basic/garden_gnome)
 	crate_name = "garden gnome crate"
 

@@ -288,5 +288,5 @@
 
 /datum/greyscale_config/garden_gnome
 	name = "Garden Gnome"
-	icon_file = 'icons/mob/simple/garden_gnome.dmi'
+	icon_file = 'icons/mob/garden_gnome.dmi'
 	json_config = 'code/datums/greyscale/json_configs/garden_gnome.json'
